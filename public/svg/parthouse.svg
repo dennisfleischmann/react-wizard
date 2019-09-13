@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="Ebene_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 10 1400 1100"
+	 xml:space="preserve">
+<title>Doppekhaushälfte</title>
+<polygon fill="#E8E8E8" points="1250.4,900.7 1047.5,817.7 1047.5,1037.2 1250.4,1037.2 "/>
+<polygon opacity="0.1" fill="#333333" points="1052.2,819.6 1245.8,1035.3 1052.2,1035.3 "/>
+<polyline fill="#999999" points="873.1,497.5 873.1,341.8 798.5,341.8 798.5,468.3 "/>
+<polygon fill="#E8E8E8" points="1052.2,1044 314.8,1044 314.8,583 665.1,408 1052.2,583 "/>
+<polygon fill="#E8E8E8" points="1116.7,608.2 662.3,341.8 250.2,608.2 "/>
+<rect x="41" y="1034.3" fill="#999999" width="1318" height="23.9"/>
+<polyline fill="#FEB901" class="fill__primary" points="667,1035.8 278,1035.8 278,604.8 211.3,604.8 666,345.5 "/>
+<rect x="708.3" y="661.5" fill="#FFFFFF" width="143.5" height="101.4"/>
+<rect x="708.3" y="813.5" fill="#FFFFFF" width="143.5" height="101.4"/>
+<rect x="489.9" y="661.5" fill="#FFFFFF" width="133.8" height="101.4"/>
+<rect x="489.9" y="813.5" fill="#FFFFFF" width="133.8" height="221.3"/>
+<polygon fill="#FEB901" class="fill__primary" points="83.1,1037.2 286,1037.2 286,817.7 83.1,900.7 "/>
+<polygon opacity="0.1" fill="#333333" points="281.4,1037.2 87.8,1037.2 281.4,821.4 "/>
+</svg>
