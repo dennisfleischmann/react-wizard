@@ -40,8 +40,9 @@ class Wizard extends Component {
     switch (currentScreen.type){
       case 'click-cart': {
         return (
-          <div class="card-group">
+          <div className="container">
             <button onClick={this.handleBack}>Back</button>
+            <div className="card-group">
             {
               currentScreen.options.map(item => (
                 <WizardCard 
@@ -50,6 +51,7 @@ class Wizard extends Component {
                   icon={item.options.icon}
                 />))
             }
+           </div>
           </div>
         );
       }

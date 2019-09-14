@@ -11,9 +11,9 @@ class App extends Component {
     super(props);
   }
   render() {
-    return ( < div className = "container" >
+    return ( 
       <Wizard config = { config } />
-      </div>
+      
     );
   }
 }
