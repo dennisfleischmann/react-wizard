@@ -19,26 +19,3 @@ class App extends Component {
 }
 
 export default App;
-
-/**
- * import React from 'react';
-import './App.css';
-
-import Wizard from './components/wizard/Wizard';
-import config from './wizard-config.js';
-import { tsConstructorType } from '@babel/types';
-
-console.log('config', config);
-
-function App() {
-
-  
-  return (
-    <div className="container">
-      <Wizard config={ config } />
-  </div>
-  );
-}
-
-export default App;
- */
