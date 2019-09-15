@@ -7,8 +7,9 @@ class Wizard extends Component {
   constructor(props) {
     super(props);
 
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handleBack = this.handleBack.bind(this);
+    this.handleNext = this.handleNext.bind(this);
+    this.handlePrevious = this.handlePrevious.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       currentStep: 0,
@@ -18,15 +19,18 @@ class Wizard extends Component {
     };
   }
 
-  handleNext(item){
+  handleNext(selection, value){
+
     this.setState({
-      currentStep: item.next,
-      previousStep: this.state.currentStep,
-      path:  [...this.state.path, item.next]
+      currentStep: selection.next,
+      path:  [...this.state.path, selection.next],
+      data: {
+        ...this.state.data,
+        [`${this.props.config.steps[this.state.currentStep].fieldName}`]: value
+      }
     })
   }
   
-
   handlePrevious() {
     
     if (this.state.path.length >= 1) {
@@ -43,29 +47,28 @@ class Wizard extends Component {
     }
   }
 
-  handleSetStepData(step, data) {
+  handleSubmit(contact, nextStep) {
+
     this.setState({
-      data: {
-        ...this.state.data,
-        [step]: data
-      }
+      contact,
+      currentStep: nextStep,
     })
+
+    console.log(this.state.data, contact);
+
   }
 
   render() {
-    const currentStep = this.props.config[this.state.currentStep];
 
-      /**
-       * Choosing the right component
-       */
+    const currentStep = this.props.config.steps[this.state.currentStep];
 
-      var StepComponent = this.props.customComponents[currentScreen.type];
+      var StepComponent = this.props.customComponents[currentStep.type];
       return (
         <StepComponent 
           step={currentStep}
           onNext={this.handleNext}
           onPrevious={this.handlePrevious}
-          data={this.state.data}
+          onSubmit={this.handleSubmit}
         />
       );
   }

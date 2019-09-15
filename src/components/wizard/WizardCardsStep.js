@@ -6,9 +6,10 @@ class WizardCardsStep extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
 
-    const { step, onNext, onPrevious, data } = this.props;
+    const { step, onNext, onPrevious } = this.props;
     return (
       <div className="container">
         <div className="row">
@@ -19,7 +20,7 @@ class WizardCardsStep extends Component {
           {
             step.options.map(item => (
               <WizardCard
-                onNext={() => onNext(item)} 
+                onNext={() => onNext(item, item.value)}
                 title={item.options.text}
                 icon={item.options.icon}
               />))

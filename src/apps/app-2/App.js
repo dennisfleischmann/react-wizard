@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import Wizard from '../../components/wizard/Wizard';
-import WizardCard from '../../components/wizard/wizard-card';
-import 'bootstrap/dist/css/bootstrap.css';
+import WizardCardsStep from '../../components/wizard/WizardCardsStep';
+import WizardSliderStep from '../../components/wizard/WizardSliderStep';
+import WizardSendStep from '../../components/wizard/WizardSendStep';
+import WizardConfirmationStep from '../../components/wizard/WizardConfirmationStep';
 import config from './wizard-config.js';
 
 class App extends Component {
 
   components = {
-    'click-cart': WizardCard
+    'cards-step': WizardCardsStep,
+    'slider-step': WizardSliderStep,
+    'send-step': WizardSendStep,
+    'confirmation-step': WizardConfirmationStep,
   };
 
   constructor(props) {

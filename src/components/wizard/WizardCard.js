@@ -7,6 +7,7 @@ class WizardCard extends Component {
   }
 
   render() {
+
     return (
       <div className="card" style={{width: '18rem'}}>
         <img src={'svg/'+this.props.icon} className="card-img-top" alt={this.props.description}/>

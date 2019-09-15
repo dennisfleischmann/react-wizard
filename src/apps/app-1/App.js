@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import Wizard from '../../components/wizard/Wizard';
 import WizardCardsStep from '../../components/wizard/WizardCardsStep';
+import WizardSliderStep from '../../components/wizard/WizardSliderStep';
+import WizardSendStep from '../../components/wizard/WizardSendStep';
+import WizardConfirmationStep from '../../components/wizard/WizardConfirmationStep';
 import config from './wizard-config.js';
 
 class App extends Component {
 
   components = {
-    'cards-step': WizardCardsStep
+    'cards-step': WizardCardsStep,
+    'slider-step': WizardSliderStep,
+    'send-step': WizardSendStep,
+    'confirmation-step': WizardConfirmationStep,
   };
 
   constructor(props) {
