@@ -6,6 +6,8 @@ import WizardSendStep from '../../components/wizard/WizardSendStep';
 import WizardConfirmationStep from '../../components/wizard/WizardConfirmationStep';
 import config from './wizard-config.js';
 
+import './style.css';
+
 class App extends Component {
 
   components = {

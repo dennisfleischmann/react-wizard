@@ -68,8 +68,6 @@ const resolveModule = (resolveFn, filePath) => {
 console.log(process.argv);
 
 var myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
-
 const app = myArgs[0];
 
 // config after eject: we're in ./config/
