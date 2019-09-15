@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     return ( 
-      <Wizard config = { config } customComponents={this.components}/>
+      <Wizard config = { config } customComponents={this.components} />
       
     );
   }
