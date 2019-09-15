@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-100 -50 1400 1100" enable-background="new 0 0 1400 1100" xml:space="preserve">
+<title>clock</title>
+<g>
+	<polygon fill="#F3F2F1" points="675.2,564.2 1081.2,720.2 524,825.3 118,670 	"/>
+</g>
+<polygon opacity="0.1" fill="#555555" enable-background="new    " points="675.2,564.2 547.9,588.1 488.2,685.2 989.6,685.2 "/>
+<polygon opacity="0.1" fill="#555555" enable-background="new    " points="771.5,600 695.1,615.1 695.1,725 1052.5,725 1082,719.4
+	"/>
+<g>
+	<g>
+		<polyline fill="#EA9800" class="fill__primary_dark" points="490.6,374.7 583.7,436.8 583.7,530 490.6,685.2 		"/>
+	</g>
+	<g>
+		<polyline fill="#FEB901" class="fill__primary" points="492.1,374.7 400.6,436.8 400.6,530 492.9,685.2 		"/>
+	</g>
+</g>
+<circle fill="#AAAAAA" cx="688" cy="593.6" r="67.7"/>
+<line fill="none" stroke="#AAAAAA" stroke-width="21" stroke-miterlimit="10" x1="691.1" y1="645.4" x2="691.1" y2="725"/>
+<path fill="#AAAAAA" d="M848.7,725c1.6-3.2,2.4-7.2,2.4-11.9c0-8-3.2-15.1-8-19.9c0-1.6,0-2.4,0-4c0-11.1-8.8-19.9-19.9-19.9
+	c-6.4,0-11.1,2.4-15.1,7.2c-4.8-8.8-14.3-15.1-24.7-15.1c-12.7,0-23.1,8-26.3,19.1c-4-2.4-8.8-3.2-13.5-3.2
+	c-15.9,0-27.9,12.7-27.9,27.9c0,8,3.2,14.3,8,19.9L848.7,725L848.7,725z"/>
+<circle fill="#AAAAAA" cx="667.3" cy="533.9" r="23.9"/>
+<circle fill="#AAAAAA" cx="635.4" cy="557.8" r="23.9"/>
+<circle fill="#AAAAAA" cx="627.5" cy="589.7" r="23.9"/>
+<circle fill="#AAAAAA" cx="635.4" cy="629.5" r="23.9"/>
+<circle fill="#AAAAAA" cx="659.3" cy="645.4" r="23.9"/>
+<circle fill="#AAAAAA" cx="699.1" cy="533.9" r="23.9"/>
+<circle fill="#AAAAAA" cx="730.9" cy="549.9" r="23.9"/>
+<circle fill="#AAAAAA" cx="746.9" cy="573.7" r="23.9"/>
+<circle fill="#AAAAAA" cx="746.9" cy="597.6" r="23.9"/>
+<circle fill="#AAAAAA" cx="738.9" cy="629.5" r="23.9"/>
+<circle fill="#AAAAAA" cx="707.1" cy="645.4" r="23.9"/>
+</svg>

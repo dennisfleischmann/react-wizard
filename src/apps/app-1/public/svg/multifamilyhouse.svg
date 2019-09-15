@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="Ebene_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 100 1400 1100"
+	 xml:space="preserve">
+<title>Mehrfamilienhaus</title>
+<polyline fill="#999999" points="912.5,604.1 912.5,446.9 837.2,446.9 837.2,574.6 "/>
+<path fill="#F6F6F6" d="M880.7,400.2h-8c0-10.1,5.1-15.1,9.6-19.6c4-4,7.2-7.2,7.2-13.9s-3.2-9.9-7.2-13.9
+	c-4.5-4.5-9.6-9.6-9.6-19.6s5.1-15.1,9.6-19.6c4-4,7.2-7.2,7.2-13.9s-3.2-9.9-7.2-13.9c-4.5-4.5-9.6-9.6-9.6-19.6
+	c0-10.1,5.1-15.1,9.6-19.6c4-4,7.2-7.2,7.2-13.9h8c0,10.1-5.1,15.1-9.6,19.6c-4,4-7.2,7.2-7.2,13.9s3.2,9.9,7.2,13.9
+	c4.5,4.5,9.6,9.6,9.6,19.6s-5.1,15.1-9.6,19.6c-4,4-7.2,7.2-7.2,13.9s3.2,9.9,7.2,13.9c4.5,4.5,9.6,9.6,9.6,19.6s-5.1,15.1-9.6,19.6
+	C883.9,390.2,880.7,393.4,880.7,400.2z"/>
+<polygon fill="#E8E8E8" points="1111.5,1153.2 254,1153.2 254,687.9 661.4,511.3 1111.5,687.9 "/>
+<polygon fill="#E8E8E8" points="1186.6,715.9 658.1,446.9 179,715.9 "/>
+<rect x="598.5" y="767.1" fill="#FFFFFF" width="155.9" height="102.4"/>
+<rect x="810.5" y="767.1" fill="#FFFFFF" width="156" height="102.4"/>
+<rect x="598.5" y="917.9" fill="#FFFFFF" width="155.9" height="102.4"/>
+<rect x="810.5" y="917.9" fill="#FFFFFF" width="156" height="102.4"/>
+<rect x="399.3" y="767" fill="#FFFFFF" width="155.9" height="102.4"/>
+<rect x="398" y="917.1" fill="#FEB901" class="fill__primary" width="155.9" height="233"/>
+<rect x="206.9" y="1143.5" fill="#999999" width="1014.1" height="24.1"/>
+</svg>

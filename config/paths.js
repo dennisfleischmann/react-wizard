@@ -65,24 +65,31 @@ const resolveModule = (resolveFn, filePath) => {
   return resolveFn(`${filePath}.js`);
 };
 
+console.log(process.argv);
+
+var myArgs = process.argv.slice(2);
+console.log('myArgs: ', myArgs);
+
+const app = myArgs[0];
+
 // config after eject: we're in ./config/
 module.exports = {
-  dotenv: resolveApp('.env'),
-  appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),
-  appPublic: resolveApp('src/apps/app-2/public'),
-  appHtml: resolveApp('src/apps/app-2/public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/apps/app-2/index'),
-  appPackageJson: resolveApp('package.json'),
-  appSrc: resolveApp('src'),
-  appTsConfig: resolveApp('tsconfig.json'),
-  appJsConfig: resolveApp('jsconfig.json'),
-  yarnLockFile: resolveApp('yarn.lock'),
-  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
-  proxySetup: resolveApp('src/setupProxy.js'),
-  appNodeModules: resolveApp('node_modules'),
-  publicUrl: getPublicUrl(resolveApp('package.json')),
-  servedPath: getServedPath(resolveApp('package.json')),
+    dotenv: resolveApp('.env'),
+    appPath: resolveApp('.'),
+    appBuild: resolveApp('build'),
+    appPublic: resolveApp(`src/apps/${app}/public`),
+    appHtml: resolveApp(`src/apps/${app}/public/index.html`),
+    appIndexJs: resolveModule(resolveApp, `src/apps/${app}/index`),
+    appPackageJson: resolveApp('package.json'),
+    appSrc: resolveApp('src'),
+    appTsConfig: resolveApp('tsconfig.json'),
+    appJsConfig: resolveApp('jsconfig.json'),
+    yarnLockFile: resolveApp('yarn.lock'),
+    testsSetup: resolveModule(resolveApp, 'src/setupTests'),
+    proxySetup: resolveApp('src/setupProxy.js'),
+    appNodeModules: resolveApp('node_modules'),
+    publicUrl: getPublicUrl(resolveApp('package.json')),
+    servedPath: getServedPath(resolveApp('package.json')),
 };
 
 

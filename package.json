@@ -61,8 +61,10 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start:app1": "node scripts/start.js app-1",
+    "start:app2": "node scripts/start.js app-2",
+    "build:app1": "node scripts/build.js app-1",
+    "build:app2": "node scripts/build.js app-2",
     "test": "node scripts/test.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook"

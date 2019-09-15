@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="Ebene_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 100 1400 1100"
+	 xml:space="preserve">
+<title>Einfamilienhaus</title>
+<polyline fill="#999999" points="809.5,594.3 809.5,434.4 732.9,434.4 732.9,564.3 "/>
+<path fill="#F6F6F6" d="M771.3,400.6h-8.2c0-10.2,5.2-15.4,9.7-20c4.1-4.1,7.3-7.3,7.3-14.2c0-6.8-3.2-10.1-7.3-14.2
+	c-4.6-4.6-9.7-9.7-9.7-20s5.2-15.4,9.7-20c4.1-4.1,7.3-7.3,7.3-14.2c0-6.8-3.2-10.1-7.3-14.2c-4.6-4.6-9.7-9.7-9.7-20
+	c0-10.3,5.2-15.4,9.7-20c4.1-4.1,7.3-7.3,7.3-14.2h8.2c0,10.2-5.2,15.4-9.7,20c-4.1,4.1-7.3,7.3-7.3,14.2s3.2,10.1,7.3,14.2
+	c4.6,4.6,9.7,9.7,9.7,20c0,10.3-5.2,15.4-9.7,20c-4.1,4.1-7.3,7.3-7.3,14.2s3.2,10.1,7.3,14.2c4.6,4.6,9.7,9.7,9.7,20
+	c0,10.3-5.2,15.4-9.7,20C774.5,390.5,771.3,393.7,771.3,400.6z"/>
+<polygon fill="#E8E8E8" points="1192.3,1005.1 984,919.9 984,1145.2 1192.3,1145.2 "/>
+<polygon fill="#E8E8E8" points="993.5,1155.4 236.3,1155.4 236.3,682.1 596,502.4 993.5,682.1 "/>
+<polygon fill="#E8E8E8" points="1059.7,708 593.1,434.4 170,708 "/>
+<polygon opacity="0.1" fill="#333333" points="993.5,923.7 1192.3,1145.2 993.5,1145.2 "/>
+<rect x="416.1" y="762.6" fill="#FFFFFF" width="170.4" height="104.1"/>
+<rect x="643.3" y="762.6" fill="#FFFFFF" width="170.4" height="104.1"/>
+<rect x="643.3" y="918.8" fill="#FFFFFF" width="170.4" height="104.1"/>
+<rect x="416.1" y="918.8" fill="#FEB901" class="fill__primary" width="170.4" height="227.2"/>
+<rect x="198.4" y="1145.5" fill="#999999" width="1031.6" height="24.5"/>
+</svg>
