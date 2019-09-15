@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Wizard from './components/wizard/Wizard';
-import config from './wizard-config.js';
-
+import WizardCard from './components/wizard/wizard-card';
 import 'bootstrap/dist/css/bootstrap.css';
+import config from './wizard-config.js';
 
 class App extends Component {
 
-  constructor(props) {
+  components = {
+    'click-cart': WizardCard
+  };
 
+  constructor(props) {
     super(props);
   }
   render() {
     return ( 
-      <Wizard config = { config } />
+      <Wizard config = { config } customComponents={this.components}/>
       
     );
   }

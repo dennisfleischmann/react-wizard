@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-
-import WizardCard from './wizard-card';
+import Slider from '@material-ui/core/Slider';
 
 class Wizard extends Component {
+
 
   constructor(props) {
     super(props);
@@ -14,30 +14,28 @@ class Wizard extends Component {
     this.state = {
       currentStep: 0,
       previousStep: -1,
-      path:[0]
+      path:[0],
+      data:{}
     };
-
   }
 
-  handleSelect(){
-    const currentStep = this.state.currentStep;
-    this.state.currentStep++;
-
+  handleSelect(item){
     this.setState({
-      currentStep: this.state.currentStep,
-      previousStep: currentStep
-    });
-
-    console.log(this.state);
+      currentStep: item.next,
+      previousStep: this.state.currentStep,
+      path:  [...this.state.path, item.next]
+    })
   }
+  
 
   handleBack() {
+    
     if (this.state.path.length >= 1) {
-
+      debugger
       var clonedArray = JSON.parse(JSON.stringify(this.state.path))
 
       clonedArray = _.slice(clonedArray, 0, clonedArray.length-1)
-
+      
      const lastStep = clonedArray[clonedArray.length-1];
 
       this.setState({
@@ -48,35 +46,31 @@ class Wizard extends Component {
   }
 
   render() {
-
-    console.log(this.state);
     const currentScreen = this.props.config[this.state.currentStep];
 
     switch (currentScreen.type){
       case 'click-cart': {
+
+        debugger;
+        var CustomComponent = this.props.customComponents['click-cart'];
         return (
           <div className="container">
-            <button onClick={this.handleBack}>Back</button>
+            <div className="row">
+              <button onClick={this.handleBack}>Back</button>
+            </div>
+            < div className="row">
             <div className="card-group">
             {
               currentScreen.options.map(item => (
-                <WizardCard 
-                  onSelect={()  => {
-                    this.setState({
-                      currentStep: item.next,
-                      previousStep: this.state.currentStep,
-                      path:  [...this.state.path, item.next]
-                    })
-
-                    // debugger;
-                    console.log(this.state);
-                    
-                  }} 
+                <CustomComponent 
+                  onSelect={() => this.handleSelect(item)} 
                   title={item.options.text}
                   icon={item.options.icon}
                 />))
             }
            </div>
+            </div>
+          
           </div>
         );
       }
@@ -84,10 +78,31 @@ class Wizard extends Component {
         return (
           <div className="container">
             
-            <button onClick={this.handleBack}>Back</button>
-       
-            {currentScreen.description}
-            {currentScreen.title}
+            <div className="row">
+              <button onClick={() => this.handleBack()}>Back</button>
+            </div>
+            <div className="row">
+              <div className="col">
+                <Slider
+                  aria-label="custom thumb label"
+                  defaultValue={20}
+                />
+              </div>
+                          
+              <div className="col">
+                <img width="50" src={'svg/'+currentScreen.options[0].options.icon} alt={this.props.description}/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <input />
+              </div>
+              <div className="col">
+              <button onClick={() => this.handleSelect(currentScreen.options[0])}>Weiter</button>
+              </div>
+
+            </div>
+            
           </div>
         );
 
