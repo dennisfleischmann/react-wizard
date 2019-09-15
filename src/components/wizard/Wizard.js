@@ -31,7 +31,6 @@ class Wizard extends Component {
   handleBack() {
     
     if (this.state.path.length >= 1) {
-      debugger
       var clonedArray = JSON.parse(JSON.stringify(this.state.path))
 
       clonedArray = _.slice(clonedArray, 0, clonedArray.length-1)
@@ -51,7 +50,6 @@ class Wizard extends Component {
     switch (currentScreen.type){
       case 'click-cart': {
 
-        debugger;
         var CustomComponent = this.props.customComponents['click-cart'];
         return (
           <div className="container">
@@ -90,12 +88,12 @@ class Wizard extends Component {
               </div>
                           
               <div className="col">
-                <img width="50" src={'svg/'+currentScreen.options[0].options.icon} alt={this.props.description}/>
+                <img width="100" src={'svg/'+currentScreen.options[0].options.icon} alt={this.props.description}/>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <input />
+               {currentScreen.options[0].options.text} <input />
               </div>
               <div className="col">
               <button onClick={() => this.handleSelect(currentScreen.options[0])}>Weiter</button>

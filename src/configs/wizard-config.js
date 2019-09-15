@@ -23,7 +23,7 @@ export default [
           "from": 200,
           "to": 2500
         },
-        "title":"Grundfläche in m2",
+        "text":"Grundfläche in m2",
         "icon": "property-square.svg"
       }
     }
@@ -77,7 +77,7 @@ export default [
           "from": 200,
           "to": 2500
         },
-        "title":"Wohnfläche",
+        "text":"Wohnfläche",
         "icon": "square.svg"
       }
     }]
@@ -94,7 +94,7 @@ export default [
           "from": 200,
           "to": 2500
         },
-        "title":"Grundfläche in m2",
+        "text":"Grundfläche in m2",
         "icon": "property-square.svg"
       }
     }
