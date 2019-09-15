@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>McMakler</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $( "button" ).click(function() {
+        $( "p" ).toggle( "slow" );
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="burger js-burger">
+        <button type="button" class="burger__button"></button>
+        <div class="burger__underlay"></div>
+      </div>
+      <a class="logo header__logo" href="/"
+        ><img
+          class="header__logo-image"
+          alt="McMakler logo"
+          src="https://images.ctfassets.net/64q0dihi81ut/6wccDLHc58Hp3wLD1LkkSR/8e11ed674f7deddd657465ebc8f2b2c0/mcmakler-logo.svg"
+      /></a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a target="" class="header__menu-link" href="/verkaufen">
+              <font>
+                <font>property sales</font>
+              </font>
+            </a>
+          </li>
+          <li class="header__menu-item header__menu-item_active">
+            <a target="" class="header__menu-link" href="/immobilienbewertung"
+              ><font
+                ><font
+                  >property valuation</font
+                ></font
+              ></a
+            >
+          </li>
+          <li class="header__menu-item header__menu-item_has-children">
+            <a target="" class="header__menu-link" href="/ratgeber"
+              ><font
+                ><font>counselor</font></font
+              ></a
+            >
+            <ul class="header__menu-children">
+              <li class="header__menu-item header__menu-child">
+                <a target="" class="header__menu-link" href="/ratgeber"
+                  ><font
+                    ><font
+                      >Popular items</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/aktuelles"
+                  ><font
+                    ><font>Current</font></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/allgemein"
+                  ><font
+                    ><font>General</font></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/immobilienbewertung"
+                  ><font
+                    ><font
+                      >property valuation</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/immobilienkauf"
+                  ><font
+                    ><font
+                      >buying property</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/immobilienmakler-vor-ort"
+                  ><font
+                    ><font
+                      >Real estate agent on site</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/immobilienverkauf"
+                  >Immobilienverkauf</a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/immobilienvermietung"
+                  >Immobilienvermietung</a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target=""
+                  class="header__menu-link"
+                  href="/ratgeber/musterdokumente"
+                  >Musterdokumente</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a target="" class="header__menu-link" href="/standorte-experten"
+              ><font
+                ><font>Our team</font></font
+              ></a
+            >
+          </li>
+          <li class="header__menu-item">
+            <a target="" class="header__menu-link" href="/karriere"
+              ><font
+                ><font>Career</font></font
+              ></a
+            >
+          </li>
+          <li class="header__menu-item header__menu-item_separator">
+            <div class="header__separator"></div>
+          </li>
+          <li class="header__menu-item header__menu-item_has-children">
+            <a target="" class="header__menu-link" href="/#"
+              ><font
+                ><font
+                  >Buy property</font
+                ></font
+              ></a
+            >
+            <ul class="header__menu-children">
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target="_blank"
+                  class="header__menu-link"
+                  href="https://immobilien.mcmakler.de"
+                  ><font
+                    ><font
+                      >Our real estate</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li class="header__menu-item header__menu-child">
+                <a
+                  target="_blank"
+                  class="header__menu-link"
+                  href="https://www.mcmakler.de/lp/de/suchagent-fuer-kaeufer"
+                  ><font
+                    ><font
+                      >Create search request</font
+                    ></font
+                  ></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right-section">
+        <a
+          class="button header__call-to-action button_secondary"
+          href="https://www.mcmakler.de/immobilienbewertung"
+          ><font
+            ><font
+              >Rate now for free</font
+            ></font
+          ></a
+        >
+        <div class="header__separator"></div>
+        <a class="header__contact" href="tel:+498005008002"
+          ><div class="header__phone-number-container">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              attr="[object Object]"
+              class="undefined header__phone-icon"
+              height="1em"
+              width="1em"
+            >
+              <path
+                d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"
+              ></path></svg><span class="header__phone-number">0800 500 80 02</span>
+          </div>
+          <span class="header__phone-label">Kostenlose Service-Hotline</span></a
+        >
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class=" hero">
+      <div id="widget-container" class=" widget-container">
+      <div class=" fullscreen" id="root">
+        
+          
+          </div>
+        </div>
+      </section>
+
+
+
+    <!-- Card Section  -->
+    <section class="card-section lazyloaded">
+      <div class="card-section__wrapper">
+        <div class="card-section__card">
+          <header class="card-section__header">
+          <h1 class="">Professionelle Immobilienbewertung kostenlos</h1>
+          <hr class="line default">
+          <h2 class=">Lassen Sie den Wert Ihrer Immobilie von ausgezeichneten Immobilienexperten berechnen</h2></header><div class=">
+          <p>
+            Unsere kostenlose Immobilienbewertung vermittelt Ihnen kompaktes Wissen rund um Ihre Immobilie. Dabei wird der Marktwert
+            anhand von Vergleichsdaten mit Objekten in Ihrer Umgebung errechnet. Dies geschieht durch den Einsatz von Künstlicher
+            Intelligenz (KI), die Algorithmen zur fundierten Wertbestimmung von Immobilien entwickelt und einsetzt, um
+            subjektive Schätzungen auszuschließen.
+          </p>
+          <a href="#" class="button button_primary">Immobilienbewertung anfordern</a>
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <!-- Valuation Section -->
+    <section class="free-valuation-section lazyloaded" data-expand="-200">
+      <header>
+        <h2>Kostenlose Immobilienbewertung mit McMakler</h2>
+        <hr class="line default">
+        <h3>Unser Service für Sie</h3>
+      </header>
+      <div class="free-valuation-section__wrapper">
+        <div class="free-valuation-section__check-list">
+          <div class="free-valuation-section__check-list-item">
+            <div class="circle-checkmark"></div>
+            <div class="content">
+              <h4>Individuelle Wertermittlung</h4>
+              <p>anhand aller relevanten Eigenschaften</p>
+            </div>
+            <div class="vertical-dots"></div>
+          </div>
+          <div class="free-valuation-section__check-list-item">
+            <div class="circle-checkmark"></div>
+            <div class="content">
+              <h4>Tagesgenaue Umfeldanalyse</h4>
+              <p>mit Immobilienpreisen aus Ihrer Nachbarschaft zur Bestimmung der Lagequalität</p>
+            </div>
+            <div class="vertical-dots"></div>
+          </div>
+          <div class="free-valuation-section__check-list-item">
+            <div class="circle-checkmark"></div>
+            <div class="content">
+              <h4>Hochmoderne Technologie und klassische Expertise
+              </h4>
+              <p>als einmalige Kombination</p>
+            </div>
+            <div class="vertical-dots"></div>
+          </div>
+          <div class="free-valuation-section__check-list-item">
+            <div class="circle-checkmark"></div>
+            <div class="content">
+              <h4>Professionelle Empfehlung</h4>
+              <p>für einen realistischen Verkaufspreis</p>
+            </div>
+            <div class="vertical-dots"></div>
+          </div>
+          <div class="free-valuation-section__check-list-item">
+            <div class="circle-checkmark"></div>
+            <div class="content">
+              <h4>Persönlich und kostenlos</h4>
+              <p>– unsere Vor-Ort-Beratung durch einen qualifizierten Immobilienmakler mit Lokalexpertise</p>
+            </div>
+            <div class="vertical-dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="three-tips-section">
+      <div class="three-tips-section__wrapper">
+        <div class="left-section">
+          <div>
+            <img class=" lazyloaded" src="images/immo-min.jpeg">
+            <header>
+              <h2>In 3 Schritten zur kostenlosen Immobilienbewertung</h2>
+              <hr class="line default">
+              <h3>Immobilienwert berechnen – So einfach geht's mit der Bewertung</h3>
+            </header>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="three-tips-section__check-list">
+            <div class="three-tips-section__check-list-item">
+              <div>
+                <div class="circle-checkmark">1.</div>
+                <div class="content">
+                  <h4>Immobilie bequem online beschreiben</h4>
+                  <p>Geben Sie die ersten relevanten Eckdaten zu Ihrer Immobilie in unser Online-Formular ein, um die kostenlose Bewertung zu starten.</p>
+                </div>
+              </div>
+              <div class="vertical-dots"></div>
+            </div>
+            <div class="three-tips-section__check-list-item">
+              <div>
+                <div class="circle-checkmark">2.</div>
+                <div class="content">
+                  <h4>Professionelle Analyse Ihrer Immobilie</h4>
+                  <p>Die zu bewertende Immobilie wird mit Vergleichsobjekten in Ihrer Region nach Lage und Eigenschaften analysiert.</p>
+                </div>
+              </div>
+              <div class="vertical-dots"></div>
+            </div>
+            <div class="three-tips-section__check-list-item">
+              <div>
+                <div class="circle-checkmark">3.</div>
+                <div class="content">
+                  <h4>Immobilienbewertung kostenlos via E-Mail</h4>
+                  <p>Nach Erstellung der Immobilienbewertung erfahren Sie den realistischen Wert Ihrer Immobilie kostenfrei per E-Mail.<br><br>
+                    <a href="#" class="button button_primary">Immobilienbewertung jetzt starten</a>
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq sections -->
+    <section class="faq-section">
+      <div class="container faq-section__wrapper">
+        <header>
+          <h2>Sie fragen, wir antworten!</h2>
+          <hr class="line default">
+          <h3>Häufige Fragen zur Immobilienbewertung</h3>
+        </header>
+        <div class="container faq-section__question-area">
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question"></div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Kostenlose Online-Immobilienbewertung oder Wertgutachten?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Wodurch ist die Immobilienbewertung von McMakler so präzise?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Welche Verfahren werden zur Immobilienbewertung genutzt?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Welche Faktoren fließen in die Bewertung mit ein?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Wie funktioniert die Online-Immobilienbewertung?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Was kostet die Immobilienbewertung bei McMakler?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+          <div class="faq-section__item">
+            <div class="faq-section__item__wrapper">
+              <div class="faq-section__question">Wann und wie erhalte ich die angefragte Bewertung meiner Immobilie?</div>
+            </div>
+            <div class="faq-section__item__button"><span class="view-answer"></span> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Valuation Section -->
+    <section class="professional-valuation-section lazyloaded">
+      <div class="container professional-valuation-section__wrapper">
+        <header class="professional-valuation-section__header">
+          <h2 class="">Professionelle Immobilienbewertung mit McMakler</h2>
+          <hr class="line default">
+          <h3 class="">Mit McMakler hält die Digitalisierung Einzug in die Immobilienbewertung</h3>
+        </header>
+        <div class="professional-valuation-section__text">
+          <div class="collapsed">
+            <p>McMakler ist deutschlandweit aktiv und bietet Immobilienvermittlung aus einer Hand – zentralisiert, lokal, national. Durch den Einsatz modernster Technologien, beispielsweise durch digitale 360° Rundgänge, schaffen wir größtmögliche Transparenz und Effizienz über den gesamten Vermarktungsprozess. Neben der Informationshoheit profitieren Sie dadurch von einer optimierten und beschleunigten Abfolge einzelner Vermarktungsschritte. Der richtige Verkehrswert gilt mitunter als wichtigster Bestandteil im Vermarktungsprozess und wird durch die Immobilienbewertung ermittelt. Für die Wertermittlung stehen Ihnen vor Ort Immobilienmakler mit fachlicher und lokaler Expertise zur Verfügung. Damit sich die Makler vor Ort umfassend um eine professionelle Bewertung Ihrer Immobilie und um die Belange der Interessenten kümmern können, werden im Hintergrund viele Arbeitsschritte in die Hände von separaten Experten gegeben. McMakler erfüllt Ihren Anspruch durch hochwertige Design-Exposés, Broschüren und weiteren Materialien, die den Immobilienverkauf unterstützen. Diese Unterlagen werden von hauseigenen Grafikern individuell für die Vermarktung einer jeden Immobilie erstellt. In Kombination mit dem weitreichenden Spektrum an Vermarktungskanälen wird jede Immobilie zielgruppengerecht angeboten. Der Zugriff auf das nationale Partnernetzwerk und entsprechend registrierte Suchkunden hat hier die größte Relevanz. Zusätzlich garantiert die Online-Vermarktung in allen relevanten Portalen und, bei Bedarf, der Einsatz von klassischen Printanzeigen oder Mailingaktionen einen umfassenden Marktauftritt. Mehr zum Thema <a href="/ratgeber/immobilienbewertung?tp_cid=mcmakler-immobilienbewertung&amp;tp_agid=cta-button&amp;tp_adid=immobilienbewertung">Immobilienbewertung</a> erfahren Sie in unserem <a href="/ratgeber?tp_cid=mcmakler-immobilienbewertung&amp;tp_agid=cta-button&amp;tp_adid=ratgeber">Ratgeber</a>.</p>
+          </div>
+          <a class="collapsed">Mehr lesen</a>
+        </div>
+      </div>
+      <a href="#" class="button button_primary">Jetzt Immobilie bewerten lassen</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container columns is-paddingless">
+        <div class="column columns is-half-tablet is-marginless is-paddingless">
+          <div class="column footer__menu show-on-tablet">
+            <ul class="footer__menu-list">
+              <li>
+                <a class="footer__menu-item" href="/standorte-experten"
+                  ><font
+                    ><font
+                      >Our team</font
+                    ></font
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="footer__menu-item" href="/karriere"
+                  ><font
+                    ><font>Career</font></font
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="footer__menu-item" href="/presse"
+                  ><font
+                    ><font>Press</font></font
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="column is-paddingless is-two-thirds-tablet">
+            <div>
+              <div class="footer__card">
+                <header class="footer__card__header">
+                  <span class="footer__card__header-text"
+                    ><font
+                      ><font
+                        >Contact</font
+                      ></font
+                    ></span
+                  >
+                </header>
+                <div class="footer__card__contact">
+                  <img
+                    class="footer__icon"
+                    alt=""
+                    src="images/icons/email.svg"
+                  /><a
+                    class="footer__card-link"
+                    href="mailto:service@mcmakler.de"
+                    ><font
+                      ><font
+                        >service@mcmakler.de
+                      </font></font
+                    ></a
+                  ><span class="fineprint"
+                    ><font
+                      ><font
+                        >McMakler email address</font
+                      ></font
+                    ></span
+                  >
+                </div>
+                <div class="footer__card__contact">
+                  <img
+                    class="footer__icon"
+                    src="images/icons/phone.svg"
+                    alt=""
+                  /><a class="card-link" href="tel:+498005008002"
+                    ><font
+                      ><font
+                        >0800 500 80 02
+                      </font></font
+                    ></a
+                  ><span class="fineprint"
+                    ><font
+                      ><font
+                        >Free service hotline</font
+                      ></font
+                    ></span
+                  >
+                </div>
+              </div>
+              <div class="footer__info">
+                <font
+                  ><font>
+                    We advise you in a personal conversation on the phone. </font
+                  ><font
+                    >We are available from Monday to Friday from 8:00 to 20:00,
+                    Sat-Sun 9:00 to 18:00.
+                  </font></font
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-paddingless">
+          <div class="footer__card">
+            <header class="footer__card__header">
+              <span class="footer__card__header-text"
+                ><font
+                  ><font>Awards</font></font
+                ></span
+              >
+            </header>
+            <div
+              class="columns is-marginless has-text-centered is-vcentered footer__card__badges"
+            >
+              <div class="column is-paddingless footer__card-badge">
+                <a href="/pdf/tuv.pdf" target="_blank" rel="noopener noreferrer"
+                  ><img
+                    class="footer__tuv"
+                    src="images/tuv-official.png"
+                    alt="TÜV seal"
+                    title="TÜV certified online portal"
+                /></a>
+              </div>
+              <div class="column is-paddingless footer__card-badge">
+                <div
+                  id="auorg-bg"
+                  style="margin: 0px; border: 0px; padding: 0px; position: relative; width: 100%; min-width: 120px; height: 113px;"
+                >
+                  <div
+                    itemscope="itemscope"
+                    itemtype="http://schema.org/LocalBusiness"
+                    class="auorg-widget small "
+                    id="auorg-1564767983"
+                  >
+                    <meta itemprop="name" content="McMakler GmbH" /><meta
+                      itemprop="url"
+                      content="www.mcmakler.de"
+                    />
+                    <div class="auorg-widget-header">
+                      <a
+                        class="link-to-aus-org-homepage"
+                        href="https://www.ausgezeichnet.org"
+                        target="_blank"
+                        rel="nofollow"
+                        title="Independent reviews, customer reviews and quality labels from Excellent.org"
+                        ><b
+                          ><font
+                            ><font
+                              >EXCELLENT
+                            </font></font
+                          ><span style="font-size: 70%"
+                            ><font
+                              ><font
+                                >.ORG</font
+                              ></font
+                            ></span
+                          ></b
+                        ></a
+                      >
+                    </div>
+                    <div
+                      class="aus-widget-score-container"
+                      itemprop="aggregateRating"
+                      itemscope="itemscope"
+                      itemtype="http://schema.org/AggregateRating"
+                    >
+                      <meta itemprop="worstRating" content="1" /><meta
+                        itemprop="bestRating"
+                        content="5"
+                      /><meta itemprop="ratingCount" content="1816" /><a
+                        href="https://www.ausgezeichnet.org/bewertungen-mcmakler.de-3CDH2H"
+                        target="_blank"
+                        class="auorg-link aus-link-to-customer-homepage"
+                        ><img
+                          src="https://siegel.ausgezeichnet.org/asset/images/widgets/rating-4_5-cent-s.png"
+                          style="width:79px;height:11px;margin:0;padding:0;border:0;display:inline;"
+                          alt="very well"
+                        /><br /><b class="aus-rating-text"
+                          ><font
+                            ><font
+                              >VERY GOOD
+                            </font></font
+                          ></b
+                        ><br /><span class="aus-widget-score"
+                          ><span class="aus-rating-score" itemprop="ratingValue"
+                            ><font
+                              ><font
+                                >4.38</font
+                              ></font
+                            ></span
+                          ><font
+                            ><font>
+                              /5.00
+                            </font></font
+                          ></span
+                        ><br /><span class="aus-number-of-review"
+                          ><font
+                            ><font
+                              >1,816 reviews
+                            </font></font
+                          ><br /><font
+                            ><font
+                              >from here, ekomi.de, kaeuferportal.de</font
+                            ></font
+                          ></span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/mcmakler.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social__icon"
+              ><svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 264 512"
+                attr="[object Object]"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"
+                ></path></svg></a
+            ><a
+              href="https://www.instagram.com/mcmakler.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social__icon"
+              ><svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                attr="[object Object]"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z"
+                ></path>
+                <path
+                  d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z"
+                ></path></svg></a
+            ><a
+              href="https://www.linkedin.com/company/mcmakler-gmbh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social__icon"
+              ><svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                version="1.2"
+                baseProfile="tiny"
+                viewBox="0 0 24 24"
+                attr="[object Object]"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"
+                ></path>
+                <ellipse
+                  cx="6.5"
+                  cy="6.5"
+                  rx="1.55"
+                  ry="1.5"
+                ></ellipse></svg></a
+            ><a
+              href="https://twitter.com/McMaklerDE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social__icon"
+              ><svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                attr="[object Object]"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"
+                ></path></svg></a>
+          </div>
+        </div>
+        <div class="column hide-on-tablet">
+          <ul class="footer__menu-list footer__menu--centered">
+            <li>
+              <a class="footer__menu-item" href="/standorte-experten"
+                >Unser Team</a
+              >
+            </li>
+            <li><a class="footer__menu-item" href="/karriere">Karriere</a></li>
+            <li><a class="footer__menu-item" href="/presse">Presse</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container columns imprint">
+        <div class="column column_no-top-padding">
+          <ul class="list list_inline footer__last-links">
+            <li class="list_inline__list-item">
+              <a href="/agb"
+                ><font
+                  ><font
+                    >Conditions</font
+                  ></font
+                ></a
+              >
+            </li>
+            <li class="list_inline__list-item">
+              <a href="/datenschutz"
+                ><font
+                  ><font
+                    >data protection</font
+                  ></font
+                ></a
+              >
+            </li>
+            <li class="list_inline__list-item">
+              <a href="/impressum"
+                ><font
+                  ><font>imprint</font></font
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="column all-rights-reserved">
+          <small class="fineprint push-right"
+            ><font
+              ><font>© </font></font
+            ><font
+              ><font>2019 </font></font
+            >
+            <font
+              ><font
+                >McMakler GmbH - All rights reserved</font
+              ></font
+            ></small
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
