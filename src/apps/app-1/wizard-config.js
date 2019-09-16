@@ -45,7 +45,22 @@ export default {
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
       {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
       {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+    ]
+  },
+  {
+    "id": 3,
+    "type": "input-step",
+    "description":"differentReason",
+    "title": "Anderer Grund",
+    "fieldName": "differentReason",
+    "options": [
+      { id:"0", "next" : 998, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Grund für die Bewertung?",
+        "icon": "property-square.svg"
+      }
+    }
     ]
   },
   {
@@ -222,19 +237,16 @@ export default {
   },
   {
     "id": 998,
-    "type": "slider-step",
+    "type": "map-locator-step",
     "description":"propertyLocation",
     "title": "Ort",
     "fieldName": "propertySize",
     "options": [
       { id:"0", "next" : 999, "prev" : "nil", "options": {
-        "unit": "m2",
-        "range": {
-          "from": 200,
-          "to": 2500
-        },
+        "default": "",
         "text":"Postleitzahl",
-        "icon": "property-square.svg"
+        "description": "Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können",
+        "icon": "map.png"
       }
     }
     ]
@@ -252,7 +264,7 @@ export default {
     "id": 1000,
     "type": "confirmation-step",
     "description":"send data",
-    "title": "Anfrage erfolgreich gesendet",
+    "title": "Um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.",
     "options": [
     ]
   }

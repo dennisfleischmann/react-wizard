@@ -13,7 +13,7 @@ class WizardCardsStep extends Component {
     return (
       <div className="container">
         <div className="row">
-          <button onClick={onPrevious}>Back</button>
+          {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Back</button> }
         </div>
         < div className="row">
           <div className="card-group">

@@ -13,10 +13,10 @@ class WizardSliderStep extends Component {
     }
   }
 
-    updateInputValue(event) {
-      this.setState({
-        inputValue: event.target.value
-      });
+  updateInputValue(event) {
+    this.setState({
+      inputValue: event.target.value
+    });
   }
 
   render() {
@@ -26,7 +26,7 @@ class WizardSliderStep extends Component {
     return (
       <div className="container">
         <div className="row">
-          <button onClick={() => this.props.onPrevious()}>Back</button>
+            {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Back</button> }
         </div>
         <div className="row">
           <div className="col">

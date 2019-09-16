@@ -62,8 +62,11 @@ class Wizard extends Component {
     const currentStep = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
     
     var StepComponent = this.props.customComponents[currentStep.type];
+    
+    const isFirstStep = this.state.path.length === 1
     return (
       <StepComponent 
+        isFirstStep={isFirstStep}
         step={currentStep}
         onNext={this.handleNext}
         onPrevious={this.handlePrevious}
