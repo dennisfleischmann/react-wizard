@@ -72,7 +72,7 @@ export default {
   {
     "id":"5",
     "type": "confirmation-step",
-    "description":"send data",
+    "description":"show confirmation",
     "title": "Anfrage erfolgreich gesendet",
     "options": [
     ]

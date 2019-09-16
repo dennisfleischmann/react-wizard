@@ -12,7 +12,7 @@ class WizardCard extends Component {
       <div className="card" style={{width: '18rem'}}>
         <img src={'svg/'+this.props.icon} className="card-img-top" alt={this.props.description}/>
         <div className="card-body text-center">
-          <a onClick={this.props.onNext} className="stretched-link">{this.props.title}</a>
+          <button onClick={this.props.onNext} className="stretched-link">{this.props.title}</button>
         </div>
       </div>
     );

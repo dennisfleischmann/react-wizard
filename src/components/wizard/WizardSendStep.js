@@ -48,7 +48,7 @@ class WizardSendStep extends Component {
         </div>
         <div className="row">
           <div className="col">
-          <button onClick={() => onSubmit(this.state, nextStep)}>Bewertung erhalten</button>
+          <button onClick={() => onSubmit(this.state, nextStep)}>{step.title}</button>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ class WizardCardsStep extends Component {
           {
             step.options.map(item => (
               <WizardCard
-                onNext={() => onNext(item, item.value)}
+                onNext={(event) => { event.preventDefault(); onNext(item, item.value)}}
                 title={item.options.text}
                 icon={item.options.icon}
               />))
