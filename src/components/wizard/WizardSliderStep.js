@@ -9,7 +9,7 @@ class WizardSliderStep extends Component {
     this.updateInputValue = this.updateInputValue.bind(this);
 
     this.state = {
-      inputValue: 50
+      inputValue: props.step.options[0].options.default
     }
   }
 

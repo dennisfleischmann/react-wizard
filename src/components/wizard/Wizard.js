@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 class Wizard extends Component {
 
-
   constructor(props) {
     super(props);
 
@@ -19,14 +18,16 @@ class Wizard extends Component {
     };
   }
 
-  handleNext(selection, value){
+  handleNext(selection, value) {
 
+    const stepConfig = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
+    
     this.setState({
       currentStep: selection.next,
       path:  [...this.state.path, selection.next],
       data: {
         ...this.state.data,
-        [`${this.props.config.steps[this.state.currentStep].fieldName}`]: value
+        [`${stepConfig.fieldName}`]: value
       }
     })
   }
@@ -55,22 +56,20 @@ class Wizard extends Component {
     })
 
     console.log(this.state.data, contact);
-
   }
 
   render() {
-
-    const currentStep = this.props.config.steps[this.state.currentStep];
-
-      var StepComponent = this.props.customComponents[currentStep.type];
-      return (
-        <StepComponent 
-          step={currentStep}
-          onNext={this.handleNext}
-          onPrevious={this.handlePrevious}
-          onSubmit={this.handleSubmit}
-        />
-      );
+    const currentStep = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
+    
+    var StepComponent = this.props.customComponents[currentStep.type];
+    return (
+      <StepComponent 
+        step={currentStep}
+        onNext={this.handleNext}
+        onPrevious={this.handlePrevious}
+        onSubmit={this.handleSubmit}
+      />
+    );
   }
 }
 

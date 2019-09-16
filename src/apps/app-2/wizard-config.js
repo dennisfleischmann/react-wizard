@@ -4,7 +4,7 @@ export default {
   },
   steps: [
   {
-    "id":"0",
+    "id":0,
     "type": "cards-step",
     "description":"house select",
     "title": "Welche Immobilie möchten Sie bewerten?",
@@ -17,7 +17,7 @@ export default {
     ]
   },
   {
-    "id":"1",
+    "id":1,
     "type": "slider-step",
     "description":"property size",
     "title": "Welche Fläche hat das Grundstück?",
@@ -36,7 +36,7 @@ export default {
     ]
   },
   {
-    "id":"2",
+    "id":2,
     "type": "cards-step",
     "description":"house select",
     "title": "Um was für einen Grundstückstyp handelt es sich?",
@@ -49,7 +49,7 @@ export default {
     ]
   },
   {
-    "id":"3",
+    "id":3,
     "type": "cards-step",
     "description":"marketingType",
     "title": "Wofür benötigen Sie den Immobilienwert?",
@@ -61,7 +61,7 @@ export default {
     ]
   },
   {
-    "id":"4",
+    "id":4,
     "type": "send-step",
     "description":"send data",
     "title": "send data",
@@ -70,7 +70,7 @@ export default {
     ]
   },
   {
-    "id":"5",
+    "id":5,
     "type": "confirmation-step",
     "description":"show confirmation",
     "title": "Anfrage erfolgreich gesendet",
