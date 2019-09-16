@@ -10,11 +10,11 @@ export default {
     "title": "Welche Immobilie möchten Sie bewerten?",
     "fieldName": "houseType",
     "options": [
-      {  id:"0", value:"Haus", "next" : 1, "prev" : -1, "options": {"icon":"other.svg", "text":"Haus", "size":"s"}},
-      {  id:"1", value:"Wohnung", "next" : 100, "prev" : -1, "options": {"icon":"other.svg", "text":"Wohnung", "size":"s"}},
-      {  id:"2", value:"Gewerbe", "next" : 200, "prev" : -1, "options": {"icon":"other.svg", "text":"Gewerbe", "size":"s"}},
-      {  id:"2", value:"Grundstück", "next" : 300, "prev" : -1, "options": {"icon":"other.svg", "text":"Grundstück", "size":"s"}},
-      {  id:"3", value:"Sonderimmobilien", "next" : 400, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonderimmobilien", "size":"s"}}
+      {  id:"0", value:"Haus", "next" : 1, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Haus", "size":"s"}},
+      {  id:"1", value:"Wohnung", "next" : 100, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohnung", "size":"s"}},
+      {  id:"2", value:"Gewerbe", "next" : 200, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gewerbe", "size":"s"}},
+      {  id:"2", value:"Grundstück", "next" : 300, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Grundstück", "size":"s"}},
+      {  id:"3", value:"Sonderimmobilien", "next" : 400, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonderimmobilien", "size":"s"}}
     ]
   },
   {
@@ -24,12 +24,12 @@ export default {
     "title": "Art des Gebäudes",
     "fieldName": "propertyType",
     "options": [
-      {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Einfamilienhaus", "size":"s"}},
-      {  id:"1", value:"Reihenendhaus", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Reihenendhaus", "size":"s"}},
-      {  id:"2", value:"Reihenmittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Reihenmittelhaus", "size":"s"}},
-      {  id:"2", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Doppelhaushälfte", "size":"s"}},
-      {  id:"3", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Mehrfamilienhaus", "size":"s"}},
-      {  id:"3", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"other.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
+      {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Einfamilienhaus", "size":"s"}},
+      {  id:"1", value:"Reihenendhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenendhaus", "size":"s"}},
+      {  id:"2", value:"Reihenmittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenmittelhaus", "size":"s"}},
+      {  id:"2", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Doppelhaushälfte", "size":"s"}},
+      {  id:"3", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Mehrfamilienhaus", "size":"s"}},
+      {  id:"3", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
     ]
   },
   {
@@ -39,13 +39,13 @@ export default {
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Erbe", "size":"s"}},
-      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Scheidung", "size":"s"}},
-      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Verkauf", "size":"s"}},
-      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
-      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
+      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Scheidung", "size":"s"}},
+      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Verkauf", "size":"s"}},
+      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
@@ -90,13 +90,13 @@ export default {
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Erbe", "size":"s"}},
-      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Scheidung", "size":"s"}},
-      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Verkauf", "size":"s"}},
-      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
-      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
+      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Scheidung", "size":"s"}},
+      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Verkauf", "size":"s"}},
+      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
@@ -126,11 +126,11 @@ export default {
     "title": "Nutzungsart",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Produktion", "size":"s"}},
-      {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Lager/ Logistik", "size":"s"}},
-      {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Büro/ Praxis", "size":"s"}},
-      {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Handel", "size":"s"}},
-      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
+      {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Produktion", "size":"s"}},
+      {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Lager/ Logistik", "size":"s"}},
+      {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Büro/ Praxis", "size":"s"}},
+      {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Handel", "size":"s"}},
+      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
   },
   {
@@ -140,13 +140,13 @@ export default {
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Erbe", "size":"s"}},
-      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Scheidung", "size":"s"}},
-      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Verkauf", "size":"s"}},
-      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
-      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
+      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Scheidung", "size":"s"}},
+      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Verkauf", "size":"s"}},
+      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
@@ -176,13 +176,13 @@ export default {
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Erbe", "size":"s"}},
-      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Scheidung", "size":"s"}},
-      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Verkauf", "size":"s"}},
-      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
-      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
+      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Scheidung", "size":"s"}},
+      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Verkauf", "size":"s"}},
+      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
@@ -212,11 +212,11 @@ export default {
     "title": "Nutzungsart",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Hotel", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Hotel", "size":"s"}},
-      {  id:"1", value:"Pflegeheim", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Pflegeheim", "size":"s"}},
-      {  id:"2", value:"Krankenhaus", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Krankenhaus", "size":"s"}},
-      {  id:"3", value:"Gastronomie", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Gastronomie", "size":"s"}},
-      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
+      {  id:"0", value:"Hotel", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Hotel", "size":"s"}},
+      {  id:"1", value:"Pflegeheim", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Pflegeheim", "size":"s"}},
+      {  id:"2", value:"Krankenhaus", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Krankenhaus", "size":"s"}},
+      {  id:"3", value:"Gastronomie", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gastronomie", "size":"s"}},
+      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
   },
   {
@@ -226,13 +226,13 @@ export default {
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Erbe", "size":"s"}},
-      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Scheidung", "size":"s"}},
-      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Verkauf", "size":"s"}},
-      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Finanzamt", "size":"s"}},
-      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
+      {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Scheidung", "size":"s"}},
+      {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Verkauf", "size":"s"}},
+      {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
