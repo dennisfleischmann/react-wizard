@@ -17,9 +17,6 @@ class App extends Component {
     'confirmation-step': WizardConfirmationStep,
   };
 
-  constructor(props) {
-    super(props);
-  }
   render() {
     return ( 
       <Wizard config = { config } customComponents={this.components} />

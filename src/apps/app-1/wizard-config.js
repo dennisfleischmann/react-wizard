@@ -10,11 +10,11 @@ export default {
     "title": "Welche Immobilie möchten Sie bewerten?",
     "fieldName": "houseType",
     "options": [
-      {  id:"0", value:"Haus", "next" : 1, "prev" : -1, "options": {"icon":"house.svg", "text":"Haus", "size":"s"}},
-      {  id:"1", value:"Wohnung", "next" : 100, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohnung", "size":"s"}},
-      {  id:"2", value:"Gewerbe", "next" : 200, "prev" : -1, "options": {"icon":"commercial.svg", "text":"Gewerbe", "size":"s"}},
-      {  id:"2", value:"Grundstück", "next" : 300, "prev" : -1, "options": {"icon":"property1.svg", "text":"Grundstück", "size":"s"}},
-      {  id:"3", value:"Sonderimmobilien", "next" : 400, "prev" : -1, "options": {"icon":"special.svg", "text":"Sonderimmobilien", "size":"s"}}
+      {  id:"0", value:"Haus", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"house.svg", "text":"Haus", "size":"s"}},
+      {  id:"1", value:"Wohnung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"apartment.svg", "text":"Wohnung", "size":"s"}},
+      {  id:"2", value:"Gewerbe", "next" : 200, "stepRange":{"from": 200, "to": 299}, "options": {"icon":"commercial.svg", "text":"Gewerbe", "size":"s"}},
+      {  id:"3", value:"Grundstück", "next" : 300, "stepRange":{"from": 300, "to": 399}, "options": {"icon":"property1.svg", "text":"Grundstück", "size":"s"}},
+      {  id:"4", value:"Sonderimmobilien", "next" : 400, "stepRange":{"from": 400, "to": 499}, "options": {"icon":"special.svg", "text":"Sonderimmobilien", "size":"s"}}
     ]
   },
   {
@@ -27,9 +27,9 @@ export default {
       {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Einfamilienhaus", "size":"s"}},
       {  id:"1", value:"Reihenendhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenendhaus", "size":"s"}},
       {  id:"2", value:"Reihenmittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenmittelhaus", "size":"s"}},
-      {  id:"2", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Doppelhaushälfte", "size":"s"}},
-      {  id:"3", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Mehrfamilienhaus", "size":"s"}},
-      {  id:"3", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
+      {  id:"3", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Doppelhaushälfte", "size":"s"}},
+      {  id:"4", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Mehrfamilienhaus", "size":"s"}},
+      {  id:"5", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
     ]
   },
   {
@@ -67,7 +67,7 @@ export default {
     "id": 100,
     "type": "slider-step",
     "description":"Apartment Count",
-    "title": "Anzahl der Wohneinheiten",
+    "title": "Wie viele Zimmer hat die Wohnung?(ohne Bad und Küche)",
     "fieldName": "apartmentAmount",
     "options": [
       { id:"0", "next" : 101, "prev" : "nil", "options": {
@@ -239,8 +239,9 @@ export default {
     "id": 998,
     "type": "map-locator-step",
     "description":"propertyLocation",
+    "isSharedStep":true,
     "title": "Ort",
-    "fieldName": "propertySize",
+    "fieldName": "zip",
     "options": [
       { id:"0", "next" : 999, "prev" : "nil", "options": {
         "default": "",
@@ -255,6 +256,7 @@ export default {
     "id": 999,
     "type": "send-step",
     "description":"send data",
+    "isSharedStep":true,
     "title": "send data",
     "options": [
       {  id:"0", "next" : 1000},
@@ -264,6 +266,7 @@ export default {
     "id": 1000,
     "type": "confirmation-step",
     "description":"send data",
+    "isSharedStep":true,
     "title": "Um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.",
     "options": [
     ]

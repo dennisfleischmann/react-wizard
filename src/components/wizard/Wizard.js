@@ -12,7 +12,6 @@ class Wizard extends Component {
 
     this.state = {
       currentStep: 0,
-      previousStep: -1,
       path: [0],
       data: {}
     };
@@ -58,20 +57,43 @@ class Wizard extends Component {
     console.log(this.state.data, contact);
   }
 
+  renderProgressBar(currentStep){
+
+    if(this.state.path.length <= 1) {
+      return (<div>Start
+        </div>);
+    }
+
+    const startStep = this.state.path[1];
+
+    const choosenPath = this.props.config.steps[0].options.find(option => option.stepRange.from <= startStep && option.stepRange.to >= startStep);
+
+    const totalStepsPath =  _.filter(this.props.config.steps, step => step.id >= choosenPath.stepRange.from && step.id <= choosenPath.stepRange.to);
+
+    const totalSharedSteps = _.filter(this.props.config.steps, step => step.isSharedStep);
+     
+    return (
+      <div>{`(${this.state.path.length}/ ${totalStepsPath.length+totalSharedSteps.length}) for progressbar`}</div>
+    )
+  }
+
   render() {
     const currentStep = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
     
-    var StepComponent = this.props.customComponents[currentStep.type];
+    const StepComponent = this.props.customComponents[currentStep.type];
     
     const isFirstStep = this.state.path.length === 1
     return (
-      <StepComponent 
-        isFirstStep={isFirstStep}
-        step={currentStep}
-        onNext={this.handleNext}
-        onPrevious={this.handlePrevious}
-        onSubmit={this.handleSubmit}
-      />
+      <React.Fragment>
+        {this.renderProgressBar(currentStep)}
+        <StepComponent 
+          isFirstStep={isFirstStep}
+          step={currentStep}
+          onNext={this.handleNext}
+          onPrevious={this.handlePrevious}
+          onSubmit={this.handleSubmit}
+        />
+      </React.Fragment>
     );
   }
 }

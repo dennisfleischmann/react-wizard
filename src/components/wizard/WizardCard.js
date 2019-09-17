@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 class WizardCard extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
 
     return (

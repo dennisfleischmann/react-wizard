@@ -23,9 +23,6 @@ class App extends Component {
     'map-locator-step': WizardMapLocator,
   };
 
-  constructor(props) {
-    super(props);
-  }
   render() {
     return ( 
       <Wizard config = { config } customComponents={this.components} />

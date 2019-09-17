@@ -25,6 +25,7 @@ class WizardSliderStep extends Component {
 
     return (
       <div className="container">
+        {step.title}
         <div className="row">
             {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Back</button> }
         </div>
