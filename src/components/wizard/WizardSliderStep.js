@@ -30,6 +30,7 @@ class WizardSliderStep extends Component {
         </div>
         <div className="row">
           <div className="col">
+            {step.options[0].options.text}
             <Slider
               aria-label="custom thumb label"
               defaultValue={20}
@@ -41,7 +42,7 @@ class WizardSliderStep extends Component {
         </div>
         <div className="row">
           <div className="col">
-            {step.options[0].options.text}  <input value={this.state.inputValue} onChange={this.updateInputValue}/>
+            {step.options[0].options.unit}  <input value={this.state.inputValue} onChange={this.updateInputValue}/>
           </div>
           <div className="col">
             <button onClick={() => this.props.onNext(step.options[0], this.state.inputValue)}>Weiter</button>

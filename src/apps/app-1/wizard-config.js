@@ -10,11 +10,11 @@ export default {
     "title": "Welche Immobilie möchten Sie bewerten?",
     "fieldName": "houseType",
     "options": [
-      {  id:"0", value:"Haus", "next" : 1, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Haus", "size":"s"}},
+      {  id:"0", value:"Haus", "next" : 1, "prev" : -1, "options": {"icon":"house.svg", "text":"Haus", "size":"s"}},
       {  id:"1", value:"Wohnung", "next" : 100, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohnung", "size":"s"}},
-      {  id:"2", value:"Gewerbe", "next" : 200, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gewerbe", "size":"s"}},
-      {  id:"2", value:"Grundstück", "next" : 300, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Grundstück", "size":"s"}},
-      {  id:"3", value:"Sonderimmobilien", "next" : 400, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonderimmobilien", "size":"s"}}
+      {  id:"2", value:"Gewerbe", "next" : 200, "prev" : -1, "options": {"icon":"commercial.svg", "text":"Gewerbe", "size":"s"}},
+      {  id:"2", value:"Grundstück", "next" : 300, "prev" : -1, "options": {"icon":"property1.svg", "text":"Grundstück", "size":"s"}},
+      {  id:"3", value:"Sonderimmobilien", "next" : 400, "prev" : -1, "options": {"icon":"special.svg", "text":"Sonderimmobilien", "size":"s"}}
     ]
   },
   {
@@ -157,14 +157,14 @@ export default {
     "fieldName": "propertySize",
     "options": [
       { id:"0", "next" : 301, "prev" : "nil", "options": {
-        "unit": "Anzahl",
+        "unit": "Alternativ eintippen",
         "range": {
           "from": 500,
           "to": 1000
         },
         "default": 500,
-        "text":"Grundstücksgröße",
-        "icon": "property-square.svg"
+        "text":"Welche Fläche hat das Grundstück?",
+        "icon": "m2-area-icon.svg"
       }
     }
     ]
