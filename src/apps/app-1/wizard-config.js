@@ -215,7 +215,7 @@ export default {
     "options": [
       {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"hotel.svg", "text":"Hotel", "size":"s"}},
       {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"residential_care.svg", "text":"Pflegeheim", "size":"s"}},
-      {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"hospital_1.svg", "text":"Krankenhaus", "size":"s"}},
+      {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"hospital_2.svg", "text":"Krankenhaus", "size":"s"}},
       {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"gastronomy.svg", "text":"Gastronomie", "size":"s"}},
       {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
