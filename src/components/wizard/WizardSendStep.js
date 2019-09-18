@@ -21,6 +21,7 @@ class WizardSendStep extends Component {
 
     return (
       <div className="container">
+        {this.props.step.title}
         <div className="row">
           <div className="col">
             Herr <input name="salutation" value="Herr" type="radio" onChange={ event =>  this.setState({salutation: event.currentTarget.value })}/>

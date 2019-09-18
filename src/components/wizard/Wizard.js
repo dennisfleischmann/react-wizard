@@ -76,18 +76,16 @@ class Wizard extends Component {
         this.props.config.steps, step => step.id >= choosenPath.stepRange.from && step.id <= choosenPath.stepRange.to && !step.isSpecialSelection
       );
 
-      // debugger;
     const totalSharedSteps = _.filter(this.props.config.steps, step => step.isSharedStep);
 
-      const stepsPassedWithoutSpecialSelection = 
-        this.state.path.filter(id => this.props.config.steps.find(step => step.id === id && !step.isSpecialSelection))
-       // debugger;
+    const stepsPassedWithoutSpecialSelection = 
+      this.state.path.filter(id => this.props.config.steps.find(step => step.id === id && !step.isSpecialSelection))
 
-    // const countSpecialSelections = _.filter(this.props.config.steps, step => step.isSpecialSelection);
-     
+      const percentFinished = (stepsPassedWithoutSpecialSelection.length/(totalStepsPath.length+totalSharedSteps.length))*100;
+
     return (
       <div>
-        {`(${stepsPassedWithoutSpecialSelection.length }/ ${totalStepsPath.length+totalSharedSteps.length}) ${totalStepsPath.length} ${totalSharedSteps.length}for progressbar`}
+        <strong>{`${percentFinished} %`}</strong>
       </div>
     )
   }
@@ -101,7 +99,7 @@ class Wizard extends Component {
     return (
       <React.Fragment>
         {this.renderProgressBar(currentStep)}
-        {currentStep.title}
+
         <StepComponent 
           isFirstStep={isFirstStep}
           step={currentStep}

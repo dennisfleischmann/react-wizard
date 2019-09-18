@@ -4,11 +4,9 @@ class WizardConfirmationStep extends Component {
 
   render() {
 
-    const { step } = this.props;
-
     return (
       <div>
-        { step.title }yay
+       {this.props.step.title}
       </div>
     );
   }
