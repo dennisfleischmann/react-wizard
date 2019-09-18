@@ -24,12 +24,12 @@ export default {
     "title": "Art des Gebäudes",
     "fieldName": "propertyType",
     "options": [
-      {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Einfamilienhaus", "size":"s"}},
-      {  id:"1", value:"Reihenendhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenendhaus", "size":"s"}},
-      {  id:"2", value:"Reihenmittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Reihenmittelhaus", "size":"s"}},
-      {  id:"3", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Doppelhaushälfte", "size":"s"}},
-      {  id:"4", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Mehrfamilienhaus", "size":"s"}},
-      {  id:"5", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
+      {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"one_family_house.svg", "text":"Einfamilienhaus", "size":"s"}},
+      {  id:"1", value:"Reihenendhaus", "next" : 2, "prev" : -1, "options": {"icon":"row_house.svg", "text":"Reihenendhaus", "size":"s"}},
+      {  id:"2", value:"Reihenmittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"row_house_middle.svg", "text":"Reihenmittelhaus", "size":"s"}},
+      {  id:"3", value:"Doppelhaushälfte", "next" : 2, "prev" : -1, "options": {"icon":"semi_detached_house.svg", "text":"Doppelhaushälfte", "size":"s"}},
+      {  id:"4", value:"Mehrfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"multifamily_house.svg", "text":"Mehrfamilienhaus", "size":"s"}},
+      {  id:"5", value:"Wohn- & Geschäftshaus", "next" : 2, "prev" : -1, "options": {"icon":"live_commercial.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
     ]
   },
   {
@@ -45,7 +45,7 @@ export default {
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Kauf", "size":"s"}},
       {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Finanzamt", "size":"s"}},
       {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gericht", "size":"s"}},
-      {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges", "size":"s"}},
+      {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
     ]
   },
   {
@@ -59,7 +59,7 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
         "text":"",
-        "icon": "property-square.svg"
+        "icon": "other.svg"
       }
     }
     ]
@@ -79,7 +79,7 @@ export default {
         },
         "default": 1,
         "text":"Anzahl der Wohnungen",
-        "icon": "property-square.svg"
+        "icon": "flat_units.svg"
       }
     }
     ]
@@ -115,7 +115,7 @@ export default {
         },
         "default": 500,
         "text":"Nutzfläche",
-        "icon": "property-square.svg"
+        "icon": "floorspace.svg"
       }
     }
     ]
@@ -127,11 +127,11 @@ export default {
     "title": "Bitte wählen Sie die Nutzungsart aus",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Produktion", "size":"s"}},
-      {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Lager/ Logistik", "size":"s"}},
-      {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Büro/ Praxis", "size":"s"}},
-      {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Handel", "size":"s"}},
-      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
+      {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"s"}},
+      {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
+      {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
+      {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"s"}},
+      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
   },
   {
@@ -201,7 +201,7 @@ export default {
         },
         "default": 500,
         "text":"Nutzfläche",
-        "icon": "property-square.svg"
+        "icon": "floorspace.svg"
       }
     }
     ]
@@ -213,11 +213,11 @@ export default {
     "title": "Um welche Nutzungsart handelt es sich?",
     "fieldName": "specialPropertyType",
     "options": [
-      {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Hotel", "size":"s"}},
-      {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Pflegeheim", "size":"s"}},
-      {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Krankenhaus", "size":"s"}},
-      {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gastronomie", "size":"s"}},
-      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
+      {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"hotel.svg", "text":"Hotel", "size":"s"}},
+      {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"residential_care.svg", "text":"Pflegeheim", "size":"s"}},
+      {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"hospital_1.svg", "text":"Krankenhaus", "size":"s"}},
+      {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"gastronomy.svg", "text":"Gastronomie", "size":"s"}},
+      {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
   },
 
@@ -232,7 +232,7 @@ export default {
       { id:"0", "next" : 403, "prev" : "nil", "options": {
         "default": '',
         "text":"",
-        "icon": "property-square.svg"
+        "icon": "other.svg"
       }
     }
     ]
