@@ -7,15 +7,24 @@ class WizardSliderStep extends Component {
     super(props);
 
     this.updateInputValue = this.updateInputValue.bind(this);
+    this.updateSliderValue = this.updateSliderValue.bind(this);
+
+    const value = props.data[props.step.fieldName];
 
     this.state = {
-      inputValue: props.step.options[0].options.default
+      inputValue: value || this.props.step.options[0].options.range.min
     }
   }
 
   updateInputValue(event) {
     this.setState({
-      inputValue: event.target.value
+      inputValue: parseInt(event.target.value) || this.props.step.options[0].options.range.min
+    });
+  }
+
+  updateSliderValue(event,value) {
+    this.setState({
+      inputValue: value
     });
   }
 
@@ -25,16 +34,19 @@ class WizardSliderStep extends Component {
 
     return (
       <div className="container">
-        {step.title}
         <div className="row">
-            {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Back</button> }
+            {!this.props.isFirstStep && <button onClick={_ => this.props.onPrevious()}>Back</button> }
         </div>
         <div className="row">
           <div className="col">
             {step.options[0].options.text}
             <Slider
               aria-label="custom thumb label"
-              defaultValue={20}
+              max={this.props.step.options[0].options.range.max}
+              min={this.props.step.options[0].options.range.min}
+              name={this.props.step.options[0].options.name}
+              onChange={this.updateSliderValue}
+              value={this.state.inputValue}
             />
           </div>      
           <div className="col">
@@ -46,7 +58,7 @@ class WizardSliderStep extends Component {
             {step.options[0].options.unit}  <input value={this.state.inputValue} onChange={this.updateInputValue}/>
           </div>
           <div className="col">
-            <button onClick={() => this.props.onNext(step.options[0], this.state.inputValue)}>Weiter</button>
+            <button onClick={_ => this.props.onNext(step.options[0], this.state.inputValue)}>Weiter</button>
           </div>
         </div>
       </div>

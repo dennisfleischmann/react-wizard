@@ -26,7 +26,7 @@ class WizardInputStep extends Component {
     return (
       <div className="container">
         <div className="row">
-          <button onClick={() => this.props.onPrevious()}>Back</button>
+        {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Zurück</button> }
       </div>
       <div className="row">
         <div className="col">

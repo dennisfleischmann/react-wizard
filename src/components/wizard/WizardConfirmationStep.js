@@ -8,7 +8,7 @@ class WizardConfirmationStep extends Component {
 
     return (
       <div>
-        { step.title }
+        { step.title }yay
       </div>
     );
   }

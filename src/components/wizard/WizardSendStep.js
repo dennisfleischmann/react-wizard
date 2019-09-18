@@ -12,6 +12,7 @@ class WizardSendStep extends Component {
       phone: '',
     }
   }
+
   render() {
 
     const { onSubmit, step } = this.props;
@@ -22,33 +23,33 @@ class WizardSendStep extends Component {
       <div className="container">
         <div className="row">
           <div className="col">
-            Herr <input name="salutation" value="Herr" type="radio" onChange={ (event) =>  this.setState({salutation: event.currentTarget.value })}/>
-            Frau <input name="salutation" value="Frau" type="radio" onChange={ (event) =>  this.setState({salutation: event.currentTarget.value })}/>
+            Herr <input name="salutation" value="Herr" type="radio" onChange={ event =>  this.setState({salutation: event.currentTarget.value })}/>
+            Frau <input name="salutation" value="Frau" type="radio" onChange={ event =>  this.setState({salutation: event.currentTarget.value })}/>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            Vorname <input onChange={ (event) =>  this.setState({name: event.currentTarget.value })} />
+            Vorname <input onChange={ event =>  this.setState({name: event.currentTarget.value })} />
           </div>
         </div>
         <div className="row">
           <div className="col">
-            Nachname <input onChange={ (event) =>  this.setState({familyName: event.currentTarget.value })} />
+            Nachname <input onChange={ event =>  this.setState({familyName: event.currentTarget.value })} />
           </div>
         </div>
         <div className="row">
           <div className="col">
-            E-Mail <input onChange={ (event) =>  this.setState({email: event.currentTarget.value })} />
+            E-Mail <input onChange={ event =>  this.setState({email: event.currentTarget.value })} />
           </div>
         </div>
         <div className="row">
           <div className="col">
-            Telefonnummer <input onChange={ (event) =>  this.setState({phone: event.currentTarget.value })} />
+            Telefonnummer <input onChange={ event =>  this.setState({phone: event.currentTarget.value })} />
           </div>
         </div>
         <div className="row">
           <div className="col">
-          <button onClick={() => onSubmit(this.state, nextStep)}>{step.title}</button>
+          <button onClick={_ => onSubmit(this.state, nextStep)}>{step.options[0].text}</button>
           </div>
         </div>
       </div>

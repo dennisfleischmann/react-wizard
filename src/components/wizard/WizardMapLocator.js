@@ -25,7 +25,7 @@ class WizardMapLocator extends Component {
     return (
       <div className="container">
         <div className="row">
-          {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Back</button> }
+          {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Zurück</button> }
       </div>
       <div className="row">
       <div className="col">
@@ -35,11 +35,11 @@ class WizardMapLocator extends Component {
       <div className="row">
         <div className="col">
           {step.options[0].options.text} <br />
-          <input value={this.state.inputValue} onChange={this.updateInputValue}/> <br/>
+          <input value={this.state.inputValue || ''} onChange={this.updateInputValue}/> <br/>
           {step.options[0].options.description} <br />
         </div>
         <div className="col">
-            <button onClick={() => this.props.onNext(step.options[0], this.state.inputValue)}>Weiter</button>
+            <button onClick={_ => this.props.onNext(step.options[0], this.state.inputValue)}>Weiter</button>
           </div>
       </div>
     </div>

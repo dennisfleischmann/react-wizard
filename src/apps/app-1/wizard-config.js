@@ -20,7 +20,7 @@ export default {
   {
     "id": 1,
     "type": "cards-step",
-    "description":"Art des Gebäudes",
+    "description":"Bitte wählen Sie die Art des Gebäudes aus",
     "title": "Art des Gebäudes",
     "fieldName": "propertyType",
     "options": [
@@ -35,7 +35,7 @@ export default {
   {
     "id": 2,
     "type": "cards-step",
-    "description":"marketingType",
+    "description":"contractReason",
     "title": "Grund für die Bewertung",
     "fieldName": "contractReason",
     "options": [
@@ -53,11 +53,12 @@ export default {
     "type": "input-step",
     "description":"differentReason",
     "title": "Anderer Grund",
+    "isSpecialSelection": true,
     "fieldName": "differentReason",
     "options": [
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
-        "text":"Grund für die Bewertung?",
+        "text":"",
         "icon": "property-square.svg"
       }
     }
@@ -67,14 +68,14 @@ export default {
     "id": 100,
     "type": "slider-step",
     "description":"Apartment Count",
-    "title": "Wie viele Zimmer hat die Wohnung?(ohne Bad und Küche)",
+    "title": "Wählen Sie die Anzahl der Wohnung",
     "fieldName": "apartmentAmount",
     "options": [
       { id:"0", "next" : 101, "prev" : "nil", "options": {
         "unit": "Anzahl",
         "range": {
-          "from": 1,
-          "to": 10
+          "min": 1,
+          "max": 100
         },
         "default": 1,
         "text":"Anzahl der Wohnungen",
@@ -87,7 +88,7 @@ export default {
     "id": 101,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Grund für die Bewertung",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
     "fieldName": "contractReason",
     "options": [
       {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
@@ -103,14 +104,14 @@ export default {
     "id": 200,
     "type": "slider-step",
     "description":"Apartment Count",
-    "title": "Nutzfläche",
+    "title": "Wie groß ist die Nutzfläche?",
     "fieldName": "floorSpace",
     "options": [
       { id:"0", "next" : 201, "prev" : "nil", "options": {
         "unit": "m2",
         "range": {
-          "from": 500,
-          "to": 2500
+          "min": 500,
+          "max": 2500
         },
         "default": 500,
         "text":"Nutzfläche",
@@ -123,7 +124,7 @@ export default {
     "id": 201,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Nutzungsart",
+    "title": "Bitte wählen Sie die Nutzungsart aus",
     "fieldName": "contractReason",
     "options": [
       {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Produktion", "size":"s"}},
@@ -137,7 +138,7 @@ export default {
     "id": 202,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Grund für die Bewertung",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
     "fieldName": "contractReason",
     "options": [
       {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
@@ -153,14 +154,14 @@ export default {
     "id": 300,
     "type": "slider-step",
     "description":"propertySize",
-    "title": "Grundstücksgröße",
+    "title": "Um welche Grundstücksgröße handelt es sich?",
     "fieldName": "propertySize",
     "options": [
       { id:"0", "next" : 301, "prev" : "nil", "options": {
         "unit": "Alternativ eintippen",
         "range": {
-          "from": 500,
-          "to": 1000
+          "min": 500,
+          "max": 1000
         },
         "default": 500,
         "text":"Welche Fläche hat das Grundstück?",
@@ -173,7 +174,7 @@ export default {
     "id": 301,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Grund für die Bewertung",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
     "fieldName": "contractReason",
     "options": [
       {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
@@ -189,14 +190,14 @@ export default {
     "id": 400,
     "type": "slider-step",
     "description":"Apartment Count",
-    "title": "Nutzfläche",
+    "title": "Um welche Nutzfläche handelt es sich?",
     "fieldName": "floorSpace",
     "options": [
       { id:"0", "next" : 401, "prev" : "nil", "options": {
         "unit": "m2",
         "range": {
-          "from": 500,
-          "to": 2000
+          "min": 500,
+          "max": 2000
         },
         "default": 500,
         "text":"Nutzfläche",
@@ -209,21 +210,38 @@ export default {
     "id": 401,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Nutzungsart",
-    "fieldName": "contractReason",
+    "title": "Um welche Nutzungsart handelt es sich?",
+    "fieldName": "specialPropertyType",
     "options": [
-      {  id:"0", value:"Hotel", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Hotel", "size":"s"}},
-      {  id:"1", value:"Pflegeheim", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Pflegeheim", "size":"s"}},
-      {  id:"2", value:"Krankenhaus", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Krankenhaus", "size":"s"}},
-      {  id:"3", value:"Gastronomie", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gastronomie", "size":"s"}},
+      {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Hotel", "size":"s"}},
+      {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Pflegeheim", "size":"s"}},
+      {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Krankenhaus", "size":"s"}},
+      {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Gastronomie", "size":"s"}},
       {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
     ]
   },
+
   {
     "id": 402,
+    "type": "input-step",
+    "description":"differentSpecialPropertyType",
+    "title": "Um welche Art Sonderimmobilie handelt es sich?",
+    "fieldName": "differentSpecialPropertyType",
+    "isSpecialSelection":true,
+    "options": [
+      { id:"0", "next" : 403, "prev" : "nil", "options": {
+        "default": '',
+        "text":"",
+        "icon": "property-square.svg"
+      }
+    }
+    ]
+  },
+  {
+    "id": 403,
     "type": "cards-step",
     "description":"marketingType",
-    "title": "Grund für die Bewertung",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
     "fieldName": "contractReason",
     "options": [
       {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"apartment.svg", "text":"Erbe", "size":"s"}},
@@ -240,7 +258,7 @@ export default {
     "type": "map-locator-step",
     "description":"propertyLocation",
     "isSharedStep":true,
-    "title": "Ort",
+    "title": "In welcher Region befindet sich die Immobilie?",
     "fieldName": "zip",
     "options": [
       { id:"0", "next" : 999, "prev" : "nil", "options": {
@@ -256,10 +274,10 @@ export default {
     "id": 999,
     "type": "send-step",
     "description":"send data",
+    "title": "Wer soll ein kostenlose Beratung erhalten?",
     "isSharedStep":true,
-    "title": "send data",
     "options": [
-      {  id:"0", "next" : 1000},
+      {  id:"0", "next" : 1000, text: "Kostenlos beraten lassen"},
     ]
   },
   {
@@ -267,8 +285,6 @@ export default {
     "type": "confirmation-step",
     "description":"send data",
     "isSharedStep":true,
-    "title": "Um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.",
-    "options": [
-    ]
+    "title": "Ein Kundeberater wird Sie in kürze telefonisch kontaktieren."
   }
   ]}
