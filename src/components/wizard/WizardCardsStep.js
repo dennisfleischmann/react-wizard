@@ -8,7 +8,7 @@ class WizardCardsStep extends Component {
     const { step, onNext } = this.props;
 
     return (
-      <div className="container">
+      <div className="wizard-container">
         {this.props.step.title}
         <div className="row">
           {!this.props.isFirstStep && <button onClick={() => this.props.onPrevious()}>Zurück</button> }

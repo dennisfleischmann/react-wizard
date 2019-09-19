@@ -3,21 +3,13 @@ import _ from 'lodash';
 
 class Wizard extends Component {
 
-  constructor(props) {
-    super(props);
+  state = {
+    currentStep: 0,
+    path: [0],
+    data: {}
+  };
 
-    this.handleNext = this.handleNext.bind(this);
-    this.handlePrevious = this.handlePrevious.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-    this.state = {
-      currentStep: 0,
-      path: [0],
-      data: {}
-    };
-  }
-
-  handleNext(selection, value) {
+  handleNext = (selection, value) => {
 
     const stepConfig = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
     
@@ -31,7 +23,7 @@ class Wizard extends Component {
     })
   }
   
-  handlePrevious() {
+  handlePrevious = () => {
     
     if (this.state.path.length >= 1) {
       var clonedArray = JSON.parse(JSON.stringify(this.state.path))
@@ -47,7 +39,7 @@ class Wizard extends Component {
     }
   }
 
-  handleSubmit(contact, nextStep) {
+  handleSubmit = (contact, nextStep) => {
 
     this.setState({
       contact,
