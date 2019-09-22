@@ -2,10 +2,15 @@
   box-shadow: 0 4px 15px rgba(0,0,0,.14);
   background-color: #fafafa;
   width: 770px;
-  margin: auto
+  margin: auto;
+  border: 5px solid #feb901;
+  text-align: center;
+  padding: 2rem 0;
 }
 .card-group {
   display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0;
 }
 .card {
   /* width: 200px; */
@@ -15,7 +20,7 @@
   box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 20px;
   font-size: 16px;
   justify-content: center;
-  width: 100%;
+  width: 130px;
   border: 4px solid #ffffff;
   padding: 4px;
   flex-direction: column;
@@ -26,8 +31,11 @@
 .card button {
   background: none;
   border: none;
+  word-break: break-word;
+  line-height: 20px;
 }
 .card img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  margin: 2rem 0;
 }
