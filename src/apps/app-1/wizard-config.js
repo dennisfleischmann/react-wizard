@@ -145,7 +145,7 @@ export default {
       {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
       {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"sell.svg", "text":"Verkauf", "size":"s"}},
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"s"}},
-      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"financial_office.svg", "text":"Finanzamt", "size":"s"}},
+      {  id:"4", value:"Finanzamt", "next" : 998, "prev" : -1, "options": {"icon":"finance_office.svg", "text":"Finanzamt", "size":"s"}},
       {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"law_court_justice.svg", "text":"Gericht", "size":"s"}},
       {  id:"6", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
     ]
