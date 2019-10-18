@@ -15,5 +15,6 @@ A new wizard is easy to create
    Install
     - Clone the project
     - run npm i
+
   Start
     - npm run start:app1
