@@ -10,10 +10,11 @@ A new wizard is easy to create
   - Component level style sheet
 
 
-  # Usage of Components and styles
+  # Usage of the project
 
-   React-wizard library
-    - Comes with basic components
-    - Style sheet can be replaced or modified
-      - Import of the global styles will happen on application level and not on library level
-    - New custom components can be used
+   Install
+    - Clone the project
+    - run npm i
+
+  Start
+    - npm run start:app1
