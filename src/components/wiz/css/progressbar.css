@@ -1,0 +1,10 @@
+.wui.progress-bar {
+  height: 5px;
+  position: relative;
+  background: #f2932c;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  -webkit-transition: width 0.4s;
+  transition: width 0.8s;
+  margin-top: 14px;
+  border-radius: 50em;
+}
