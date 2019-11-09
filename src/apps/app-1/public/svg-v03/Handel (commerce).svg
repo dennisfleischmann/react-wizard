@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1100" style="enable-background:new 0 0 1400 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#E3E3E2;}
+	.st2{fill:#033153;}
+	.st3{fill:#F2931B;}
+	.st4{fill:#CC710D;}
+</style>
+<rect y="0" class="st0" width="1400" height="1100"/>
+<title>clock</title>
+<g>
+	<polygon class="st1" points="1094.6,816.7 1094.6,259.9 700,259.9 700,816.7 700,821.3 700,840.1 1133,840.1 1133,816.7 	"/>
+	<polygon class="st2" points="305.4,259.9 305.4,816.7 267,816.7 267,840.1 700,840.1 700,823.9 700,816.7 700,259.9 	"/>
+	<rect x="718.8" y="645.9" class="st3" width="308.8" height="170.9"/>
+	<rect x="739" y="665.6" class="st0" width="192.7" height="123.5"/>
+	<rect x="954" y="698.6" class="st4" width="58.8" height="118.2"/>
+	<polygon class="st3" points="1046.3,637.9 700,637.9 718.8,607.5 1027.5,607.5 	"/>
+	<rect x="369.3" y="345.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="555.9" y="345.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="742.5" y="345.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="929.1" y="345.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="369.3" y="486.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="555.9" y="486.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="369.3" y="622.7" class="st0" width="101.7" height="101.7"/>
+	<rect x="555.9" y="622.7" class="st0" width="101.7" height="101.7"/>
+	<rect x="742.5" y="486.4" class="st0" width="101.7" height="101.7"/>
+	<rect x="929.1" y="486.4" class="st0" width="101.7" height="101.7"/>
+	<g>
+		<circle class="st2" cx="828.9" cy="761.2" r="5.8"/>
+		<circle class="st2" cx="861.6" cy="761.2" r="5.8"/>
+		<path class="st2" d="M889,709.6c-0.3-0.4-0.7-0.6-1.2-0.6h-83.5l-3-9.4c-0.2-0.6-0.7-1-1.4-1h-17.1c-0.8,0-1.4,0.6-1.4,1.4
+			s0.6,1.4,1.4,1.4h16l3,9.4l13.1,40.4c0.2,0.6,0.7,1,1.4,1c0,0,0.1,0,0.1,0l60.3-5.7c0.6-0.1,1.1-0.4,1.2-1l11.2-34.7
+			C889.4,710.4,889.3,709.9,889,709.6z M879.6,731.4l-66.9,3.4l-4.9-15.3h75.6L879.6,731.4z M875.6,743.8l-58.2,5.5l-4.4-13.5
+			l66.2-3.4L875.6,743.8z M883.7,718.5h-76.3l-2.2-6.7h80.6L883.7,718.5z"/>
+	</g>
+</g>
+</svg>

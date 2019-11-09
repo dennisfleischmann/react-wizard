@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1100" style="enable-background:new 0 0 1400 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#E3E3E2;}
+	.st2{fill:#033153;}
+	.st3{fill:#F2931B;}
+	.st4{fill:#D1D3D4;}
+	.st5{fill:#032133;}
+</style>
+<rect y="0" class="st0" width="1400" height="1100"/>
+<title>clock</title>
+<g>
+	<rect x="700" y="255.7" class="st1" width="394.6" height="656"/>
+	<polygon class="st2" points="305.4,165 305.4,186.9 378.8,186.9 378.8,255.7 305.4,255.7 305.4,911.7 267,911.7 267,935 700,935 
+		700,917 700,911.7 700,261.4 700,255.7 700,186.9 700,181.1 700,165 	"/>
+	<rect x="700" y="186.9" class="st1" width="321.2" height="68.8"/>
+	<rect x="700" y="165" class="st1" width="394.6" height="21.9"/>
+	<rect x="305.4" y="326.7" class="st3" width="394.6" height="136.2"/>
+	<rect x="378.8" y="366.8" class="st0" width="84.9" height="84.9"/>
+	<rect x="378.8" y="478.2" class="st0" width="84.9" height="84.9"/>
+	<rect x="378.8" y="589.7" class="st0" width="84.9" height="84.9"/>
+	<rect x="378.8" y="701.2" class="st0" width="84.9" height="84.9"/>
+	<rect x="522.5" y="409.2" class="st0" width="99.4" height="42.4"/>
+	<rect x="522.5" y="520.7" class="st0" width="99.4" height="42.4"/>
+	<rect x="522.5" y="632.1" class="st0" width="99.4" height="42.4"/>
+	<rect x="522.5" y="743.6" class="st0" width="99.4" height="42.4"/>
+	
+		<rect x="936.3" y="366.8" transform="matrix(-1 -4.489088e-11 4.489088e-11 -1 1957.4823 818.4152)" class="st0" width="84.9" height="84.9"/>
+	
+		<rect x="936.3" y="478.2" transform="matrix(-1 -4.488022e-11 4.488022e-11 -1 1957.4823 1041.3351)" class="st0" width="84.9" height="84.9"/>
+	
+		<rect x="936.3" y="589.7" transform="matrix(-1 -4.492285e-11 4.492285e-11 -1 1957.4823 1264.255)" class="st0" width="84.9" height="84.9"/>
+	
+		<rect x="936.3" y="701.2" transform="matrix(-1 -4.488022e-11 4.488022e-11 -1 1957.4823 1487.1749)" class="st0" width="84.9" height="84.9"/>
+	
+		<rect x="778" y="409.2" transform="matrix(-1 -4.494461e-11 4.494461e-11 -1 1655.5206 860.8502)" class="st0" width="99.4" height="42.4"/>
+	
+		<rect x="778" y="520.7" transform="matrix(-1 -4.496282e-11 4.496282e-11 -1 1655.5206 1083.77)" class="st0" width="99.4" height="42.4"/>
+	
+		<rect x="778" y="632.1" transform="matrix(-1 -4.485313e-11 4.485313e-11 -1 1655.5206 1306.6899)" class="st0" width="99.4" height="42.4"/>
+	
+		<rect x="778" y="743.6" transform="matrix(-1 -4.507251e-11 4.507251e-11 -1 1655.5206 1529.6097)" class="st0" width="99.4" height="42.4"/>
+	<polygon class="st4" points="378.8,186.9 1021.2,255.7 1021.2,186.9 	"/>
+	<path class="st5" d="M700,221.3c0,0-328-34.4-321.2-34.4c6.8,0,321.2,0,321.2,0V221.3z"/>
+	<rect x="700" y="911.7" class="st1" width="433" height="23.3"/>
+</g>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1100" style="enable-background:new 0 0 1400 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#E3E3E2;}
+	.st2{fill:#033153;}
+	.st3{fill:#032133;}
+	.st4{fill:#F2931B;}
+</style>
+<rect y="0" class="st0" width="1400" height="1100"/>
+<title>clock</title>
+<g>
+	<polygon class="st1" points="1071.5,876.8 1071.5,519.2 1071.5,519.2 1000.3,304.4 731.9,304.4 731.9,199.8 700,199.8 700,317.3 
+		700,317.3 700,519.1 700,519.2 700,876.8 700,876.8 700,900.2 1133,900.2 1133,876.8 	"/>
+	<polygon class="st2" points="700,519.1 700,304.4 700,304.4 700,199.8 668.1,199.8 668.1,304.4 399.7,304.4 328.5,519.2 
+		328.5,519.2 328.5,876.8 267,876.8 267,900.2 700,900.2 700,882.8 700,882.8 700,519.2 	"/>
+	<rect x="564" y="753.4" class="st0" width="72.9" height="72.9"/>
+	<rect x="709.1" y="753.4" class="st0" width="72.9" height="72.9"/>
+	
+		<rect x="939" y="753.4" transform="matrix(-1 -4.487223e-11 4.487223e-11 -1 1950.8601 1579.6041)" class="st0" width="72.9" height="72.9"/>
+	
+		<rect x="793.9" y="753.4" transform="matrix(-1 -4.482205e-11 4.482205e-11 -1 1660.645 1579.6041)" class="st0" width="72.9" height="72.9"/>
+	<rect x="564" y="548.9" class="st0" width="72.9" height="72.9"/>
+	<rect x="709.1" y="548.9" class="st0" width="72.9" height="72.9"/>
+	
+		<rect x="939" y="548.9" transform="matrix(-1 -4.502189e-11 4.502189e-11 -1 1950.8601 1170.595)" class="st0" width="72.9" height="72.9"/>
+	
+		<rect x="793.9" y="548.9" transform="matrix(-1 -4.487223e-11 4.487223e-11 -1 1660.645 1170.595)" class="st0" width="72.9" height="72.9"/>
+	<rect x="564" y="651.4" class="st0" width="127.4" height="72.9"/>
+	<rect x="724.3" y="651.4" class="st0" width="127.4" height="72.9"/>
+	<rect x="884.5" y="651.4" class="st0" width="127.4" height="72.9"/>
+	<rect x="328.5" y="519.1" class="st3" width="185.7" height="357.7"/>
+	<rect x="354" y="753.4" class="st4" width="74.9" height="123.5"/>
+</g>
+</svg>
