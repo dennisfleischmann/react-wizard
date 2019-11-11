@@ -8,8 +8,13 @@ const WCardStep = ({fieldName, options, onNext}) => {
         throw Error("Options must be an array!");
     }
 
+    let css = "";
+    if (options[0].options.size === "m") {
+        css = "medium";
+    }
+
     return (
-        <div className={'wui content-container'}>
+        <div className={`wui content-container ${css}`}>
             {options.map((o, index) =>
                 <WCard
                     key={index}

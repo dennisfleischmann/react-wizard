@@ -2,16 +2,27 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import WHeader from './WHeader'
 import WFooter from './WFooter'
+import WSendStep from "./steps/WSendStep";
 import utils from "./utils";
 
 import './css/index.css';
-import WSendStep from "./steps/WSendStep";
+import WConfirmationStep from "./steps/WConfirmationStep";
 
 const Wizard = ({config: {backend: {api}, steps}}) => {
+    console.log(steps);
     // state
-    const [currentStep, setCurrentStep] = useState(steps[0]);
+    const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([]); // stack contain path stack
+    const [direction, setDirection] = useState(0); // 0 - NA, 1 - Back, 2 - Forward
+
+    let directionTransformX = {};
+    // directionTransformX.transition = "transform 0.4s";
+    // if (direction === 1) {
+    //     directionTransformX.tansform = "transform(0%)"
+    // } else if (direction === 2) {
+    //     directionTransformX.tansform = "transform(100%)";
+    // }
 
     const Component = utils.getStepComponentByType(currentStep.type);
 
@@ -24,7 +35,7 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
         }
     }}/>;
 
-    if (Component === WSendStep) {
+    if (Component === WSendStep || Component === WConfirmationStep) {
         return content;
     }
 
@@ -61,10 +72,15 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
                                  setCurrentStep(stack[lastIndex]);
                                  setStack(stack.filter((_, i) => i !== lastIndex));
                                  setData(data.filter((_, i) => i !== lastIndex));
+                                 setDirection(2);
                              }
                          }}/>
-                <div className={"wui content"}>
-                    {content}
+                <div className={"wui carousel"}>
+                    <div className={"wui carousel-slide"} style={directionTransformX}>
+                        <div className={"wui content"} style={directionTransformX}>
+                            {content}
+                        </div>
+                    </div>
                 </div>
                 <WFooter/>
             </div>

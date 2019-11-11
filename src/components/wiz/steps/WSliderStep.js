@@ -19,7 +19,7 @@ class WSliderStep extends Component {
                 <div className={"wui step-slider paper"}>
                     <div className={"wui slider-measure"}>
                         <WSlider min={min} max={max} step={1} value={value}
-                                 onChange={value => this.setState({value})}
+                                 onChange={d => this.setState({value:d})}
                                  style={{width: "100%"}}/>
                         <div className={"wui slider-measure-input"}>
                             <span className={"wui slider-measure-input-label"}>ABCD</span>

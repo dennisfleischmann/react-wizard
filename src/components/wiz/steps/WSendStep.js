@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 import '../css/send-step.css';
 
 class WSendStep extends Component {
@@ -9,15 +10,29 @@ class WSendStep extends Component {
             lastname: "",
             email: "",
             phone: "",
-            salutation: ""
+            salutation: "Herr",
+            firstnameErr: false,
+            lastnameErr: false,
+            emailErr: false,
+            phoneErr: false,
+            salutationErr: false
         };
         this.onChange = this.onChange.bind(this);
+        this.onBlur = this.onBlur.bind(this);
     }
 
-    onChange = ({target: {name, value}}) => this.setState({[name]: value});
+    onChange = ({target: {name, value}}) => this.setState({[name]: value, [`${name}Err`]: false});
+
+    onBlur = ({target: {name, value}}) => {
+        if (!value) {
+            this.setState({[`${name}Err`]: true});
+        }
+    };
 
     render() {
-        const {firstname, lastname, email, phone, salutation} = this.state;
+        const {onNext, options} = this.props;
+        const {next} = options[0];
+        const {firstname, lastname, email, phone, salutation, firstnameErr, lastnameErr, phoneErr, emailErr} = this.state;
         return (
             <div className={'wui outer'}>
                 <div className={'wui container border'}>
@@ -37,7 +52,7 @@ class WSendStep extends Component {
                                             <span className={"wui ss-form-title"}>
                                                 Wer soll die Immobilienbewertung erhalten?
                                             </span>
-                                            <div className={"wui ss-form-gender-container"}>
+                                            <div className={"wui ss-form-gender-container margin-below"}>
                                                 <div className={"wui ss-styled-radio"}
                                                      onClick={() => this.setState({salutation: "Herr"})}>
                                                     <input type={"radio"} name={"salutation"} value="Herr"
@@ -57,28 +72,83 @@ class WSendStep extends Component {
                                                     Frau
                                                 </div>
                                             </div>
-                                            <div className={"wui ss-styled-input"}>
-                                                <input className={"wui ss-styled-input-input"} placeholder={"Vorname"} onChange={this.onChange} name={"firstname"} value={firstname}/>
-                                                <span className={"wui ss-styled-input-input--invalid"}>Ihre Eingabe ist nicht korrekt</span>
+                                            <div
+                                                className={`wui ss-styled-input margin-below ${firstnameErr && "ss-styled-input-input-invalid"}`}>
+                                                <input className={"wui ss-styled-input-input"} placeholder={"Vorname"}
+                                                       onBlur={this.onBlur}
+                                                       onChange={this.onChange} name={"firstname"} value={firstname}/>
+                                                {firstnameErr &&
+                                                <span className={"wui ss-styled-input-input-err"}>Ihre Eingabe ist nicht korrekt</span>}
                                             </div>
-                                            <div className={"wui ss-styled-input"}>
-                                                <input className={"wui ss-styled-input-input"} placeholder={"Nachname"} onChange={this.onChange} name={"lastname"} value={lastname}/>
-                                                <span className={"wui ss-styled-input-input--invalid"}>Ihre Eingabe ist nicht korrekt</span>
+                                            <div
+                                                className={`wui ss-styled-input margin-below ${lastnameErr && "ss-styled-input-input-invalid"}`}>
+                                                <input className={"wui ss-styled-input-input"} placeholder={"Nachname"}
+                                                       onBlur={this.onBlur}
+                                                       onChange={this.onChange} name={"lastname"} value={lastname}/>
+                                                {lastnameErr &&
+                                                <span className={"wui ss-styled-input-input-err"}>Ihre Eingabe ist nicht korrekt</span>}
                                             </div>
-                                            <div className={"wui ss-styled-input"}>
-                                                <input className={"wui ss-styled-input-input"} type={"email"} placeholder={"E-Mail-Adresse"} onChange={this.onChange} name={"email"} value={email}/>
-                                                <span className={"wui ss-styled-input-input--invalid"}>Ihre Eingabe ist nicht korrekt</span>
+                                            <div
+                                                className={`wui ss-styled-input margin-below ${emailErr && "ss-styled-input-input-invalid"}`}>
+                                                <input className={"wui ss-styled-input-input"} type={"email"}
+                                                       onBlur={this.onBlur}
+                                                       placeholder={"E-Mail-Adresse"} onChange={this.onChange}
+                                                       name={"email"} value={email}/>
+                                                {emailErr &&
+                                                <span className={"wui ss-styled-input-input-err"}>Ihre Eingabe ist nicht korrekt</span>}
                                             </div>
-                                            <div className={"wui ss-styled-input"}>
-                                                <input className={"wui ss-styled-input-input"} type={"tel"} placeholder={"Telefonnummer"} onChange={this.onChange} name={"phone"} value={phone}/>
-                                                <span className={"wui ss-styled-input-input--invalid"}>Ihre Eingabe ist nicht korrekt</span>
+                                            <div
+                                                className={`wui ss-styled-input margin-below ${phoneErr && "ss-styled-input-input-invalid"}`}>
+                                                <input className={"wui ss-styled-input-input"} type={"tel"}
+                                                       onBlur={this.onBlur}
+                                                       placeholder={"Telefonnummer"} onChange={this.onChange}
+                                                       name={"phone"} value={phone}/>
+                                                {phoneErr &&
+                                                <span className={"wui ss-styled-input-input-err"}>Ihre Eingabe ist nicht korrekt</span>}
                                             </div>
                                         </div>
-                                        <div className={"wui ss-contact-ctrl"}></div>
+                                        <div className={"wui ss-contact-ctrl"}>
+                                            <div className={"wui ss-img-container"}>
+                                                {/*<img className={"wui ss-img"}*/}
+                                                {/*     src={"https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png"}*/}
+                                                {/*     alt={""}/>*/}
+                                            </div>
+                                            <div className={"wui ss-btn"}>
+                                                <button type={"submit"} className={"wui action-button ss-btn"}
+                                                        onClick={() => {
+                                                            onNext && onNext({
+                                                                firstname,
+                                                                lastname,
+                                                                phone,
+                                                                email,
+                                                                salutation,
+                                                                next
+                                                            });
+                                                        }}
+                                                        disabled={!(firstname && lastname && phone && email && salutation)}>
+                                                    <div>Bewertung erhalten</div>
+                                                    <span className={"wui action-button-arrow"}/>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className={"wui ss-form-bottom-content"}>
-
+                                        <div className={"wui disclaimer"}>
+                                            <p>Dieser Service ist kostenfrei. Mit Klick auf "Bewertung erhalten"
+                                                bestätigen Sie die Kenntnisnahme unserer <a className=""
+                                                                                            href="https://www.mcmakler.de/agb"
+                                                                                            target="_blank">AGBs</a> und <a
+                                                    className="" href="https://www.mcmakler.de/datenschutz"
+                                                    target="_blank">Datenschutzbestimmungen</a>.</p>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div className={"wui ss-footer"}>
+                                <div className={"wui ss-footer-content"}>
+                                    <img
+                                        src={"https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png"}
+                                        alt={""}/>
                                 </div>
                             </div>
                         </div>
@@ -89,47 +159,9 @@ class WSendStep extends Component {
     }
 }
 
-WSendStep.propTypes = {};
+WSendStep.propTypes = {
+    onNext: PropTypes.func,
+    type: PropTypes.oneOf(["send-step"]).isRequired
+};
 
 export default WSendStep;
-
-//
-// <div className="row">
-//     <div className="col">
-//         Herr <input name="salutation" value="Herr" type="radio"
-//                     onChange={this.onChange}/>
-//         Frau <input name="salutation" value="Frau" type="radio"
-//                     onChange={this.onChange}/>
-//     </div>
-// </div>
-// <div className="row">
-//     <div className="col">
-//     <input placeholder={"Vorname"} name={"firstname"} onChange={this.onChange}/>
-// </div>
-// </div>
-// <div className="row">
-// <div className="col">
-// <input placeholder={"Nachname"} name={"lastname"} onChange={this.onChange}/>
-// </div>
-// </div>
-// <div className="row">
-// <div className="col">
-// <input placeholder={"E-Mail-Adresse"} type={"email"} name="email"
-// onChange={this.onChange}/>
-// </div>
-// </div>
-// <div className="row">
-// <div className="col">
-// <input placeholder={"Telefonnummer"} type={"tel"} name={"phone"}
-// onChange={this.onChange}/>
-// </div>
-// </div>
-// <div className="row">
-// <div className="col">
-// <button className={"wui action-button"}>
-// <div className={"wui action-button-line"}>Bewertung erhalten</div>
-// <div className={"wui action-button-line"}>kostenlos & unverbindlich</div>
-// <span className={"wui action-button-arrow"}/>
-// </button>
-// </div>
-// </div>

@@ -2,6 +2,7 @@
     display: flex;
     min-height: 530px;
     justify-content: center;
+    position: relative;
     align-items: center;
 }
 
@@ -13,6 +14,19 @@
     text-align: center;
     padding: 2rem 0 0 0;
     border-radius: 4px;
+    z-index: 10;
+    position: relative;
+}
+
+.wui.carousel {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+}
+
+.wui.carousel-slide {
+    flex: 1 0 100%;
 }
 
 .wui.back-btn {
@@ -51,13 +65,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: trasnform 0.4s;
+    transform: translateX(0%);
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .wui.card {
     display: flex;
-    height: 184px;
     flex: 1 1 0;
     padding: 6px;
+}
+
+.wui.card.small {
+    height: 184px;
 }
 
 @media (min-width: 768px) {
@@ -85,6 +106,10 @@
     border-color: #ffffff;
     outline: none;
     padding: 4px;
+}
+
+.wui.content-container.medium {
+    min-height: 320px;
 }
 
 .wui.card-icon-container {
@@ -147,6 +172,22 @@
     font-size: 13px;
     height: 44px;
     white-space: pre;
+}
+
+.wui.benefit-checkmark {
+    margin-right: 4px;
+    width: 10px;
+}
+
+.wui.benefit-title {
+    word-wrap: break-spaces;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .wui.benefit-checkmark {
+        margin-right: 10px;
+    }
 }
 
 .wui.step-slider {
@@ -418,4 +459,131 @@ button:disabled, button[disabled] {
     width: 100%;
     border: rgb(188, 188, 188) solid 1px;
     padding: 12px 16px;
+}
+
+/* random */
+.widget.jsx-1910737295 {
+    font-size: 15px;
+    color: #222;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #fafafa;
+    overflow: hidden;
+    position: relative;
+    max-width: 768px;
+    min-height: 530px;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen--enabled .widget.jsx-1910737295 {
+    min-height: 100%;
+}
+
+div.fullscreen--enabled.widget {
+    min-height: 100%;
+}
+
+.widget__carousel.jsx-1910737295 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.widget__carousel--forwards.jsx-1910737295 {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.carousel__slide.jsx-1910737295 {
+    -webkit-flex: 1 0 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+}
+
+.carousel__slide--transition.jsx-1910737295 {
+    -webkit-transition: -webkit-transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+@media (max-width: 767px) {
+    .widget.jsx-1910737295 {
+        min-height: 455px;
+    }
+}
+
+@media (min-width: 768px) {
+    .widget.jsx-1910737295 {
+        height: 0;
+    }
+}
+
+.step-wrapper.jsx-1769602645 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.step-wrapper--active.jsx-1769602645 {
+    position: relative;
+}
+
+.step-wrapper__content.jsx-1769602645 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
