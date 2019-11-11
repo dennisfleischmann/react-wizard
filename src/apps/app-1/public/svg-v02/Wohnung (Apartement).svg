@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1100" style="enable-background:new 0 0 1400 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#033153;}
+	.st2{fill:#E3E3E2;}
+	.st3{fill:#F2931B;}
+	.st4{fill:#D1D3D4;}
+</style>
+<rect y="0" class="st0" width="1400" height="1100"/>
+<title>clock</title>
+<g>
+	<rect x="267" y="911.7" class="st1" width="866" height="23.3"/>
+	<rect x="305.4" y="255.7" class="st2" width="789.1" height="656"/>
+	<rect x="378.8" y="186.9" class="st2" width="642.4" height="68.8"/>
+	<rect x="305.4" y="165" class="st2" width="789.1" height="21.9"/>
+	<rect x="305.4" y="326.7" class="st3" width="394.6" height="136.2"/>
+	<rect x="378.8" y="387.6" class="st0" width="243.1" height="64.1"/>
+	<rect x="378.8" y="499" class="st0" width="243.1" height="64.1"/>
+	<rect x="378.8" y="610.5" class="st0" width="243.1" height="64.1"/>
+	<rect x="378.8" y="722" class="st0" width="243.1" height="64.1"/>
+	<rect x="778" y="387.6" class="st0" width="243.1" height="64.1"/>
+	<rect x="778" y="499" class="st0" width="243.1" height="64.1"/>
+	<rect x="778" y="610.5" class="st0" width="243.1" height="64.1"/>
+	<rect x="778" y="722" class="st0" width="243.1" height="64.1"/>
+	<polygon class="st4" points="378.8,186.9 1021.2,255.7 1021.2,186.9 	"/>
+</g>
+</svg>

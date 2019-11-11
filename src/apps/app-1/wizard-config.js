@@ -20,8 +20,8 @@ export default {
   {
     "id": 1,
     "type": "cards-step",
-    "description":"Bitte wählen Sie die Art des Gebäudes aus",
-    "title": "Art des Gebäudes",
+    "description":"type of real estate",
+    "title": "Bitte wählen Sie die Art des Gebäudes aus",
     "fieldName": "propertyType",
     "options": [
       {  id:"0", value:"Einfamilienhaus", "next" : 2, "prev" : -1, "options": {"icon":"one_family_house.svg", "text":"Einfamilienhaus", "size":"m"}},
@@ -49,13 +49,13 @@ export default {
     "id": 3,
     "type": "input-step",
     "description":"differentReason",
-    "title": "Anderer Grund",
+    "title": "Grund für die Bewertung",
     "isSpecialSelection": true,
     "fieldName": "differentReason",
     "options": [
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
-        "text":"",
+        "text":"Grund",
         "icon": "other.svg"
       }
     }
@@ -92,13 +92,29 @@ export default {
       {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"m"}},
       {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"sell.svg", "text":"Verkauf", "size":"m"}},
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"m"}},
-      {  id:"4", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+      {  id:"4", value:"Sonstiges", "next" : 102, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+    ]
+  },
+  {
+    "id": 102,
+    "type": "input-step",
+    "description":"differentReason",
+    "title": "Grund für die Bewertung",
+    "isSpecialSelection": true,
+    "fieldName": "contractReason",
+    "options": [
+      { id:"0", "next" : 998, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Grund",
+        "icon": "other.svg"
+      }
+    }
     ]
   },
   {
     "id": 200,
     "type": "slider-step",
-    "description":"Apartment Count",
+    "description":"size of usage ",
     "title": "Wie groß ist die Nutzfläche?",
     "fieldName": "floorSpace",
     "options": [
@@ -122,17 +138,33 @@ export default {
     "title": "Bitte wählen Sie die Nutzungsart aus",
     "fieldName": "contractReason",
     "options": [
-      {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"m"}},
-      {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"m"}},
-      {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"m"}},
-      {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"m"}},
+      {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"m"}},
+      {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"m"}},
+      {  id:"2", value:"Büro/ Praxis", "next" : 203, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"m"}},
+      {  id:"3", value:"Handel", "next" : 203, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"m"}},
       {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"m"}},      
     ]
   },
   {
     "id": 202,
+    "type": "input-step",
+    "description":"differentSpecialPropertyType",
+    "title": "Um welche Nutzungsart handelt es sich?",
+    "fieldName": "differentSpecialPropertyType",
+    "isSpecialSelection":true,
+    "options": [
+      { id:"0", "next" : 203, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Nutzungsart",
+        "icon": "other.svg"
+      }
+    }
+    ]
+  },
+  {
+    "id": 203,
     "type": "cards-step",
-    "description":"marketingType",
+    "description":"reason of evaluation",
     "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
     "fieldName": "contractReason",
     "options": [
@@ -140,7 +172,23 @@ export default {
       {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"m"}},
       {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"sell.svg", "text":"Verkauf", "size":"m"}},
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"m"}},
-      {  id:"4", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+      {  id:"4", value:"Sonstiges", "next" : 204, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+    ]
+  },
+  {
+    "id": 204,
+    "type": "input-step",
+    "description":"differentSpecialPropertyType",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
+    "fieldName": "differentSpecialPropertyType",
+    "isSpecialSelection":true,
+    "options": [
+      { id:"0", "next" : 998, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Grund",
+        "icon": "other.svg"
+      }
+    }
     ]
   },
   {
@@ -175,6 +223,22 @@ export default {
       {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"sell.svg", "text":"Verkauf", "size":"m"}},
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"m"}},
       {  id:"4", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+    ]
+  },
+  {
+    "id": 302,
+    "type": "input-step",
+    "description":"differentSpecialPropertyType",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
+    "fieldName": "differentSpecialPropertyType",
+    "isSpecialSelection":true,
+    "options": [
+      { id:"0", "next" : 998, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Grund",
+        "icon": "other.svg"
+      }
+    }
     ]
   },
   {
@@ -216,13 +280,13 @@ export default {
     "id": 402,
     "type": "input-step",
     "description":"differentSpecialPropertyType",
-    "title": "Um welche Art Sonderimmobilie handelt es sich?",
+    "title": "Um welche Nutzungsart handelt es sich?",
     "fieldName": "differentSpecialPropertyType",
     "isSpecialSelection":true,
     "options": [
       { id:"0", "next" : 403, "prev" : "nil", "options": {
         "default": '',
-        "text":"",
+        "text":"Nutzungsart",
         "icon": "other.svg"
       }
     }
@@ -240,6 +304,22 @@ export default {
       {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"sell.svg", "text":"Verkauf", "size":"m"}},
       {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"m"}},
       {  id:"4", value:"Sonstiges", "next" : 998, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"m"}},
+    ]
+  },
+  {
+    "id": 404,
+    "type": "input-step",
+    "description":"differentSpecialPropertyType",
+    "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
+    "fieldName": "differentSpecialPropertyType",
+    "isSpecialSelection":true,
+    "options": [
+      { id:"0", "next" : 998, "prev" : "nil", "options": {
+        "default": '',
+        "text":"Grund",
+        "icon": "other.svg"
+      }
+    }
     ]
   },
   {

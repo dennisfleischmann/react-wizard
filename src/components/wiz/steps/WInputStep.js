@@ -6,7 +6,8 @@ class WInputStep extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: props.options[0].options.default
+            value: props.options[0].options.default,
+            text:  props.options[0].options.text,
         };
     }
 
@@ -20,6 +21,7 @@ class WInputStep extends Component {
                              className={"wui step=input-image"}/>
                     </div>
                     <div className={"wui step-input-btn-container"}>
+                        {this.state.text}
                         <div className={"wui step-input-styled"}>
                             <input className={"wui step-input-styled-input"}
                                    value={this.state.value}

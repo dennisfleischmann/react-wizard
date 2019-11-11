@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1100" style="enable-background:new 0 0 1400 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#033153;}
+	.st2{fill:#F2931B;}
+	.st3{fill:none;stroke:#F2931B;stroke-miterlimit:10;}
+	.st4{fill:#E3E3E2;}
+</style>
+<rect y="0" class="st0" width="1400" height="1100"/>
+<title>clock</title>
+<g>
+	<rect x="267" y="825.2" class="st1" width="866" height="23.3"/>
+	<g>
+		<path class="st1" d="M1094.3,669.1H645.9c-23.7,0-42.9-19.2-42.9-42.9c0-23.7,19.2-42.9,42.9-42.9h448.4v11.3H645.9
+			c-17.4,0-31.6,14.2-31.6,31.6c0,17.4,14.2,31.6,31.6,31.6h448.4V669.1z"/>
+	</g>
+	<circle class="st1" cx="652.8" cy="626.2" r="25.9"/>
+	<circle class="st1" cx="719.7" cy="626.2" r="25.9"/>
+	<circle class="st1" cx="786.6" cy="626.2" r="25.9"/>
+	<rect x="658.8" y="524.8" class="st2" width="93.6" height="58"/>
+	<rect x="912.1" y="524.8" class="st2" width="93.6" height="58"/>
+	<g>
+		<rect x="305.7" y="729.5" class="st1" width="143.8" height="95.7"/>
+		<path class="st1" d="M377.6,666.4c-21.5,0-41.4-6.7-58-18.2v81.3h116v-81.3C419,659.7,399.1,666.4,377.6,666.4z"/>
+		<path class="st1" d="M438,583.2l-10.6-199.6c0-27.5-22.3-49.8-49.8-49.8s-49.8,22.3-49.8,49.8l-10.6,199.6
+			c-0.3,2.5-0.5,4.9-0.5,7.5l0,0l0,0c0,33.6,27.2,60.8,60.8,60.8c33.6,0,60.8-27.2,60.8-60.8C438.5,588.2,438.3,585.7,438,583.2z"/>
+		<path class="st3" d="M524.5,251.5"/>
+		<path class="st1" d="M707.7,251.6c-1.1-0.1-2.2-0.1-3.2-0.1v0h-0.3c0,0,0,0,0,0l-152.1,0c3.7,2.9,7,6.4,9.7,10.5
+			c12.9,19.6,8.4,45.5-9.8,59.7h152.5v0c17.9,0,33.3-13.6,35-31.8C741.2,270.5,727,253.4,707.7,251.6z"/>
+		<path class="st1" d="M553.8,267.3c-10.7-16.2-32.5-20.6-48.6-9.9L393,324.7c14,3.7,26.8,12.3,35.4,25.3c8.6,13,11.5,28.2,9.4,42.5
+			l106-76.7C560,305.2,564.4,283.4,553.8,267.3z"/>
+		<path class="st1" d="M733.9,355.4h-59.1c-3.1,0-5.6-2.5-5.6-5.6v-13.9c0-3.1,2.5-5.6,5.6-5.6h59.1c3.1,0,5.6,2.5,5.6,5.6v13.9
+			C739.5,352.9,737,355.4,733.9,355.4z"/>
+		<rect x="695.1" y="347.3" class="st1" width="16.5" height="34.6"/>
+		<circle class="st1" cx="703.3" cy="384.7" r="14"/>
+		<polygon class="st1" points="697.7,379.9 660.9,406.1 651.8,439.2 673.5,466.1 661.8,437.5 671.2,413.2 703.3,393.8 		"/>
+		<polygon class="st1" points="709,379.9 745.8,406.1 754.9,439.2 733.2,466.1 744.9,437.5 735.5,413.2 703.3,393.8 		"/>
+		<circle class="st4" cx="377.6" cy="590.7" r="20.5"/>
+		<circle class="st4" cx="524.5" cy="286.6" r="16"/>
+		<circle class="st1" cx="524.5" cy="286.6" r="8.8"/>
+		<circle class="st4" cx="704.4" cy="286.6" r="14.5"/>
+		<circle class="st1" cx="704.4" cy="286.6" r="8.2"/>
+		<circle class="st4" cx="377.6" cy="383.6" r="22"/>
+		<circle class="st1" cx="377.6" cy="383.6" r="12.8"/>
+		<circle class="st1" cx="377.6" cy="590.7" r="12.8"/>
+	</g>
+	<rect x="671.4" y="663.4" class="st1" width="22.4" height="161.8"/>
+	<rect x="1009.5" y="663.4" class="st1" width="22.4" height="161.8"/>
+</g>
+</svg>
