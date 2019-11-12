@@ -34,14 +34,14 @@ class WConfirmationStep extends Component {
                                                 <p className={"wui cs-main-content-line"}>
                                                     Mit freundlichen Grüßen
                                                     <span className={"wui cs-main-content-line-styled"}>
-                                                        Sehr geehrter Interessent,
+                                                        Martin Saurer,
                                                     </span>
                                                 </p>
                                             </div>
                                         </div>
                                         <div className={"wui cs-thank-you-img"}>
                                             <div className={"wui cs-img-container"}>
-                                                <img style={{maxWidth: "160px"}}
+                                                <img style={{maxWidth: "160px"}} className={"wui cs-img-image"}
                                                      src={"https://images.ctfassets.net/64q0dihi81ut/4zJJMLibX4inVK9JkwA6np/faa32958f98eb1c749bb84e0b0401464/makler.png"}
                                                      alt={""}/>
                                             </div>
@@ -72,7 +72,7 @@ class WConfirmationStep extends Component {
                             </div>
                             <div className={"wui cs-footer"}>
                                 <div className={"wui cs-footer-content"}>
-                                    <img
+                                    <img className={""}
                                         src={"https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png"}
                                         alt={""}/>
                                 </div>

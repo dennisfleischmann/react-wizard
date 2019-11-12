@@ -12,7 +12,7 @@ import WConfirmationStep from "./steps/WConfirmationStep";
 const Wizard = ({config: {backend: {api}, steps}}) => {
     console.log(steps);
     // state
-    const [currentStep, setCurrentStep] = useState(steps[21]); // it hold current step
+    const [currentStep, setCurrentStep] = useState(steps[22]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([]); // stack contain path stack
     const [dimen, setDimen] = useState({

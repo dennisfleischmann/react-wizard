@@ -86,6 +86,7 @@
 
 .wui.cs-main-content-line-styled {
     font-weight: bold;
+    display: block;
 }
 
 .wui.cs-thank-you-footer {
@@ -159,5 +160,65 @@
     .wui.cs-header-title {
         font-size: 20px;
         white-space: pre;
+    }
+}
+
+@media (max-width: 767px) {
+    .wui.container.border {
+        width: 100%;
+    }
+
+    .wui.cs-header {
+        justify-content: center;
+    }
+
+    .wui.cs-header-title {
+        word-break: break-all;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .wui.cs-thank-you-container {
+        width: 100%;
+    }
+
+    .wui.cs-thank-you-content {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .wui.cs-thank-you-img {
+        margin-top: 16px;
+        align-items: flex-start;
+    }
+
+    .wui.cs-img-container {
+        width: 28%;
+    }
+
+    .wui.cs-img-image {
+        max-width: 76px !important;
+    }
+
+    .wui.cs-img-info {
+        margin-left: 8px;
+        margin-top: 14px;
+        text-align: left;
+    }
+
+    .wui.cs-thank-you-footer {
+        padding: 8px;
+    }
+
+    .wui.benefits-group {
+        flex-direction: column;
+        justify-content: unset !important;
+    }
+
+    .wui.benefit {
+        height: unset !important;
     }
 }
