@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
+import {isBrowser, isMobile} from 'react-device-detect';
+import WBottomBtnsBar from "../WBottomBtnsBar";
 
 class WMapLocatorStep extends Component {
     constructor(props) {
@@ -10,10 +12,10 @@ class WMapLocatorStep extends Component {
     }
 
     render() {
-        const {options: [options], onNext, fieldName} = this.props;
+        const {options: [options], onNext, fieldName, onBack} = this.props;
         return (
-            <div className={"wui step-slider"}>
-                <div className={"wui step-slider paper"}>
+            <div className={"wui step-map"}>
+                <div className={"wui step-map paper"}>
                     <div className={"wui step-map-img-container"}>
                         <img src={`${process.env.PUBLIC_URL}/svg/${options.options.icon}`} alt={""}
                              className={"wui step-map-image"}/>
@@ -28,15 +30,21 @@ class WMapLocatorStep extends Component {
                                    onChange={e => this.setState({value: e.target.value})}/>
                             <div className={"wui step-map-input-desc"}>{options.options.description}</div>
                         </div>
-                        <button type={"submit"} className={"wui action-button"}
-                                disabled={this.state.value.length === 0} onClick={() => {
+                        {isBrowser && <button type={"submit"} className={"wui action-button"}
+                                              disabled={this.state.value.length === 0} onClick={() => {
                             onNext && onNext({[fieldName]: this.state.value, next: options.next});
                         }}>
                             Next
                             <span className={"wui action-button-arrow"}/>
-                        </button>
+                        </button>}
                     </div>
                 </div>
+                {isMobile && <WBottomBtnsBar
+                    onBack={() => onBack && onBack()}
+                    btnProps={{
+                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
+                        disabled: this.state.value.length === 0
+                    }}/>}
             </div>
         );
     }
@@ -44,7 +52,8 @@ class WMapLocatorStep extends Component {
 
 WMapLocatorStep.propTypes = {
     type: PropTypes.oneOf(["map-locator-step"]).isRequired,
-    onNext: PropTypes.func
+    onNext: PropTypes.func,
+    onBack: PropTypes.func,
 };
 
 export default WMapLocatorStep;

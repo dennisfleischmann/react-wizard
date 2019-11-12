@@ -488,6 +488,23 @@ button:disabled, button[disabled] {
     }
 }
 
+@media (max-width: 767px) {
+    .wui.step-map {
+        margin: 0;
+    }
+
+    .wui.step-map.paper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .wui.step-map-btn-container {
+        margin-top: 20px;
+        width: 100% !important;
+    }
+}
+
 .wui.step-map-btn-container {
     width: 40%;
     margin-left: 8px;
