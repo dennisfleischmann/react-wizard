@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
+import {isMobile} from 'react-device-detect';
 import WHeader from './WHeader'
 import WFooter from './WFooter'
 import WSendStep from "./steps/WSendStep";
@@ -14,15 +15,19 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([]); // stack contain path stack
-    const [direction, setDirection] = useState(0); // 0 - NA, 1 - Back, 2 - Forward
-
-    let directionTransformX = {};
-    // directionTransformX.transition = "transform 0.4s";
-    // if (direction === 1) {
-    //     directionTransformX.tansform = "transform(0%)"
-    // } else if (direction === 2) {
-    //     directionTransformX.tansform = "transform(100%)";
-    // }
+    const [dimen, setDimen] = useState({
+        height: window.innerHeight,
+        width: window.innerWidth
+    });
+    console.log(dimen);
+    useEffect(_ => {
+        const handleResize = () => setDimen({
+            height: window.innerHeight,
+            width: window.innerWidth
+        });
+        window.addEventListener("resize", handleResize);
+        return _ => window.removeEventListener("resize", handleResize);
+    });
 
     const Component = utils.getStepComponentByType(currentStep.type);
 
@@ -59,6 +64,33 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
         return ((stepsPassedWithoutSpecialSelection.length / temp) * 100);
     };
 
+    if (isMobile) {
+        return (
+            <div className={"wui fullscreen"}>
+                <div className={"wui widget fullscreen"}>
+                    <WHeader backArrow={stack.length > 0} title={currentStep.title}
+                             percentage={calcPercentageProgress()}
+                             onBack={() => {
+                                 // go back by one step
+                                 if (stack.length > 0) {
+                                     const lastIndex = stack.length - 1;
+                                     setCurrentStep(stack[lastIndex]);
+                                     setStack(stack.filter((_, i) => i !== lastIndex));
+                                     setData(data.filter((_, i) => i !== lastIndex));
+                                 }
+                             }}/>
+                    <div className={"wui carousel"}>
+                        <div className={"wui carousel-slide"}>
+                            <div className={"wui content"}>
+                                {content}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     // render
     return (
         <div className={'wui outer'}>
@@ -72,12 +104,11 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
                                  setCurrentStep(stack[lastIndex]);
                                  setStack(stack.filter((_, i) => i !== lastIndex));
                                  setData(data.filter((_, i) => i !== lastIndex));
-                                 setDirection(2);
                              }
                          }}/>
                 <div className={"wui carousel"}>
-                    <div className={"wui carousel-slide"} style={directionTransformX}>
-                        <div className={"wui content"} style={directionTransformX}>
+                    <div className={"wui carousel-slide"}>
+                        <div className={"wui content"}>
                             {content}
                         </div>
                     </div>
