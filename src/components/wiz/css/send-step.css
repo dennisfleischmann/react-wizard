@@ -231,3 +231,30 @@
         white-space: pre;
     }
 }
+
+@media (max-width: 767px) {
+    .container-fluid {
+        padding: 0;
+    }
+
+    .wui.ss-header {
+        justify-content: center;
+    }
+
+    .wui.ss-form-content {
+        flex-direction: column;
+    }
+
+    .wui.ss-form-container {
+        width: 100%;
+    }
+
+    .wui.ss-contact-ctrl {
+        width: 100%;
+    }
+
+    .wui.action-button.ss-btn {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
