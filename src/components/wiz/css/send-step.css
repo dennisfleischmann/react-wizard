@@ -234,7 +234,7 @@
 
 @media (max-width: 767px) {
     .container-fluid {
-        padding: 0;
+        /*padding: 0;*/
     }
 
     .wui.ss-header {
