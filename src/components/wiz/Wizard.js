@@ -29,16 +29,29 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
         return _ => window.removeEventListener("resize", handleResize);
     });
 
+    const handleBack = _ => {
+        // go back by one step
+        if (stack.length > 0) {
+            const lastIndex = stack.length - 1;
+            setCurrentStep(stack[lastIndex]);
+            setStack(stack.filter((_, i) => i !== lastIndex));
+            setData(data.filter((_, i) => i !== lastIndex));
+        }
+    };
+
     const Component = utils.getStepComponentByType(currentStep.type);
 
-    const content = <Component {...currentStep} onNext={(d) => {
-        const nextStep = steps.find(s => s.id === d.next);
-        if (nextStep) {
-            setCurrentStep(nextStep);
-            setStack([...stack, {...currentStep}]);
-            setData([...data, {...d}]);
-        }
-    }}/>;
+    const content = <Component {...currentStep}
+                               isBackVisible={stack.length > 0}
+                               onBack={() => handleBack()}
+                               onNext={(d) => {
+                                   const nextStep = steps.find(s => s.id === d.next);
+                                   if (nextStep) {
+                                       setCurrentStep(nextStep);
+                                       setStack([...stack, {...currentStep}]);
+                                       setData([...data, {...d}]);
+                                   }
+                               }}/>;
 
     if (Component === WSendStep || Component === WConfirmationStep) {
         return content;
@@ -70,15 +83,7 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
                 <div className={"wui widget fullscreen"}>
                     <WHeader backArrow={stack.length > 0} title={currentStep.title}
                              percentage={calcPercentageProgress()}
-                             onBack={() => {
-                                 // go back by one step
-                                 if (stack.length > 0) {
-                                     const lastIndex = stack.length - 1;
-                                     setCurrentStep(stack[lastIndex]);
-                                     setStack(stack.filter((_, i) => i !== lastIndex));
-                                     setData(data.filter((_, i) => i !== lastIndex));
-                                 }
-                             }}/>
+                             onBack={() => handleBack()}/>
                     <div className={"wui carousel"}>
                         <div className={"wui carousel-slide"}>
                             <div className={"wui content"}>
@@ -97,15 +102,7 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
             <div className={'wui container'}>
                 <WHeader backArrow={stack.length > 0} title={currentStep.title}
                          percentage={calcPercentageProgress()}
-                         onBack={() => {
-                             // go back by one step
-                             if (stack.length > 0) {
-                                 const lastIndex = stack.length - 1;
-                                 setCurrentStep(stack[lastIndex]);
-                                 setStack(stack.filter((_, i) => i !== lastIndex));
-                                 setData(data.filter((_, i) => i !== lastIndex));
-                             }
-                         }}/>
+                         onBack={() => handleBack()}/>
                 <div className={"wui carousel"}>
                     <div className={"wui carousel-slide"}>
                         <div className={"wui content"}>
