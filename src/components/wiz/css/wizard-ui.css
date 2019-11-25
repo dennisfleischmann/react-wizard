@@ -16,6 +16,7 @@
     border-radius: 4px;
     z-index: 10;
     position: relative;
+    overflow: hidden;
 }
 
 .wui.fullscreen {
@@ -75,6 +76,7 @@
     height: 100%;
     padding: 0 38px;
     flex-wrap: wrap;
+    min-width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -98,7 +100,6 @@
     align-items: center;
     justify-content: center;
     transition: trasnform 0.4s;
-    transform: translateX(0%);
     position: relative;
     flex-wrap: wrap;
 }
@@ -185,11 +186,16 @@
 
 .wui.card-title {
     margin-top: 16px;
-    word-break: break-word;
-    hyphens: manual;
     margin-left: 8px;
     margin-right: 8px;
     text-align: center;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    word-break: break-word;
+    hyphens: auto;
+    width: 100%;
 }
 
 .card-container:hover {
