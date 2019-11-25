@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import WCard from '../WCard'
+import {isMobile} from "react-device-detect";
+import WBottomBtnsBar from "../WBottomBtnsBar";
 
-const WCardStep = ({fieldName, options, onNext}) => {
+const WCardStep = ({fieldName, options, onNext, onBack, isBackVisible}) => {
 
     if (!Array.isArray(options)) {
         throw Error("Options must be an array!");
@@ -21,6 +23,7 @@ const WCardStep = ({fieldName, options, onNext}) => {
                     onClick={({value, next}) => onNext && onNext({[fieldName]: value, next})}
                     data={o}/>
             )}
+            {isMobile && isBackVisible && <WBottomBtnsBar onBack={() => onBack && onBack()} isNextVisible={false}/>}
         </div>
     )
 
@@ -28,7 +31,8 @@ const WCardStep = ({fieldName, options, onNext}) => {
 
 WCardStep.propTypes = {
     type: PropTypes.oneOf(["cards-step"]).isRequired,
-    onNext: PropTypes.func
+    onNext: PropTypes.func,
+    onBack: PropTypes.func,
 };
 
 export default WCardStep;

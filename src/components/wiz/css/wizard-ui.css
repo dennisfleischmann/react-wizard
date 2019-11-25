@@ -156,7 +156,7 @@
     -webkit-box-pack: center;
     justify-content: center;
     width: 100%;
-    border-width: 4px;
+    border-width: 3px;
     border-style: solid;
     border-color: #ffffff;
     outline: none;
@@ -185,19 +185,15 @@
 
 .wui.card-title {
     margin-top: 16px;
-    font-family: "Noto Serif", sans-serif;
-    word-break: break-all;
+    word-break: break-word;
     hyphens: manual;
-    line-height: normal;
-    text-rendering: optimizeLegibility;
+    margin-left: 8px;
+    margin-right: 8px;
     text-align: center;
-    -webkit-box-direction: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-hyphens: manual !important;
 }
 
 .card-container:hover {
-    border: #f2932c solid 3px;
+    border-color: #f2932c;
 }
 
 .wui.footer {
