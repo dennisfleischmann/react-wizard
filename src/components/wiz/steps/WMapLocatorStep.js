@@ -34,7 +34,7 @@ class WMapLocatorStep extends Component {
                                               disabled={this.state.value.length === 0} onClick={() => {
                             onNext && onNext({[fieldName]: this.state.value, next: options.next});
                         }}>
-                            Next
+                            {options.options.button_title || "Next"}
                             <span className={"wui action-button-arrow"}/>
                         </button>}
                     </div>

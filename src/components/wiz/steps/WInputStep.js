@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {isBrowser, isMobile} from "react-device-detect";
+import WBottomBtnsBar from "../WBottomBtnsBar";
 
 class WInputStep extends Component {
 
@@ -7,12 +9,12 @@ class WInputStep extends Component {
         super(props);
         this.state = {
             value: props.options[0].options.default,
-            text:  props.options[0].options.text,
+            text: props.options[0].options.text,
         };
     }
 
     render() {
-        const {options: [options], onNext, fieldName} = this.props;
+        const {options: [options], onNext, fieldName, onBack} = this.props;
         return (
             <div className={"wui step-slider"}>
                 <div className={"wui step-slider paper"}>
@@ -21,22 +23,30 @@ class WInputStep extends Component {
                              className={"wui step=input-image"}/>
                     </div>
                     <div className={"wui step-input-btn-container"}>
-                        {this.state.text}
+                        <div className={"wui step-map-input-header"}>{options.options.text}</div>
                         <div className={"wui step-input-styled"}>
                             <input className={"wui step-input-styled-input"}
                                    value={this.state.value}
                                    type={"text"}
+                                   placeholder={options.options.placeholder}
                                    onChange={e => this.setState({value: e.target.value})}/>
+                            <div className={"wui step-map-input-desc"}>{options.options.description}</div>
                         </div>
-                        <button type={"submit"} className={"wui action-button"}
-                                disabled={this.state.value.length === 0} onClick={() => {
+                        {isBrowser && <button type={"submit"} className={"wui action-button"}
+                                              disabled={this.state.value.length === 0} onClick={() => {
                             onNext && onNext({[fieldName]: this.state.value, next: options.next});
                         }}>
-                            Next
+                            {options.options.button_title || "Next"}
                             <span className={"wui action-button-arrow"}/>
-                        </button>
+                        </button>}
                     </div>
                 </div>
+                {isMobile && <WBottomBtnsBar
+                    onBack={() => onBack && onBack()}
+                    btnProps={{
+                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
+                        disabled: this.state.value.length === 0
+                    }}/>}
             </div>
         );
     }
@@ -44,7 +54,8 @@ class WInputStep extends Component {
 
 WInputStep.propTypes = {
     type: PropTypes.oneOf(["input-step"]).isRequired,
-    onNext: PropTypes.func
+    onNext: PropTypes.func,
+    onBack: PropTypes.func,
 };
 
 export default WInputStep;
