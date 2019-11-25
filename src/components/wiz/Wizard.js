@@ -10,16 +10,16 @@ import './css/index.css';
 import WConfirmationStep from "./steps/WConfirmationStep";
 
 const Wizard = ({config: {backend: {api}, steps}}) => {
-    console.log(steps);
+
     // state
-    const [currentStep, setCurrentStep] = useState(steps[17]); // it hold current step
+    const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([]); // stack contain path stack
     const [dimen, setDimen] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     });
-    console.log(dimen);
+
     useEffect(_ => {
         const handleResize = () => setDimen({
             height: window.innerHeight,
