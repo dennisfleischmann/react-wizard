@@ -14,7 +14,7 @@ class WSliderStep extends Component {
 
     render() {
         const {onNext, fieldName, isBackVisible, onBack} = this.props;
-        const {options: {range: {min, max}, icon}, next} = this.props.options[0];
+        const {options: {range: {min, max}, icon}, next, button_title} = this.props.options[0];
         const {value} = this.state;
         return (
             <div className={"wui step-slider"}>
@@ -43,16 +43,18 @@ class WSliderStep extends Component {
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
                                               onClick={() => onNext && onNext({[fieldName]: this.state.value, next})}>
-                            Next
+                            {button_title || "Next"}
                             <span className={"wui action-button-arrow"}/>
                         </button>}
                     </div>
                 </div>
-                {isMobile && <WBottomBtnsBar isBackVisible={isBackVisible}
-                                             onBack={() => onBack && onBack()}
-                                             btnProps={{
-                                                 onClick: () => onNext && onNext({[fieldName]: this.state.value, next})
-                                             }}/>}
+                {isMobile && <WBottomBtnsBar
+                    isBackVisible={isBackVisible}
+                    onBack={() => onBack && onBack()}
+                    nextBtnTitle={button_title || "Next"}
+                    btnProps={{
+                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next})
+                    }}/>}
             </div>
         );
     }
