@@ -4,12 +4,12 @@ import {isMobile} from 'react-device-detect';
 import WHeader from './WHeader'
 import WFooter from './WFooter'
 import WSendStep from "./steps/WSendStep";
+import WConfirmationStep from "./steps/WConfirmationStep";
 import utils from "./utils";
 
 import './css/index.css';
-import WConfirmationStep from "./steps/WConfirmationStep";
 
-const Wizard = ({config: {backend: {api}, steps}}) => {
+const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
 
     // state
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
@@ -98,19 +98,21 @@ const Wizard = ({config: {backend: {api}, steps}}) => {
 
     // render
     return (
-        <div className={'wui outer'}>
-            <div className={'wui container'}>
-                <WHeader backArrow={stack.length > 0} title={currentStep.title}
-                         percentage={calcPercentageProgress()}
-                         onBack={() => handleBack()}/>
-                <div className={"wui carousel"}>
-                    <div className={"wui carousel-slide"}>
-                        <div className={"wui content"}>
-                            {content}
+        <div className="hero" style={{backgroundImage:  `url(${background_img})`}}>
+            <div className={'wui outer'}>
+                <div className={'wui container'}>
+                    <WHeader backArrow={stack.length > 0} title={currentStep.title}
+                             percentage={calcPercentageProgress()}
+                             onBack={() => handleBack()}/>
+                    <div className={"wui carousel"}>
+                        <div className={"wui carousel-slide"}>
+                            <div className={"wui content"}>
+                                {content}
+                            </div>
                         </div>
                     </div>
+                    <WFooter/>
                 </div>
-                <WFooter/>
             </div>
         </div>
     )

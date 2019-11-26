@@ -14,8 +14,7 @@ const WCard = ({data, onClick}) => {
                     <img className={"wui card-icon-img"} src={`${process.env.PUBLIC_URL}/svg/${icon}`}
                          alt={imgAlt}/>
                 </div>
-                <div className={"wui card-title"}>
-                    {title}
+                <div className={"wui card-title"} dangerouslySetInnerHTML={{__html: title}}>
                 </div>
             </div>
         </div>

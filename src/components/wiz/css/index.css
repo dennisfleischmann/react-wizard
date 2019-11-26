@@ -1,2 +1,18 @@
 @import "progressbar.css";
 @import "wizard-ui.css";
+
+.hero {
+    background-size: cover;
+    z-index: 10;
+    hyphens: auto;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 40px;
+    }
+
+    html[lang=de] .hero {
+        position: relative;
+    }
+}

@@ -67,8 +67,8 @@ class WSlider extends Component {
 
     componentDidMount() {
         this.handleUpdate();
-        const resizeObserver = new ResizeObserver(this.handleUpdate);
-        resizeObserver.observe(this.slider);
+        // const resizeObserver = new ResizeObserver(this.handleUpdate);
+        // resizeObserver.observe(this.slider);
     }
 
     /**

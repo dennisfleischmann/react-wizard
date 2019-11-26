@@ -20,17 +20,17 @@ class WInputStep extends Component {
                 <div className={"wui step-slider paper"}>
                     <div className={"wui step-input-img-container"}>
                         <img src={`${process.env.PUBLIC_URL}/svg/${options.options.icon}`} alt={""}
-                             className={"wui step=input-image"}/>
+                             className={"wui step-input-image"}/>
                     </div>
                     <div className={"wui step-input-btn-container"}>
-                        <div className={"wui step-map-input-header"}>{options.options.text}</div>
+                        <div className={"wui step-input-header"}>{options.options.text}</div>
                         <div className={"wui step-input-styled"}>
                             <input className={"wui step-input-styled-input"}
                                    value={this.state.value}
                                    type={"text"}
                                    placeholder={options.options.placeholder}
                                    onChange={e => this.setState({value: e.target.value})}/>
-                            <div className={"wui step-map-input-desc"}>{options.options.description}</div>
+                            <div className={"wui step-input-desc"}>{options.options.description || "This is desc"}</div>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
                                               disabled={this.state.value.length === 0} onClick={() => {

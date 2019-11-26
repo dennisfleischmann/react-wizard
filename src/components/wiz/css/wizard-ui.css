@@ -194,6 +194,7 @@
     -o-hyphens: auto;
     word-break: break-word;
     hyphens: auto;
+    line-height: normal;
     width: 100%;
 }
 
@@ -438,6 +439,20 @@ button:disabled, button[disabled] {
     justify-content: center;
     position: relative;
     width: 50%;
+}
+
+.wui.step-input-header {
+    font-size: 15px;
+    margin: 0 0 4px 0;
+    text-align: left;
+}
+
+.wui.step-input-desc {
+    font-size: 12px;
+    margin: 6px 0 4px 0;
+    color: grey;
+    line-height: 13px;
+    text-align: left;
 }
 
 .wui.step-input-image {
