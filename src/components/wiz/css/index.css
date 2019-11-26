@@ -1,6 +1,11 @@
 @import "progressbar.css";
 @import "wizard-ui.css";
 
+:root {
+    --primary-color: #f2932c;
+    --secondary-color: #033152;
+}
+
 .hero {
     background-size: cover;
     z-index: 10;
@@ -9,7 +14,7 @@
 
 @media (min-width: 768px) {
     .hero {
-        padding: 40px;
+        padding: 72px;
     }
 
     html[lang=de] .hero {

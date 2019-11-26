@@ -1,11 +1,11 @@
 .wui.container.border {
-    border: #033152 solid 1px;
+    border: var(--secondary-color) solid 1px;
     border-radius: 4px;
     padding: 0;
 }
 
 .wui.cs-background {
-    background-color: #033152;
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     text-align: center;
