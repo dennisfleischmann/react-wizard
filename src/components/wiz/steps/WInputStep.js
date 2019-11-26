@@ -16,8 +16,8 @@ class WInputStep extends Component {
     render() {
         const {options: [options], onNext, fieldName, onBack} = this.props;
         return (
-            <div className={"wui step-slider"}>
-                <div className={"wui step-slider paper"}>
+            <div className={"wui step-input"}>
+                <div className={"wui step-input paper"}>
                     <div className={"wui step-input-img-container"}>
                         <img src={`${process.env.PUBLIC_URL}/svg/${options.options.icon}`} alt={""}
                              className={"wui step-input-image"}/>
@@ -30,19 +30,20 @@ class WInputStep extends Component {
                                    type={"text"}
                                    placeholder={options.options.placeholder}
                                    onChange={e => this.setState({value: e.target.value})}/>
-                            <div className={"wui step-input-desc"}>{options.options.description || "This is desc"}</div>
+                            <div className={"wui step-input-desc"}>{options.options.description}</div>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
                                               disabled={this.state.value.length === 0} onClick={() => {
                             onNext && onNext({[fieldName]: this.state.value, next: options.next});
                         }}>
-                            {options.options.button_title || "Next"}
+                            {options.options.button_title}
                             <span className={"wui action-button-arrow"}/>
                         </button>}
                     </div>
                 </div>
                 {isMobile && <WBottomBtnsBar
                     onBack={() => onBack && onBack()}
+                    nextBtnTitle={options.options.button_title}
                     btnProps={{
                         onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
                         disabled: this.state.value.length === 0

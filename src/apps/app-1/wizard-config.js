@@ -58,7 +58,9 @@ export default {
         "default": '',
         "text":"Grund",
         "icon": "other.svg",
-          "description": "This is the descriptions"
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -108,7 +110,10 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
         "text":"Grund",
-        "icon": "other.svg"
+        "icon": "other.svg",
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -159,7 +164,9 @@ export default {
         "default": '',
         "text":"Nutzungsart",
         "icon": "other.svg",
-          "description": "This is the descriptions"
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -189,7 +196,10 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
         "text":"Grund",
-        "icon": "other.svg"
+        "icon": "other.svg",
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -239,7 +249,10 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
         "text":"Grund",
-        "icon": "other.svg"
+        "icon": "other.svg",
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -278,7 +291,6 @@ export default {
       {  id:"4", value:"Sonstiges (Eingabefeld)", "next" : 402, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"m"}},
     ]
   },
-
   {
     "id": 402,
     "type": "input-step",
@@ -290,7 +302,10 @@ export default {
       { id:"0", "next" : 403, "prev" : "nil", "options": {
         "default": '',
         "text":"Nutzungsart",
-        "icon": "other.svg"
+        "icon": "other.svg",
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]
@@ -320,7 +335,10 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "options": {
         "default": '',
         "text":"Grund",
-        "icon": "other.svg"
+        "icon": "other.svg",
+        "button_title": "Button title",
+        "placeholder" : "Add placeholder here",
+        "description": "Place some description here"
       }
     }
     ]

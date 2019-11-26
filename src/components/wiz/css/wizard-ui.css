@@ -401,8 +401,9 @@ button:disabled, button[disabled] {
 .wui.step-input {
     margin: 0 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
+    min-width: 90%;
     text-align: left;
 }
 
@@ -417,9 +418,21 @@ button:disabled, button[disabled] {
     margin: auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+    .wui.step-input {
+        margin: 0;
+        flex-direction: column;
+    }
+
     .wui.step-input.paper {
-        padding: 40px 96px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .wui.step-input-btn-container {
+        margin-top: 20px;
+        width: 100% !important;
     }
 }
 
