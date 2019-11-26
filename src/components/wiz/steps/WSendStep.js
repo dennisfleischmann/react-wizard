@@ -14,6 +14,7 @@ class WSendStep extends Component {
             firstnameErr: false,
             lastnameErr: false,
             emailErr: false,
+            emailFormatErr: false,
             phoneErr: false,
             salutationErr: false
         };
@@ -26,13 +27,17 @@ class WSendStep extends Component {
     onBlur = ({target: {name, value}}) => {
         if (!value) {
             this.setState({[`${name}Err`]: true});
+        } else if (name === "email") {
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                this.setState({emailFormatErr: true});
+            }
         }
     };
 
     render() {
         const {onNext, options} = this.props;
         const {next} = options[0];
-        const {firstname, lastname, email, phone, salutation, firstnameErr, lastnameErr, phoneErr, emailErr} = this.state;
+        const {firstname, lastname, email, phone, salutation, firstnameErr, lastnameErr, phoneErr, emailErr, emailFormatErr} = this.state;
         return (
             <div className={'wui outer'}>
                 <div className={'wui container border'}>
@@ -96,6 +101,8 @@ class WSendStep extends Component {
                                                        name={"email"} value={email}/>
                                                 {emailErr &&
                                                 <span className={"wui ss-styled-input-input-err"}>Ihre Eingabe ist nicht korrekt</span>}
+                                                {emailFormatErr &&
+                                                <span className={"wui ss-styled-input-input-err"}>Ihr E-Mail-Format ist falsch</span>}
                                             </div>
                                             <div
                                                 className={`wui ss-styled-input margin-below ${phoneErr && "ss-styled-input-input-invalid"}`}>

@@ -9,7 +9,14 @@ class WMapLocatorStep extends Component {
         this.state = {
             value: props.options[0].options.default
         };
+        this.handleChange = this.handleChange.bind(this);
     }
+
+    handleChange = ({target: {value}}) => {
+        if (value.length <= 5) {
+            this.setState({value});
+        }
+    };
 
     render() {
         const {options: [options], onNext, fieldName, onBack} = this.props;
@@ -25,13 +32,13 @@ class WMapLocatorStep extends Component {
                             <div className={"wui step-map-input-header"}>{options.options.text}</div>
                             <input className={"wui step-map-styled-map"}
                                    value={this.state.value}
-                                   type={"text"}
+                                   type={"number"}
                                    placeholder={"z.B. 12385"}
-                                   onChange={e => this.setState({value: e.target.value})}/>
+                                   onChange={this.handleChange}/>
                             <div className={"wui step-map-input-desc"}>{options.options.description}</div>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
-                                              disabled={this.state.value.length === 0} onClick={() => {
+                                              disabled={this.state.value.length < 5} onClick={() => {
                             onNext && onNext({[fieldName]: this.state.value, next: options.next});
                         }}>
                             {options.options.button_title || "Next"}
@@ -43,7 +50,7 @@ class WMapLocatorStep extends Component {
                     onBack={() => onBack && onBack()}
                     btnProps={{
                         onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
-                        disabled: this.state.value.length === 0
+                        disabled: this.state.value.length < 5
                     }}/>}
             </div>
         );
