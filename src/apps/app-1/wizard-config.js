@@ -319,7 +319,8 @@ export default {
           "default": "",
           "text":"Postleitzahl",
           "description": "Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können",
-          "icon": "map.png"
+          "icon": "map.png",
+          "button_title": "Weiter",
         }
       }
       ]
