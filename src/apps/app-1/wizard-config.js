@@ -121,7 +121,7 @@ export default {
           },
           "default": 500,
           "text":"Nutzfläche",
-          "icon": "floorspace.svg",
+          "icon": "square-size.svg",
           "button_title": "Weiter",
           "placeholder" : "m<sup>2</sup>",
         }
@@ -219,7 +219,7 @@ export default {
       "id": 400,
       "type": "slider-step",
       "description":"floorspace",
-      "title": "Um welche Nutzfläche handelt es sich?",
+      "title": "Wie groß ist die Nutzfläche der Sonderimmobilie?",
       "fieldName": "floorSpace",
       "options": [
         { id:"0", "next" : 401, "prev" : "nil", "options": {
@@ -230,7 +230,7 @@ export default {
           },
           "default": 500,
           "text":"Nutzfläche",
-          "icon": "floorspace.svg",
+          "icon": "square-size.svg",
           "button_title": "Weiter",
           "placeholder" : "m<sup>2</sup>"
         }
