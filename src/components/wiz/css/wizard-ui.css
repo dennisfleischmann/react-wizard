@@ -235,8 +235,10 @@
     width: 100%;
 }
 
-.card-container:hover {
-    border-color: var(--primary-color);
+@media (max-width: 767px) {
+    .card-container:hover {
+        border-color: var(--primary-color);
+    }
 }
 
 .wui.footer {
@@ -441,7 +443,7 @@ button:disabled, button[disabled] {
     cursor: default !important;
 }
 
-.wui.action-button:hover {
+.wui.action-button:hover, .wui.action-button:active {
     box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 20px;
 }
 

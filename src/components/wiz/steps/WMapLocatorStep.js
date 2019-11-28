@@ -13,7 +13,7 @@ class WMapLocatorStep extends Component {
     }
 
     handleChange = ({target: {value}}) => {
-        if (value.length <= 5) {
+        if (value.length <= 5 && parseInt(value)) {
             this.setState({value});
         }
     };
@@ -32,7 +32,9 @@ class WMapLocatorStep extends Component {
                             <div className={"wui step-map-input-header"}>{options.options.text}</div>
                             <input className={"wui step-map-styled-map"}
                                    value={this.state.value}
-                                   type={"number"}
+                                   type={"tel"}
+                                   pattern="\d*"
+                                   inputMode="numeric"
                                    placeholder={"z.B. 12385"}
                                    onChange={this.handleChange}/>
                             <div className={"wui step-map-input-desc"}>{options.options.description}</div>

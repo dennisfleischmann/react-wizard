@@ -22,7 +22,11 @@ class WSendStep extends Component {
         this.onBlur = this.onBlur.bind(this);
     }
 
-    onChange = ({target: {name, value}}) => this.setState({[name]: value, [`${name}Err`]: false});
+    onChange = ({target: {name, value}}) => this.setState({
+        [name]: value,
+        [`${name}Err`]: false,
+        emailFormatErr: false
+    });
 
     onBlur = ({target: {name, value}}) => {
         if (!value) {
@@ -38,6 +42,7 @@ class WSendStep extends Component {
         const {onNext, options} = this.props;
         const {next} = options[0];
         const {firstname, lastname, email, phone, salutation, firstnameErr, lastnameErr, phoneErr, emailErr, emailFormatErr} = this.state;
+        const disable = !(firstname && lastname && email && phone && salutation) || firstnameErr || lastnameErr || phoneErr || emailErr || emailFormatErr;
         return (
             <div className={'wui outer'}>
                 <div className={'wui container border'}>
@@ -132,7 +137,7 @@ class WSendStep extends Component {
                                                                 next
                                                             });
                                                         }}
-                                                        disabled={!(firstname && lastname && phone && email && salutation)}>
+                                                        disabled={disable}>
                                                     <div>Bewertung erhalten</div>
                                                     <span className={"wui action-button-arrow"}/>
                                                 </button>
