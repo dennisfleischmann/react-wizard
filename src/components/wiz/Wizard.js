@@ -45,7 +45,7 @@ const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
                                isBackVisible={stack.length > 0}
                                onBack={() => handleBack()}
                                onNext={(d) => {
-                                   const nextStep = steps.find(s => s.id === d.next);
+                                const nextStep = steps.find(s => s.id === d.next);
                                    if (nextStep) {
                                        setCurrentStep(nextStep);
                                        setStack([...stack, {...currentStep}]);

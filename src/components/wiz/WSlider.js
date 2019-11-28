@@ -30,6 +30,7 @@ class WSlider extends Component {
     static propTypes = {
         min: PropTypes.number,
         max: PropTypes.number,
+        unit: PropTypes.string,
         step: PropTypes.number,
         value: PropTypes.number,
         orientation: PropTypes.string,
@@ -52,7 +53,8 @@ class WSlider extends Component {
         tooltip: true,
         reverse: false,
         labels: {},
-        handleLabel: ''
+        handleLabel: '',
+        unit: '',
     };
 
     constructor(props, context) {
@@ -272,6 +274,7 @@ class WSlider extends Component {
             labels,
             min,
             max,
+            unit,
             handleLabel
         } = this.props;
         const {active} = this.state;
@@ -351,14 +354,14 @@ class WSlider extends Component {
                             }}
                             className='rangeslider__handle-tooltip'
                         >
-                            <span>{this.handleFormat(value)} m<sup>2</sup></span>
+                            <span dangerouslySetInnerHTML={{__html: ` ${this.handleFormat(value)} ${unit}`}} ></span>
                         </div>
                         <div className='rangeslider__handle-label'>{handleLabel}</div>
                     </div>
                 </div>
                 <div className={"waxis"}>
-                    <span>&lt; {min} m<sup>2</sup></span>
-                    <span>&gt; {max} m<sup>2</sup></span>
+                    <span dangerouslySetInnerHTML={{__html: `&lt; ${min} ${unit}`}} ></span>
+                    <span dangerouslySetInnerHTML={{__html: `&gt; ${max} ${unit}`}} ></span>
                 </div>
             </div>
         )
