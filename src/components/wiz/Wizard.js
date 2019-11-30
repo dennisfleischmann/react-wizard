@@ -7,8 +7,6 @@ import WSendStep from "./steps/WSendStep";
 import WConfirmationStep from "./steps/WConfirmationStep";
 import utils from "./utils";
 
-import './css/index.css';
-
 const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
 
     // state
