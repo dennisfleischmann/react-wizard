@@ -2,7 +2,7 @@ export default {
   backend: {
     api: '/api/wizard/submit',
   },
-  background_img: "https://images.ctfassets.net/64q0dihi81ut/4JsjvN05wPCIhRMI07CzXf/94c3c9089e60271849e01efa0c7a0f75/hero_bg.png?w=1200&fm=jpg&fl=progressive",
+  background_img: "background_2.jpeg",
   steps: [
     {
       "id": 0,
