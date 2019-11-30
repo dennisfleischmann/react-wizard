@@ -13,7 +13,9 @@ class WMapLocatorStep extends Component {
     }
 
     handleChange = ({target: {value}}) => {
-        if (value.length <= 5 && parseInt(value)) {
+        if (value.length === 0) {
+            this.setState({value: ""});
+        } else if (value.length <= 5 && value.length > 0 && parseInt(value)) {
             this.setState({value});
         }
     };
