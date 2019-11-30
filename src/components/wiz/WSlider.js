@@ -3,8 +3,6 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import {capitalize, clamp} from "./utils";
 
-import './css/slider.css';
-
 /**
  * Predefined constants
  * @type {Object}

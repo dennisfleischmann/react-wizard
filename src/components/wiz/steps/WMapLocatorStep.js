@@ -34,7 +34,7 @@ class WMapLocatorStep extends Component {
                             <div className={"wui step-map-input-header"}>{options.options.text}</div>
                             <input className={"wui step-map-styled-map"}
                                    value={this.state.value}
-                                   type={"tel"}
+                                   type={"number"}
                                    pattern="\d*"
                                    inputMode="numeric"
                                    placeholder={"z.B. 12385"}

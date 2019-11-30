@@ -1,5 +1,8 @@
-@import "progressbar.css";
 @import "wizard-ui.css";
+@import "progressbar.css";
+@import "confirmation-step.css";
+@import "slider.css";
+@import "send-step.css";
 
 :root {
     --primary-color: #f2932c;

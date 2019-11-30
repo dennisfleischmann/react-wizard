@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import "../css/confirmation-step.css";
 
 class WConfirmationStep extends Component {
     render() {

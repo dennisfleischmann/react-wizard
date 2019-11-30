@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
-import '../css/send-step.css';
 
 class WSendStep extends Component {
     constructor(props) {
