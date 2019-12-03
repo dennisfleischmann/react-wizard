@@ -5,10 +5,8 @@ import WHeader from './WHeader'
 import WFooter from './WFooter'
 import WSendStep from "./steps/WSendStep";
 import WConfirmationStep from "./steps/WConfirmationStep";
-import utils from "./utils";
 
-const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
-
+const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}}) => {
     // state
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
@@ -37,13 +35,13 @@ const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
         }
     };
 
-    const Component = utils.getStepComponentByType(currentStep.type);
+    const Component = componentMap[currentStep.type];
 
     const content = <Component {...currentStep}
                                isBackVisible={stack.length > 0}
                                onBack={() => handleBack()}
                                onNext={(d) => {
-                                const nextStep = steps.find(s => s.id === d.next);
+                                   const nextStep = steps.find(s => s.id === d.next);
                                    if (nextStep) {
                                        setCurrentStep(nextStep);
                                        setStack([...stack, {...currentStep}]);
@@ -96,7 +94,7 @@ const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
 
     // render
     return (
-        <div className="hero" style={{backgroundImage:  `url(${background_img})`}}>
+        <div className="hero" style={{backgroundImage: `url(${background_img})`}}>
             <div className={'wui outer'}>
                 <div className={'wui container'}>
                     <WHeader backArrow={stack.length > 0} title={currentStep.title}
@@ -116,6 +114,10 @@ const Wizard = ({config: {backend: {api}, background_img, steps}}) => {
     )
 };
 
+Wizard.defaultProps = {
+    componentMap: {}
+};
+
 Wizard.propTypes = {
     config: PropTypes.shape({
         steps: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -123,7 +125,8 @@ Wizard.propTypes = {
             api: PropTypes.string
         })
     }),
-    onSubmit: PropTypes.func
+    onSubmit: PropTypes.func,
+    componentMap: PropTypes.object.isRequired
 };
 
 export default Wizard
