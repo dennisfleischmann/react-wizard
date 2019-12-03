@@ -21,19 +21,23 @@ class WSendStep extends Component {
         this.onBlur = this.onBlur.bind(this);
     }
 
-    onChange = ({target: {name, value}}) => this.setState({
-        [name]: value,
-        [`${name}Err`]: false,
-        emailFormatErr: false
-    });
+    onChange = ({target: {name, value}}) => {
+        let emailFormatErr = false;
+        if (name === "email") {
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                emailFormatErr = true;
+            }
+        }
+        this.setState({
+            [name]: value,
+            [`${name}Err`]: !value,
+            emailFormatErr: emailFormatErr
+        })
+    };
 
     onBlur = ({target: {name, value}}) => {
         if (!value) {
             this.setState({[`${name}Err`]: true});
-        } else if (name === "email") {
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
-                this.setState({emailFormatErr: true});
-            }
         }
     };
 
