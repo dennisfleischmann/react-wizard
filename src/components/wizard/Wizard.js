@@ -18,15 +18,9 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
     });
 
     useEffect(_ => {
-        setTimeout(() => {
-            setAnimation("");
-        }, 800);
-        const handleResize = () => setDimen({
-            height: window.innerHeight,
-            width: window.innerWidth
-        });
+        setTimeout(() => setAnimation(""), 400);
+        const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
         window.addEventListener("resize", handleResize);
-        console.log("DID MOUNT");
         return _ => window.removeEventListener("resize", handleResize);
     });
 
