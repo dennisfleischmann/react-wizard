@@ -29,7 +29,6 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
             setCurrentStep(stack[lastIndex]);
             setStack(stack.filter((_, i) => i !== lastIndex));
             setData(data.filter((_, i) => i !== lastIndex));
-            setAnimation("fadeIn");
         }
     };
 
