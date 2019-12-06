@@ -1,3 +1,4 @@
+@import "other.css";
 @import "wizard-ui.css";
 @import "progressbar.css";
 @import "confirmation-step.css";
@@ -7,20 +8,4 @@
 :root {
     --primary-color: #f2932c;
     --secondary-color: #033152;
-}
-
-.hero {
-    background-size: cover;
-    z-index: 10;
-    hyphens: auto;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        padding: 72px;
-    }
-
-    html[lang=de] .hero {
-        position: relative;
-    }
 }

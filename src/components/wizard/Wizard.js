@@ -11,14 +11,12 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([]); // stack contain path stack
-    const [animation, setAnimation] = useState("");
     const [dimen, setDimen] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     });
 
     useEffect(_ => {
-        setTimeout(() => setAnimation(""), 400);
         const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
         window.addEventListener("resize", handleResize);
         return _ => window.removeEventListener("resize", handleResize);
@@ -46,7 +44,6 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
                                        setCurrentStep(nextStep);
                                        setStack([...stack, {...currentStep}]);
                                        setData([...data, {...d}]);
-                                       setAnimation("fadeIn");
                                    }
                                }}/>;
 
@@ -81,7 +78,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
                     <WHeader backArrow={stack.length > 0} title={currentStep.title}
                              percentage={calcPercentageProgress()}
                              onBack={() => handleBack()}/>
-                    <div className={"wui carousel animated"}>
+                    <div className={"wui carousel animated"} key={Math.random()}>
                         <div className={"wui carousel-slide"}>
                             <div className={"wui content"}>
                                 {content}
@@ -101,7 +98,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
                     <WHeader backArrow={stack.length > 0} title={currentStep.title}
                              percentage={calcPercentageProgress()}
                              onBack={() => handleBack()}/>
-                    <div className={`wui carousel animated ${animation}`}>
+                    <div className={`wui carousel animated`} key={Math.random()}>
                         <div className={"wui carousel-slide"}>
                             <div className={"wui content"}>
                                 {content}

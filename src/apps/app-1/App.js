@@ -5,6 +5,7 @@ import config from './wizard-config.js';
 import Wizard from "../../components/wizard/Wizard";
 
 import './css/index.css';
+
 import WCardStep from "../../components/wizard/steps/WCardStep";
 import WSliderStep from "../../components/wizard/steps/WSliderStep";
 import WSendStep from "../../components/wizard/steps/WSendStep";
