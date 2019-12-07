@@ -232,7 +232,7 @@ export default {
           "unit": "m<sup>2</sup>",
           "range": {
             "min": 500,
-            "max": 2000
+            "max": 1000
           },
           "default": 500,
           "text":"Welche Fläche hat das Grundstück?",
