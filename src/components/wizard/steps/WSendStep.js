@@ -131,7 +131,13 @@ class WSendStep extends Component {
                                             <div className={"wui ss-btn"}>
                                                 <button type={"submit"} className={"wui action-button ss-btn"}
                                                         onClick={() => {
-                                                            console.log('data', this.props.data);
+
+                                                            const objectData= {};
+                                                            this.props.data.map(
+                                                                item => objectData[item.fieldName] = item.value
+                                                                );
+
+                                                            console.log('normailzed', objectData);
                                                             onNext && onNext({
                                                                 firstname,
                                                                 lastname,
@@ -140,7 +146,9 @@ class WSendStep extends Component {
                                                                 salutation,
                                                                 next
                                                             });
-                                                        }}
+                                                        }
+                                                    
+                                                    }
                                                         disabled={disable}>
                                                     <div>Bewertung erhalten</div>
                                                     <span className={"wui action-button-arrow"}/>

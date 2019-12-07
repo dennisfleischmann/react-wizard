@@ -43,7 +43,7 @@ class WMapLocatorStep extends Component {
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
                                               disabled={this.state.value.length < 5} onClick={() => {
-                            onNext && onNext({[fieldName]: this.state.value, next: options.next});
+                            onNext && onNext({value: this.state.value, next: options.next, fieldName});
                         }}>
                             {options.options.button_title || "Next"}
                             <span className={"wui action-button-arrow"}/>
@@ -53,7 +53,7 @@ class WMapLocatorStep extends Component {
                 {isMobile && <WBottomBtnsBar
                     onBack={() => onBack && onBack()}
                     btnProps={{
-                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
+                        onClick: () => onNext && onNext({value: this.state.value, next: options.next, fieldName}),
                         disabled: this.state.value.length < 5
                     }}/>}
             </div>

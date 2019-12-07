@@ -34,7 +34,8 @@ class WInputStep extends Component {
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
                                               disabled={this.state.value.length === 0} onClick={() => {
-                            onNext && onNext({[fieldName]: this.state.value, next: options.next});
+
+                            onNext && onNext({value: this.state.value, next: options.next, fieldName});
                         }}>
                             {options.options.button_title}
                             <span className={"wui action-button-arrow"}/>
@@ -45,7 +46,7 @@ class WInputStep extends Component {
                     onBack={() => onBack && onBack()}
                     nextBtnTitle={options.options.button_title}
                     btnProps={{
-                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next: options.next}),
+                        onClick: () => onNext && onNext({value: this.state.value, next: options.next, fieldName}),
                         disabled: this.state.value.length === 0
                     }}/>}
             </div>

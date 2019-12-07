@@ -36,9 +36,9 @@ export default {
     {
       "id": 2,
       "type": "cards-step",
-      "description":"contractReason",
+      "description":"contactReason",
       "title": "Grund für die Bewertung",
-      "fieldName": "contractReason",
+      "fieldName": "contactReason",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -52,10 +52,10 @@ export default {
     {
       "id": 3,
       "type": "input-step",
-      "description":"differentReason",
+      "description":"contactReason",
       "title": "Grund für die Bewertung",
       "isSpecialSelection": true,
-      "fieldName": "differentReason",
+      "fieldName": "contactReason",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -93,7 +93,7 @@ export default {
     {
       "id": 101,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"contractReason",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
       "fieldName": "contractReason",
       "options": [
@@ -103,7 +103,26 @@ export default {
         {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"s"}},
         {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"finance_office.svg", "text":"Finanzamt", "size":"s"}},
         {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 102, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      ]
+    },
+    {
+      "id": 102,
+      "type": "input-step",
+      "description":"contactReason",
+      "title": "Grund für die Bewertung",
+      "isSpecialSelection": true,
+      "fieldName": "contactReason",
+      "options": [
+        { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
+          "default": '',
+          "text":"Anderer Grund",
+          "icon": "other.svg",
+          "button_title": "Weiter",
+          "placeholder" : "z.B. Schenkung",
+          "description": "Für eine professionelle Beratung benötigen wir den Grund des Gutachtens oder einer Beratung"
+        }
+      }
       ]
     },
     {
@@ -131,24 +150,24 @@ export default {
     {
       "id": 201,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"contactReason",
       "title": "Bitte wählen Sie die Nutzungsart aus",
-      "fieldName": "contractReason",
+      "fieldName": "commercial_usage",
       "options": [
         {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"s"}},
         {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
         {  id:"2", value:"Büro/ Praxis", "next" : 203, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
         {  id:"3", value:"Handel", "next" : 203, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"s"}},
-        {  id:"4", value:"Sonstiges", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
+        {  id:"4", value:"Sonstiges", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},      
       ]
     },
     {
       "id": 202,
       "type": "input-step",
-      "description":"differentReason",
+      "description":"commercial_usage",
       "title": "Andere Nutzart",
       "isSpecialSelection": true,
-      "fieldName": "differentReason",
+      "fieldName": "commercial_usage",
       "options": [
         { id:"0", "next" : 203, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -164,9 +183,9 @@ export default {
     {
       "id": 203,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"contactReason",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contractReason",
+      "fieldName": "contactReason",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -180,10 +199,10 @@ export default {
     {
       "id": 204,
       "type": "input-step",
-      "description":"differentReason",
+      "description":"contactReason",
       "title": "Anderer Grund",
       "isSpecialSelection": true,
-      "fieldName": "differentReason",
+      "fieldName": "contactReason",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -221,9 +240,9 @@ export default {
     {
       "id": 301,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"contactReason",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contractReason",
+      "fieldName": "contactReason",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -237,10 +256,10 @@ export default {
     {
       "id": 302,
       "type": "input-step",
-      "description":"differentReason",
+      "description":"contactReason",
       "title": "Grund für die Bewertung",
       "isSpecialSelection": true,
-      "fieldName": "differentReason",
+      "fieldName": "contactReason",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -293,9 +312,9 @@ export default {
     {
       "id": 402,
       "type": "input-step",
-      "description":"differentSpecialPropertyType",
+      "description":"specialPropertyType",
       "title": "Um welche Art einer Sonderimmobilie handelt es sich?",
-      "fieldName": "differentSpecialPropertyType",
+      "fieldName": "specialPropertyType",
       "isSpecialSelection":true,
       "options": [
         { id:"0", "next" : 403, "prev" : "nil", "options": {
@@ -314,7 +333,7 @@ export default {
       "type": "cards-step",
       "description":"marketingType",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contractReason",
+      "fieldName": "contactReason",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -329,10 +348,10 @@ export default {
   {
     "id": 404,
     "type": "input-step",
-    "description":"differentReason",
+    "description":"contactReason",
     "title": "Grund für die Bewertung",
     "isSpecialSelection": true,
-    "fieldName": "differentReason",
+    "fieldName": "contactReason",
     "options": [
       { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
         "default": '',
@@ -348,7 +367,7 @@ export default {
     {
       "id": 998,
       "type": "map-locator-step",
-      "description":"propertyLocation",
+      "description":"zip",
       "isSharedStep":true,
       "title": "In welcher Region befindet sich die Immobilie?",
       "fieldName": "zip",

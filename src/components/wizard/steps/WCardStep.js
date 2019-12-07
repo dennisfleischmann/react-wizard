@@ -20,7 +20,7 @@ const WCardStep = ({fieldName, options, onNext, onBack, isBackVisible}) => {
             {options.map((o, index) =>
                 <WCard
                     key={index}
-                    onClick={({value, next}) => onNext && onNext({[fieldName]: value, next})}
+                    onClick={({value, next}) => onNext && onNext({value, next, fieldName})}
                     data={o}/>
             )}
             {isMobile && isBackVisible && <WBottomBtnsBar onBack={() => onBack && onBack()} isNextVisible={false}/>}

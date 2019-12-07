@@ -20,18 +20,24 @@ class WSliderStep extends Component {
             <div className={"wui step-slider"}>
                 <div className={"wui step-slider paper"}>
                     <div className={"wui slider-measure"}>
-                        <WSlider min={min} max={max} unit={unit} step={1} value={value}
+                        <WSlider min={min} max={max} unit={unit} step={1} value={value > max ? max : value < min ? min : value}
                                  onChange={d => this.setState({value: d})}
                                  style={{width: "100%"}}/>
                         <div className={"wui slider-measure-input"}>
                             <span className={"wui slider-measure-input-label"}>Alternativ eintippen</span>
                             <div className={"wui slider-measure-input-styled"}>
-                                <input pattern={"\d"} type={"number"}
+                                <input pattern={"\d"} type={"text"}
                                        className={"wui slider-measure-input-styled-input"}
                                        onChange={e => {
-                                           this.setState({value: e.target.value})
+                                           if(parseInt(e.target.value, 10)) {
+                                            this.setState({value: parseInt(e.target.value, 10)})
+                                           }
+                                           if(!e.target.value) {
+                                            this.setState({value: 0})
+                                           }
+                                           
                                        }}
-                                       value={value}/>
+                                       value={this.state.value}/>
                                 <span className={"wui slider-measure-input-styled-unit"} dangerouslySetInnerHTML={{__html: placeholder}}></span>
                             </div>
                         </div>
@@ -42,7 +48,7 @@ class WSliderStep extends Component {
                                  className={"wui slider-ctrl-img"}/>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
-                                              onClick={() => onNext && onNext({[fieldName]: this.state.value, next})}>
+                                              onClick={() => onNext && onNext({value: this.state.value, next, fieldName})}>
                             {button_title || button_title}
                             <span className={"wui action-button-arrow"}/>
                         </button>}
@@ -53,7 +59,7 @@ class WSliderStep extends Component {
                     onBack={() => onBack && onBack()}
                     nextBtnTitle={button_title || button_title}
                     btnProps={{
-                        onClick: () => onNext && onNext({[fieldName]: this.state.value, next})
+                        onClick: () => onNext && onNext({value: this.state.value, next, fieldName})
                     }}/>}
             </div>
         );
