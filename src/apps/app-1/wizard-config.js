@@ -8,9 +8,7 @@ export default {
     "Über 10.000 zufriedene Kunden",
     "Kostenlose Immobilienbewertung"
   ],
-  footer: {
-    "img": "https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
-  },
+  certsImage: "https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
   steps: [
     {
       "id": 0,

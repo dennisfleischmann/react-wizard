@@ -6,7 +6,7 @@ import WFooter from './WFooter'
 import WSendStep from "./steps/WSendStep";
 import WConfirmationStep from "./steps/WConfirmationStep";
 
-const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, claims, footer}}) => {
+const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, claims, certsImage}}) => {
     // state
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
@@ -48,6 +48,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
                                }}
                                data={data}
                                claims={claims}
+                               certsImage={certsImage}
                     />;
 
     if (Component === WSendStep || Component === WConfirmationStep) {
@@ -108,7 +109,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
                             </div>
                         </div>
                     </div>
-                    <WFooter claims={claims} img={footer.img}/>
+                    <WFooter claims={claims} img={certsImage} />
                 </div>
             </div>
         </div>

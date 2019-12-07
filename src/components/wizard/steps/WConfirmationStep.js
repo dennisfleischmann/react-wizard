@@ -13,7 +13,7 @@ class WConfirmationStep extends Component {
                         <div className={"wuis cs-header outer"}>
                             <div className={"wui cs-header"}>
                                 <div className={"wui cs-header-title"}>
-                                    Danke! Wir werden Sie in Kürze telefonisch kontaktieren
+                                    {this.props.title}
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ class WConfirmationStep extends Component {
                                                 {this.props.claims.map((t, i) =>
                                                     <div className={"wui benefit"} key={i}>
                                                         <img
-                                                            src={"https://images.ctfassets.net/64q0dihi81ut/69SYLmbmgWlystBmgl2aaV/edc421ecace814e1a78190ddd84d00c5/checkmark.svg"}
+                                                            src={"svg/checkmark.svg"}
                                                             alt={""} className={"wui benefit-checkmark"}/>
                                                         <span className={"wui benefit-title"}>{t}</span>
                                                     </div>)}
@@ -60,7 +60,7 @@ class WConfirmationStep extends Component {
                             <div className={"wui cs-footer"}>
                                 <div className={"wui cs-footer-content"}>
                                     <img className={""}
-                                        src={"https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png"}
+                                        src={this.props.certsImage}
                                         alt={""}/>
                                 </div>
                             </div>
