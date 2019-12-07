@@ -418,13 +418,13 @@ export default {
       "type": "confirmation-step",
       "description":"send data",
       "title": "Danke! Wir werden Sie in Kürze telefonisch kontaktieren",
-      "picture_title": "Martin Saurer",
-      "picture_subtitle":"Immobilienmakler",
-      "img":"https://images.ctfassets.net/64q0dihi81ut/4zJJMLibX4inVK9JkwA6np/faa32958f98eb1c749bb84e0b0401464/makler.png",
+      "picture_title": "André Heid",
+      "picture_subtitle":"Geschäftsführer",
+      "img":"https://www.heid-immobilienbewertung.de/img/team/xAndre-Heid.jpg.pagespeed.ic.GN56gc_63E.webp",
       "html_text":"\
       <p class=\"wui cs-main-content-line\"><span class=\"wui cs-main-content-line-styled\">Sehr geehrter Interessent,</span></p>\
       <p class=\"wui cs-main-content-line\">um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.</p>\
-      <p class=\"wui cs-main-content-line\">Mit freundlichen Grüßen<span class=\"wui cs-main-content-line-styled\">Martin Saurer</span></p>\
+      <p class=\"wui cs-main-content-line\">Mit freundlichen Grüßen<span class=\"wui cs-main-content-line-styled\">André Heid</span></p>\
       "
     }
     ]}
