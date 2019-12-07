@@ -124,9 +124,9 @@ class WSendStep extends Component {
                                         </div>
                                         <div className={"wui ss-contact-ctrl"}>
                                             <div className={"wui ss-img-container"}>
-                                                {/*<img className={"wui ss-img"}
-                                                     src={"https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png"}
-                                                     alt={""}/>*/}
+                                                <img className={"wui ss-img"}
+                                                     src={this.props.sideImg}
+                                                     alt={""}/>
                                             </div>
                                             <div className={"wui ss-btn"}>
                                                 <button type={"submit"} className={"wui action-button ss-btn"}

@@ -1,5 +1,5 @@
 export default {
-  background_img: "Optimized-background_2.jpeg",
+  background_img: "img/Optimized-background_2.jpeg",
   backend: {
     api: "",
   },
@@ -395,7 +395,7 @@ export default {
       "title": "Ihre Immobilienbewertung wird erstellt",
       "isSharedStep":true,
       
-      "sideImg": "https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png",
+      "sideImg": "https://www.heid-immobilienbewertung.de/bilder/xImmobiliengutachten-berlin.jpg.pagespeed.ic.UTGXV8wIdf.webp",
       "options": [
         { 
           "id":"0", "next" : 1000,
@@ -418,7 +418,7 @@ export default {
       "title": "Danke! Wir werden Sie in Kürze telefonisch kontaktieren",
       "picture_title": "André Heid",
       "picture_subtitle":"Geschäftsführer",
-      "img":"https://www.heid-immobilienbewertung.de/img/team/xAndre-Heid.jpg.pagespeed.ic.GN56gc_63E.webp",
+      "img":"img/owner-circle-cropped.png",
       "html_text":"\
       <p class=\"wui cs-main-content-line\"><span class=\"wui cs-main-content-line-styled\">Sehr geehrter Interessent,</span></p>\
       <p class=\"wui cs-main-content-line\">um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.</p>\
