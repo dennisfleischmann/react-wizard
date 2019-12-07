@@ -3,13 +3,21 @@ export default {
   backend: {
     api: "",
   },
+  claims: [
+    "Beratung durch Experten",
+    "Über 10.000 zufriedene Kunden",
+    "Kostenlose Immobilienbewertung"
+  ],
+  footer: {
+    "img": "https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
+  },
   steps: [
     {
       "id": 0,
       "type": "cards-step",
       "description":"house select",
       "title": "Welche Immobilie möchten Sie bewerten?",
-      "fieldName": "houseType",
+      "fieldName": "Objekt_Typ",
       "options": [
         {  id:"0", value:"Haus", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"house.svg", "text":"Haus", "size":"s"}},
         {  id:"1", value:"Wohnung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"apartment.svg", "text":"Wohnung", "size":"s"}},
@@ -22,8 +30,8 @@ export default {
       "id": 1,
       "type": "cards-step",
       "description":"type of real estate",
-    "title": "Bitte wählen Sie die Art des Gebäudes aus",
-      "fieldName": "propertyType",
+      "title": "Bitte wählen Sie die Art des Gebäudes aus",
+      "fieldName": "Art_des_Gebäudes",
       "options": [
         {  id:"0", value:"Einfamilien&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"one_family_house.svg", "text":"Einfamilienhaus", "size":"s"}},
         {  id:"1", value:"Reihen&shy;end&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"row_end_house.svg", "text":"Reihenendhaus", "size":"s"}},
@@ -36,9 +44,9 @@ export default {
     {
       "id": 2,
       "type": "cards-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Grund für die Bewertung",
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -52,10 +60,10 @@ export default {
     {
       "id": 3,
       "type": "input-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Grund für die Bewertung",
       "isSpecialSelection": true,
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -73,7 +81,7 @@ export default {
       "type": "slider-step",
       "description":"Apartment Count",
       "title": "Wählen Sie die Anzahl der Wohnungen",
-      "fieldName": "apartmentAmount",
+      "fieldName": "Anzahl_Wohnungen",
       "options": [
         { id:"0", "next" : 101, "prev" : "nil", "options": {
           "unit": "",
@@ -93,9 +101,9 @@ export default {
     {
       "id": 101,
       "type": "cards-step",
-      "description":"contractReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contractReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -109,10 +117,10 @@ export default {
     {
       "id": 102,
       "type": "input-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Grund für die Bewertung",
       "isSpecialSelection": true,
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -130,7 +138,7 @@ export default {
       "type": "slider-step",
       "description":"floorspace",
       "title": "Wie groß ist die Nutzfläche?",
-      "fieldName": "floorSpace",
+      "fieldName": "Nutzfläche",
       "options": [
         { id:"0", "next" : 201, "prev" : "nil", "options": {
           "unit": "m<sup>2</sup>",
@@ -150,9 +158,9 @@ export default {
     {
       "id": 201,
       "type": "cards-step",
-      "description":"contactReason",
+      "description":"Nutzungsart",
       "title": "Bitte wählen Sie die Nutzungsart aus",
-      "fieldName": "commercial_usage",
+      "fieldName": "Nutzungsart",
       "options": [
         {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"s"}},
         {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
@@ -164,10 +172,10 @@ export default {
     {
       "id": 202,
       "type": "input-step",
-      "description":"commercial_usage",
+      "description":"Nutzungsart",
       "title": "Andere Nutzart",
       "isSpecialSelection": true,
-      "fieldName": "commercial_usage",
+      "fieldName": "Nutzungsart",
       "options": [
         { id:"0", "next" : 203, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -183,9 +191,9 @@ export default {
     {
       "id": 203,
       "type": "cards-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -199,10 +207,10 @@ export default {
     {
       "id": 204,
       "type": "input-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Anderer Grund",
       "isSpecialSelection": true,
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -218,9 +226,9 @@ export default {
     {
       "id": 300,
       "type": "slider-step",
-      "description":"propertySize",
+      "description":"Grundstücksgroße",
       "title": "Um welche Grundstücksgröße handelt es sich?",
-      "fieldName": "propertySize",
+      "fieldName": "Grundstücksgroße",
       "options": [
         { id:"0", "next" : 301, "prev" : "nil", "options": {
           "unit": "m<sup>2</sup>",
@@ -240,9 +248,9 @@ export default {
     {
       "id": 301,
       "type": "cards-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -256,10 +264,10 @@ export default {
     {
       "id": 302,
       "type": "input-step",
-      "description":"contactReason",
+      "description":"Grund_für_die_Bewertung",
       "title": "Grund für die Bewertung",
       "isSpecialSelection": true,
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
@@ -275,9 +283,9 @@ export default {
     {
       "id": 400,
       "type": "slider-step",
-      "description":"floorspace",
+      "description":"Nutzfläche",
       "title": "Wie groß ist die Nutzfläche der Sonderimmobilie?",
-      "fieldName": "floorSpace",
+      "fieldName": "Nutzfläche",
       "options": [
         { id:"0", "next" : 401, "prev" : "nil", "options": {
           "unit": "m<sup>2</sup>",
@@ -297,9 +305,9 @@ export default {
     {
       "id": 401,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"Typ_Sonderimmobilie",
       "title": "Um welche art einer Sonderimmobilie handelt es sich?",
-      "fieldName": "specialPropertyType",
+      "fieldName": "Typ_Sonderimmobilie",
       "options": [
         {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"hotel.svg", "text":"Hotel", "size":"s"}},
         {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"residential_care.svg", "text":"Pflegeheim", "size":"s"}},
@@ -312,9 +320,9 @@ export default {
     {
       "id": 402,
       "type": "input-step",
-      "description":"specialPropertyType",
+      "description":"Typ_Sonderimmobilie",
       "title": "Um welche Art einer Sonderimmobilie handelt es sich?",
-      "fieldName": "specialPropertyType",
+      "fieldName": "Typ_Sonderimmobilie",
       "isSpecialSelection":true,
       "options": [
         { id:"0", "next" : 403, "prev" : "nil", "options": {
@@ -331,9 +339,9 @@ export default {
     {
       "id": 403,
       "type": "cards-step",
-      "description":"marketingType",
+      "description":"Grund_für_die_Bewertung",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
-      "fieldName": "contactReason",
+      "fieldName": "Grund_für_die_Bewertung",
       "options": [
         {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"heritage.svg", "text":"Erbe", "size":"s"}},
         {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"divorce.svg", "text":"Scheidung", "size":"s"}},
@@ -348,10 +356,10 @@ export default {
   {
     "id": 404,
     "type": "input-step",
-    "description":"contactReason",
+    "description":"Grund_für_die_Bewertung",
     "title": "Grund für die Bewertung",
     "isSpecialSelection": true,
-    "fieldName": "contactReason",
+    "fieldName": "Grund_für_die_Bewertung",
     "options": [
       { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
         "default": '',
@@ -367,10 +375,10 @@ export default {
     {
       "id": 998,
       "type": "map-locator-step",
-      "description":"zip",
+      "description":"PLZ",
       "isSharedStep":true,
       "title": "In welcher Region befindet sich die Immobilie?",
-      "fieldName": "zip",
+      "fieldName": "PLZ",
       "options": [
         { id:"0", "next" : 999, "prev" : "nil", "options": {
           "default": "",
@@ -386,10 +394,22 @@ export default {
       "id": 999,
       "type": "send-step",
       "description":"send data",
-      "title": "Wer soll ein kostenlose Beratung erhalten?",
+      "title": "Ihre Immobilienbewertung wird erstellt",
       "isSharedStep":true,
+      
+      "sideImg": "https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png",
       "options": [
-        { id:"0", "next" : 1000, text: "Kostenlos beraten lassen"},
+        { 
+          "id":"0", "next" : 1000,
+          "text": "Wer soll die Immobilienbewertung erhalten?", 
+          "button_title": "Bewertung erhalten",
+          "description": "Dieser Service ist kostenfrei. Mit Klick auf \"Bewertung erhalten\" bestätigen Sie die Kenntnisnahme unserer\
+          <a className=\"\"\
+          href=\"\"\
+          target=\"_blank\">AGBs</a> und <a\
+          className=\"\" href=\"\"\
+          target=\"_blank\">Datenschutzbestimmungen</a>"
+        },
       ],
       api: '/api/wizard/submit',
     },
@@ -397,6 +417,14 @@ export default {
       "id": 1000,
       "type": "confirmation-step",
       "description":"send data",
-      "title": "Ein Kundeberater wird Sie in kürze telefonisch kontaktieren."
+      "title": "Danke! Wir werden Sie in Kürze telefonisch kontaktieren",
+      "picture_title": "Martin Saurer",
+      "picture_subtitle":"Immobilienmakler",
+      "img":"https://images.ctfassets.net/64q0dihi81ut/4zJJMLibX4inVK9JkwA6np/faa32958f98eb1c749bb84e0b0401464/makler.png",
+      "html_text":"\
+      <p class=\"wui cs-main-content-line\"><span class=\"wui cs-main-content-line-styled\">Sehr geehrter Interessent,</span></p>\
+      <p class=\"wui cs-main-content-line\">um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.</p>\
+      <p class=\"wui cs-main-content-line\">Mit freundlichen Grüßen<span class=\"wui cs-main-content-line-styled\">Martin Saurer</span></p>\
+      "
     }
     ]}

@@ -53,7 +53,7 @@ class WSendStep extends Component {
                         <div className={"wuis ss-header outer"}>
                             <div className={"wui ss-header"}>
                                 <div className={"wui ss-header-title"}>
-                                    Ihre Immobilienbewertung wird erstellt
+                                    {this.props.title}
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ class WSendStep extends Component {
                                     <div className={"wui ss-form-content"}>
                                         <div className={"wui ss-form-container"}>
                                             <span className={"wui ss-form-title"}>
-                                                Wer soll die Immobilienbewertung erhalten?
+                                            {this.props.options[0].text}
                                             </span>
                                             <div className={"wui ss-form-gender-container margin-below"}>
                                                 <div className={"wui ss-styled-radio"}
@@ -124,18 +124,31 @@ class WSendStep extends Component {
                                         </div>
                                         <div className={"wui ss-contact-ctrl"}>
                                             <div className={"wui ss-img-container"}>
-                                                {/*<img className={"wui ss-img"}*/}
-                                                {/*     src={"https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png"}*/}
-                                                {/*     alt={""}/>*/}
+                                                {/*<img className={"wui ss-img"}
+                                                     src={"https://images.ctfassets.net/64q0dihi81ut/3oWveGQ9vIMCDo4fh10ESF/21919b4694cc0c382a5b560b28dbad78/book.png"}
+                                                     alt={""}/>*/}
                                             </div>
                                             <div className={"wui ss-btn"}>
                                                 <button type={"submit"} className={"wui action-button ss-btn"}
                                                         onClick={() => {
 
-                                                            const objectData= {};
+                                                            const objectData= {
+                                                                contact: {
+                                                                    firstname,
+                                                                    lastname,
+                                                                    phone,
+                                                                    email,
+                                                                    salutation,
+                                                                },
+                                                                wizard: {
+
+                                                                }
+                                                            };
+
                                                             this.props.data.map(
-                                                                item => objectData[item.fieldName] = item.value
+                                                                item => objectData.wizard[item.fieldName] = item.value
                                                                 );
+                                                                
 
                                                             console.log('normailzed', objectData);
                                                             onNext && onNext({
@@ -150,7 +163,7 @@ class WSendStep extends Component {
                                                     
                                                     }
                                                         disabled={disable}>
-                                                    <div>Bewertung erhalten</div>
+                                                    <div>{this.props.options[0].button_title}</div>
                                                     <span className={"wui action-button-arrow"}/>
                                                 </button>
                                             </div>
@@ -158,12 +171,7 @@ class WSendStep extends Component {
                                     </div>
                                     <div className={"wui ss-form-bottom-content"}>
                                         <div className={"wui disclaimer"}>
-                                            <p>Dieser Service ist kostenfrei. Mit Klick auf "Bewertung erhalten"
-                                                bestätigen Sie die Kenntnisnahme unserer <a className=""
-                                                                                            href=""
-                                                                                            target="_blank">AGBs</a> und <a
-                                                    className="" href=""
-                                                    target="_blank">Datenschutzbestimmungen</a>.</p>
+                                            <p dangerouslySetInnerHTML={{__html: this.props.options[0].description}}></p>
                                         </div>
                                     </div>
                                 </div>

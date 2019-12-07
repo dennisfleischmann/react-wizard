@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class WConfirmationStep extends Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (
             <div className={'wui outer'}>
@@ -19,37 +22,22 @@ class WConfirmationStep extends Component {
                                 <div className={"wui cs-thank-you-container"}>
                                     <div className={"wui cs-thank-you-content"}>
                                         <div className={"wui cs-thank-you-main-content"}>
-                                            <div className={"wui cs-main-content"}>
-                                                <p className={"wui cs-main-content-line"}>
-                                                    <span className={"wui cs-main-content-line-styled"}>
-                                                        Sehr geehrter Interessent,
-                                                    </span>
-                                                </p>
-                                                <p className={"wui cs-main-content-line"}>
-                                                    um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu
-                                                    können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in
-                                                    Kürze ein Kundenberater telefonisch kontaktieren.
-                                                </p>
-                                                <p className={"wui cs-main-content-line"}>
-                                                    Mit freundlichen Grüßen
-                                                    <span className={"wui cs-main-content-line-styled"}>
-                                                        Martin Saurer,
-                                                    </span>
-                                                </p>
+                                            <div className={"wui cs-main-content"} dangerouslySetInnerHTML={{__html: this.props.html_text}}>
+                                                
                                             </div>
                                         </div>
                                         <div className={"wui cs-thank-you-img"}>
                                             <div className={"wui cs-img-container"}>
                                                 <img style={{maxWidth: "160px"}} className={"wui cs-img-image"}
-                                                     src={"https://images.ctfassets.net/64q0dihi81ut/4zJJMLibX4inVK9JkwA6np/faa32958f98eb1c749bb84e0b0401464/makler.png"}
+                                                     src={this.props.img}
                                                      alt={""}/>
                                             </div>
                                             <div className={"wui cs-img-info"}>
                                                 <div className={"wui cs-img-info-name"}>
-                                                    Martin Saurer
+                                                    {this.props.picture_title}
                                                 </div>
                                                 <div className={"wui cs-img-info-profession"}>
-                                                    Immobilienmakler
+                                                    {this.props.picture_subtitle}
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +45,7 @@ class WConfirmationStep extends Component {
                                     <div className={"wui cs-thank-you-footer"}>
                                         <div className={"wui benefits"}>
                                             <div className={"wui benefits-group"}>
-                                                {["Beratung durch Experten", "Über 100.000 zufriedene Eigentümer", "Kostenlose Immobilienbewertung"].map((t, i) =>
+                                                {this.props.claims.map((t, i) =>
                                                     <div className={"wui benefit"} key={i}>
                                                         <img
                                                             src={"https://images.ctfassets.net/64q0dihi81ut/69SYLmbmgWlystBmgl2aaV/edc421ecace814e1a78190ddd84d00c5/checkmark.svg"}
