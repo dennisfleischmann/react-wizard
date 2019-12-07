@@ -1,8 +1,8 @@
 export default {
+  background_img: "Optimized-background_2.jpeg",
   backend: {
-    api: '/api/wizard/submit',
+    api: "",
   },
-  background_img: "background_2.jpeg",
   steps: [
     {
       "id": 0,
@@ -109,7 +109,7 @@ export default {
     {
       "id": 200,
       "type": "slider-step",
-      "description":"Apartment Count",
+      "description":"floorspace",
       "title": "Wie groß ist die Nutzfläche?",
       "fieldName": "floorSpace",
       "options": [
@@ -135,15 +135,34 @@ export default {
       "title": "Bitte wählen Sie die Nutzungsart aus",
       "fieldName": "contractReason",
       "options": [
-        {  id:"0", value:"Produktion", "next" : 202, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"s"}},
-        {  id:"1", value:"Lager/ Logistik", "next" : 202, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
-        {  id:"2", value:"Büro/ Praxis", "next" : 202, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
-        {  id:"3", value:"Handel", "next" : 202, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"s"}},
+        {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"production.svg", "text":"Produktion", "size":"s"}},
+        {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
+        {  id:"2", value:"Büro/ Praxis", "next" : 203, "prev" : -1, "options": {"icon":"doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
+        {  id:"3", value:"Handel", "next" : 203, "prev" : -1, "options": {"icon":"commerce.svg", "text":"Handel", "size":"s"}},
         {  id:"4", value:"Sonstiges", "next" : 202, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges (Eingabefeld) ", "size":"s"}},      
       ]
     },
     {
       "id": 202,
+      "type": "input-step",
+      "description":"differentReason",
+      "title": "Andere Nutzart",
+      "isSpecialSelection": true,
+      "fieldName": "differentReason",
+      "options": [
+        { id:"0", "next" : 203, "prev" : "nil", "button_title": "Next", "options": {
+          "default": '',
+          "text":"Andere Nutzart",
+          "icon": "other.svg",
+          "button_title": "Weiter",
+          "placeholder" : "z.B. Golfplatz",
+          "description": "Für eine professionelle Beratung benötigen wir die Nutzart"
+        }
+      }
+      ]
+    },
+    {
+      "id": 203,
       "type": "cards-step",
       "description":"marketingType",
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
@@ -155,7 +174,26 @@ export default {
         {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"buy.svg", "text":"Kauf", "size":"s"}},
         {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"finance_office.svg", "text":"Finanzamt", "size":"s"}},
         {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 204, "prev" : -1, "options": {"icon":"other.svg", "text":"Sonstiges", "size":"s"}},
+      ]
+    },
+    {
+      "id": 204,
+      "type": "input-step",
+      "description":"differentReason",
+      "title": "Anderer Grund",
+      "isSpecialSelection": true,
+      "fieldName": "differentReason",
+      "options": [
+        { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
+          "default": '',
+          "text":"Anderer Grund",
+          "icon": "other.svg",
+          "button_title": "Weiter",
+          "placeholder" : "z.B. Golfplatz",
+          "description": "Für eine professionelle Beratung einen anderen Grund"
+        }
+      }
       ]
     },
     {
@@ -332,14 +370,14 @@ export default {
       "title": "Wer soll ein kostenlose Beratung erhalten?",
       "isSharedStep":true,
       "options": [
-        {  id:"0", "next" : 1000, text: "Kostenlos beraten lassen"},
-      ]
+        { id:"0", "next" : 1000, text: "Kostenlos beraten lassen"},
+      ],
+      api: '/api/wizard/submit',
     },
     {
       "id": 1000,
       "type": "confirmation-step",
       "description":"send data",
-      "isSharedStep":true,
       "title": "Ein Kundeberater wird Sie in kürze telefonisch kontaktieren."
     }
     ]}

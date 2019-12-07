@@ -10,7 +10,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
     // state
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
-    const [stack, setStack] = useState([]); // stack contain path stack
+    const [stack, setStack] = useState([steps[0]]); // stack contain path stack
     const [dimen, setDimen] = useState({
         height: window.innerHeight,
         width: window.innerWidth
@@ -23,12 +23,12 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
     });
 
     const handleBack = _ => {
-        // go back by one step
-        if (stack.length > 0) {
-            const lastIndex = stack.length - 1;
+        if (stack.length > 0) { 
+            const lastIndex = stack.length - 2;
+            
             setCurrentStep(stack[lastIndex]);
-            setStack(stack.filter((_, i) => i !== lastIndex));
-            setData(data.filter((_, i) => i !== lastIndex));
+            setStack(stack.filter((_, i) => i <= lastIndex));
+            setData(data.filter((_, i) => i <= lastIndex));
         }
     };
 
@@ -41,17 +41,20 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
                                    const nextStep = steps.find(s => s.id === d.next);
                                    if (nextStep) {
                                        setCurrentStep(nextStep);
-                                       setStack([...stack, {...currentStep}]);
+                                       setStack([...stack, {...nextStep}]);
                                        setData([...data, {...d}]);
+
                                    }
-                               }}/>;
+                               }}
+                               data={data}
+                    />;
 
     if (Component === WSendStep || Component === WConfirmationStep) {
         return content;
     }
 
     const calcPercentageProgress = () => {
-        if (stack.length <= 0) {
+        if (stack.length <= 1) {
             return 5;
         }
 
@@ -65,7 +68,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
 
         const stepsPassedWithoutSpecialSelection = stack.filter(({id}) => steps.find(({id: sid, isSpecialSelection}) => sid === id && !isSpecialSelection));
 
-        const temp = totalSharedSteps.length + totalStepsPath.length;
+        const temp = totalSharedSteps.length + totalStepsPath.length+1;
 
         return ((stepsPassedWithoutSpecialSelection.length / temp) * 100);
     };
@@ -74,7 +77,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
         return (
             <div className={"wui fullscreen"}>
                 <div className={"wui widget fullscreen"}>
-                    <WHeader backArrow={stack.length > 0} title={currentStep.title}
+                    <WHeader backArrow={stack.length > 1} title={currentStep.title}
                              percentage={calcPercentageProgress()}
                              onBack={() => handleBack()}/>
                     <div className={"wui carousel animated"} key={Math.random()}>
@@ -94,7 +97,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps}})
         <div className="hero" style={{backgroundImage: `url(${background_img})`}}>
             <div className={'wui outer'}>
                 <div className={'wui container'}>
-                    <WHeader backArrow={stack.length > 0} title={currentStep.title}
+                    <WHeader backArrow={stack.length > 1} title={currentStep.title}
                              percentage={calcPercentageProgress()}
                              onBack={() => handleBack()}/>
                     <div className={`wui carousel animated`} key={Math.random()}>

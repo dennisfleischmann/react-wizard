@@ -131,6 +131,7 @@ class WSendStep extends Component {
                                             <div className={"wui ss-btn"}>
                                                 <button type={"submit"} className={"wui action-button ss-btn"}
                                                         onClick={() => {
+                                                            console.log('data', this.props.data);
                                                             onNext && onNext({
                                                                 firstname,
                                                                 lastname,
@@ -151,9 +152,9 @@ class WSendStep extends Component {
                                         <div className={"wui disclaimer"}>
                                             <p>Dieser Service ist kostenfrei. Mit Klick auf "Bewertung erhalten"
                                                 bestätigen Sie die Kenntnisnahme unserer <a className=""
-                                                                                            href="https://www.mcmakler.de/agb"
+                                                                                            href=""
                                                                                             target="_blank">AGBs</a> und <a
-                                                    className="" href="https://www.mcmakler.de/datenschutz"
+                                                    className="" href=""
                                                     target="_blank">Datenschutzbestimmungen</a>.</p>
                                         </div>
                                     </div>
