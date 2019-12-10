@@ -18,3 +18,16 @@ A new wizard is easy to create
 
   Start
     - npm run start:app1
+
+
+
+# Deployment Notes
+
+This project will integrate a small wizard build upon react into your web application.
+
+## How to deploy a package
+
+  - Unpack the zip of the specific version in /packages/{project-name}/release-vxx folder
+  - Use the javascript, css in folder and insert them in your html page
+  - Make sure the folders are available in your static serving webserver (svg, img)
+  - Add an div element to your web site at the position were you want to integrate the wizard 
