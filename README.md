@@ -12,12 +12,37 @@ A new wizard is easy to create
 
   # Usage of the project
 
-   Install
+  Install
     - Clone the project
     - run npm i
 
   Start
     - npm run start:app1
+
+  
+  Modification of the wizard
+
+  The wizard is build upon configratuions. This makes sure a changed is mainly driven by a configration change. The changes are made in the wizard.config file of the project.
+
+```json
+export default {
+  background_img: "img/Optimized-background_2.jpeg",
+  backend: {
+    api: "",
+  },
+  claims: [
+    "Beratung durch Experten",
+  ],
+  certsImage: "",
+  steps: [
+    {
+
+      ..
+    }
+    ]}
+```
+
+
 
 # Build Instructions
 
