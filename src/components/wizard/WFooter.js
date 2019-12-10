@@ -13,7 +13,7 @@ class WFooter extends Component {
                         {this.props.claims.map((t, index) =>
                             <div className={'wui benefit'} key={index}>
                                 <img
-                                    src={"svg/checkmark.svg"}
+                                    src={"/libs/wizard/svg/checkmark.svg"}
                                     className="wui benefit-checkmark" alt=""/>
                                 <p className={'wui benefit-title'}>{t}</p>
                             </div>)}

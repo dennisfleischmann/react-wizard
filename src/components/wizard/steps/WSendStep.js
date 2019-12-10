@@ -2,6 +2,33 @@ import React, {Component} from 'react';
 import PropTypes from "prop-types";
 
 class WSendStep extends Component {
+
+
+    handleCallback(data) {
+        var script_tag = document.getElementById('wizard');
+
+        if(script_tag) {
+            var query = script_tag.src.replace(/^[^\?]+\??/,''); 
+            // Parse the querystring into arguments and parameters
+            var vars = query.split("&");
+            var args = {};
+            for (var i=0; i<vars.length; i++) {
+                var pair = vars[i].split("=");
+                // decodeURI doesn't expand "+" to a space.
+                args[pair[0]] = decodeURI(pair[1]).replace(/\+/g, ' ');   
+            }
+
+            var callback = args['callback'];
+
+            if(callback) {
+                var fn = window[callback];
+
+                if (typeof fn === "function") fn.apply(null, [data]);
+            }
+        }
+    }
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -151,6 +178,9 @@ class WSendStep extends Component {
                                                                 
 
                                                             console.log('normailzed', objectData);
+
+                                                            this.handleCallback(objectData);
+
                                                             onNext && onNext({
                                                                 firstname,
                                                                 lastname,

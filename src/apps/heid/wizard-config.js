@@ -1,5 +1,5 @@
 export default {
-  background_img: "img/Optimized-background_2.jpeg",
+  background_img: "/libs/wizard/img/Optimized-background_2.jpeg",
   backend: {
     api: "",
   },
@@ -8,7 +8,7 @@ export default {
     "Über 10.000 zufriedene Kunden",
     "Kostenlose Immobilienbewertung"
   ],
-  certsImage: "https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
+  certsImage: "/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
   steps: [
     {
       "id": 0,
@@ -17,11 +17,11 @@ export default {
       "title": "Welche Immobilie möchten Sie bewerten?",
       "fieldName": "Objekt_Typ",
       "options": [
-        {  id:"0", value:"Haus", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"svg/house.svg", "text":"Haus", "size":"s"}},
-        {  id:"1", value:"Wohnung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"svg/apartment.svg", "text":"Wohnung", "size":"s"}},
-        {  id:"2", value:"Gewerbe", "next" : 200, "stepRange":{"from": 200, "to": 299}, "options": {"icon":"svg/commercial.svg", "text":"Gewerbe", "size":"s"}},
-        {  id:"3", value:"Grund&shy;stück", "next" : 300, "stepRange":{"from": 300, "to": 399}, "options": {"icon":"svg/property1.svg", "text":"Grundstück", "size":"s"}},
-        {  id:"4", value:"Sonder&shy;immobilien", "next" : 400, "stepRange":{"from": 400, "to": 499}, "options": {"icon":"svg/special.svg", "text":"Sonderimmobilien", "size":"s"}}
+        {  id:"0", value:"Haus", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"/libs/wizard/svg/house.svg", "text":"Haus", "size":"s"}},
+        {  id:"1", value:"Wohnung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"/libs/wizard/svg/apartment.svg", "text":"Wohnung", "size":"s"}},
+        {  id:"2", value:"Gewerbe", "next" : 200, "stepRange":{"from": 200, "to": 299}, "options": {"icon":"/libs/wizard/svg/commercial.svg", "text":"Gewerbe", "size":"s"}},
+        {  id:"3", value:"Grund&shy;stück", "next" : 300, "stepRange":{"from": 300, "to": 399}, "options": {"icon":"/libs/wizard/svg/property1.svg", "text":"Grundstück", "size":"s"}},
+        {  id:"4", value:"Sonder&shy;immobilien", "next" : 400, "stepRange":{"from": 400, "to": 499}, "options": {"icon":"/libs/wizard/svg/special.svg", "text":"Sonderimmobilien", "size":"s"}}
       ]
     },
     {
@@ -31,12 +31,12 @@ export default {
       "title": "Bitte wählen Sie die Art des Gebäudes aus",
       "fieldName": "Art_des_Gebäudes",
       "options": [
-        {  id:"0", value:"Einfamilien&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"svg/one_family_house.svg", "text":"Einfamilienhaus", "size":"s"}},
-        {  id:"1", value:"Reihen&shy;end&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"svg/row_end_house.svg", "text":"Reihenendhaus", "size":"s"}},
-        {  id:"2", value:"Reihen&shy;mittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"svg/row_house_middle.svg", "text":"Reihenmittelhaus", "size":"s"}},
-        {  id:"3", value:"Doppel&shy;haus&shy;hälfte", "next" : 2, "prev" : -1, "options": {"icon":"svg/row_house.svg", "text":"Doppelhaushälfte", "size":"s"}},
-        {  id:"4", value:"Mehrfamilien&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"svg/multifamily_house.svg", "text":"Mehrfamilienhaus", "size":"s"}},
-        {  id:"5", value:"Wohn- & Geschäfts&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"svg/live_commercial.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
+        {  id:"0", value:"Einfamilien&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/one_family_house.svg", "text":"Einfamilienhaus", "size":"s"}},
+        {  id:"1", value:"Reihen&shy;end&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/row_end_house.svg", "text":"Reihenendhaus", "size":"s"}},
+        {  id:"2", value:"Reihen&shy;mittelhaus", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/row_house_middle.svg", "text":"Reihenmittelhaus", "size":"s"}},
+        {  id:"3", value:"Doppel&shy;haus&shy;hälfte", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/row_house.svg", "text":"Doppelhaushälfte", "size":"s"}},
+        {  id:"4", value:"Mehrfamilien&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/multifamily_house.svg", "text":"Mehrfamilienhaus", "size":"s"}},
+        {  id:"5", value:"Wohn- & Geschäfts&shy;haus", "next" : 2, "prev" : -1, "options": {"icon":"/libs/wizard/svg/live_commercial.svg", "text":"Wohn- & Geschäftshaus", "size":"s"}}
       ]
     },
     {
@@ -46,13 +46,13 @@ export default {
       "title": "Grund für die Bewertung",
       "fieldName": "Grund_für_die_Bewertung",
       "options": [
-        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"svg/heritage.svg", "text":"Erbe", "size":"s"}},
-        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"svg/divorce.svg", "text":"Scheidung", "size":"s"}},
-        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/sell.svg", "text":"Verkauf", "size":"s"}},
-        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/buy.svg", "text":"Kauf", "size":"s"}},
-        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
-        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/heritage.svg", "text":"Erbe", "size":"s"}},
+        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/divorce.svg", "text":"Scheidung", "size":"s"}},
+        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/sell.svg", "text":"Verkauf", "size":"s"}},
+        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/buy.svg", "text":"Kauf", "size":"s"}},
+        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
+        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 3, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},
       ]
     },
     {
@@ -66,7 +66,7 @@ export default {
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Anderer Grund",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Schenkung",
           "description": "Für eine professionelle Beratung benötigen wir den Grund des Gutachtens oder einer Beratung"
@@ -89,7 +89,7 @@ export default {
           },
           "default": 1,
           "text":"Anzahl der Wohnungen",
-          "icon": "svg/flat_count.svg",
+          "icon": "/libs/wizard/svg/flat_count.svg",
           "button_title": "Weiter",
           "placeholder" : "Anzahl",
         }
@@ -103,13 +103,13 @@ export default {
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
       "fieldName": "Grund_für_die_Bewertung",
       "options": [
-        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"svg/heritage.svg", "text":"Erbe", "size":"s"}},
-        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"svg/divorce.svg", "text":"Scheidung", "size":"s"}},
-        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/sell.svg", "text":"Verkauf", "size":"s"}},
-        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/buy.svg", "text":"Kauf", "size":"s"}},
-        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
-        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 102, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/heritage.svg", "text":"Erbe", "size":"s"}},
+        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/divorce.svg", "text":"Scheidung", "size":"s"}},
+        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/sell.svg", "text":"Verkauf", "size":"s"}},
+        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/buy.svg", "text":"Kauf", "size":"s"}},
+        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
+        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 102, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},
       ]
     },
     {
@@ -123,7 +123,7 @@ export default {
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Anderer Grund",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Schenkung",
           "description": "Für eine professionelle Beratung benötigen wir den Grund des Gutachtens oder einer Beratung"
@@ -146,7 +146,7 @@ export default {
           },
           "default": 500,
           "text":"Nutzfläche",
-          "icon": "svg/square-size.svg",
+          "icon": "/libs/wizard/svg/square-size.svg",
           "button_title": "Weiter",
           "placeholder" : "m<sup>2</sup>",
         }
@@ -160,11 +160,11 @@ export default {
       "title": "Bitte wählen Sie die Nutzungsart aus",
       "fieldName": "Nutzungsart",
       "options": [
-        {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"svg/production.svg", "text":"Produktion", "size":"s"}},
-        {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"svg/store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
-        {  id:"2", value:"Büro/ Praxis", "next" : 203, "prev" : -1, "options": {"icon":"svg/doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
-        {  id:"3", value:"Handel", "next" : 203, "prev" : -1, "options": {"icon":"svg/commerce.svg", "text":"Handel", "size":"s"}},
-        {  id:"4", value:"Sonstiges", "next" : 202, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},      
+        {  id:"0", value:"Produktion", "next" : 203, "prev" : -1, "options": {"icon":"/libs/wizard/svg/production.svg", "text":"Produktion", "size":"s"}},
+        {  id:"1", value:"Lager/ Logistik", "next" : 203, "prev" : -1, "options": {"icon":"/libs/wizard/svg/store_logistic.svg", "text":"Lager/ Logistik", "size":"s"}},
+        {  id:"2", value:"Büro/ Praxis", "next" : 203, "prev" : -1, "options": {"icon":"/libs/wizard/svg/doctors_office.svg", "text":"Büro/ Praxis", "size":"s"}},
+        {  id:"3", value:"Handel", "next" : 203, "prev" : -1, "options": {"icon":"/libs/wizard/svg/commerce.svg", "text":"Handel", "size":"s"}},
+        {  id:"4", value:"Sonstiges", "next" : 202, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},      
       ]
     },
     {
@@ -178,7 +178,7 @@ export default {
         { id:"0", "next" : 203, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Andere Nutzart",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Golfplatz",
           "description": "Für eine professionelle Beratung benötigen wir die Nutzart"
@@ -193,13 +193,13 @@ export default {
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
       "fieldName": "Grund_für_die_Bewertung",
       "options": [
-        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"svg/heritage.svg", "text":"Erbe", "size":"s"}},
-        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"svg/divorce.svg", "text":"Scheidung", "size":"s"}},
-        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/sell.svg", "text":"Verkauf", "size":"s"}},
-        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/buy.svg", "text":"Kauf", "size":"s"}},
-        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
-        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 204, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/heritage.svg", "text":"Erbe", "size":"s"}},
+        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/divorce.svg", "text":"Scheidung", "size":"s"}},
+        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/sell.svg", "text":"Verkauf", "size":"s"}},
+        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/buy.svg", "text":"Kauf", "size":"s"}},
+        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
+        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 204, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},
       ]
     },
     {
@@ -213,7 +213,7 @@ export default {
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Anderer Grund",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Golfplatz",
           "description": "Für eine professionelle Beratung einen anderen Grund"
@@ -236,7 +236,7 @@ export default {
           },
           "default": 500,
           "text":"Welche Fläche hat das Grundstück?",
-          "icon": "svg/m2-size.svg",
+          "icon": "/libs/wizard/svg/m2-size.svg",
           "button_title": "Weiter",
           "placeholder" : "m<sup>2</sup>",
         }
@@ -250,13 +250,13 @@ export default {
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
       "fieldName": "Grund_für_die_Bewertung",
       "options": [
-        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"svg/heritage.svg", "text":"Erbe", "size":"s"}},
-        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"svg/divorce.svg", "text":"Scheidung", "size":"s"}},
-        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/sell.svg", "text":"Verkauf", "size":"s"}},
-        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/buy.svg", "text":"Kauf", "size":"s"}},
-        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
-        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 302, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/heritage.svg", "text":"Erbe", "size":"s"}},
+        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/divorce.svg", "text":"Scheidung", "size":"s"}},
+        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/sell.svg", "text":"Verkauf", "size":"s"}},
+        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/buy.svg", "text":"Kauf", "size":"s"}},
+        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
+        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 302, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},
       ]
     },
     {
@@ -270,7 +270,7 @@ export default {
         { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Anderer Grund",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Schenkung",
           "description": "Für eine professionelle Beratung benötigen wir den Grund des Gutachtens oder einer Beratung"
@@ -293,7 +293,7 @@ export default {
           },
           "default": 500,
           "text":"Nutzfläche",
-          "icon": "svg/square-size.svg",
+          "icon": "/libs/wizard/svg/square-size.svg",
           "button_title": "Weiter",
           "placeholder" : "m<sup>2</sup>"
         }
@@ -307,11 +307,11 @@ export default {
       "title": "Um welche art einer Sonderimmobilie handelt es sich?",
       "fieldName": "Typ_Sonderimmobilie",
       "options": [
-        {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"svg/hotel.svg", "text":"Hotel", "size":"s"}},
-        {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"svg/residential_care.svg", "text":"Pflegeheim", "size":"s"}},
-        {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"svg/hospital_1.svg", "text":"Krankenhaus", "size":"s"}},
-        {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"svg/gastronomy.svg", "text":"Gastronomie", "size":"s"}},
-        {  id:"4", value:"Sonstiges", "next" : 402, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},      
+        {  id:"0", value:"Hotel", "next" : 403, "prev" : -1, "options": {"icon":"/libs/wizard/svg/hotel.svg", "text":"Hotel", "size":"s"}},
+        {  id:"1", value:"Pflegeheim", "next" : 403, "prev" : -1, "options": {"icon":"/libs/wizard/svg/residential_care.svg", "text":"Pflegeheim", "size":"s"}},
+        {  id:"2", value:"Krankenhaus", "next" : 403, "prev" : -1, "options": {"icon":"/libs/wizard/svg/hospital_1.svg", "text":"Krankenhaus", "size":"s"}},
+        {  id:"3", value:"Gastronomie", "next" : 403, "prev" : -1, "options": {"icon":"/libs/wizard/svg/gastronomy.svg", "text":"Gastronomie", "size":"s"}},
+        {  id:"4", value:"Sonstiges", "next" : 402, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},      
       ]
     },
   
@@ -326,7 +326,7 @@ export default {
         { id:"0", "next" : 403, "prev" : "nil", "options": {
           "default": '',
           "text":"",
-          "icon": "svg/other.svg",
+          "icon": "/libs/wizard/svg/other.svg",
           "button_title": "Weiter",
           "placeholder" : "z.B. Fitnessstudio",
           "description": "Für eine professionelle Beratung benötigen wir die Art der Sonderimmobilie"
@@ -341,13 +341,13 @@ export default {
       "title": "Wählen Sie den Grund für eine Immobilienbewertung aus",
       "fieldName": "Grund_für_die_Bewertung",
       "options": [
-        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"svg/heritage.svg", "text":"Erbe", "size":"s"}},
-        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"svg/divorce.svg", "text":"Scheidung", "size":"s"}},
-        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/sell.svg", "text":"Verkauf", "size":"s"}},
-        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"svg/buy.svg", "text":"Kauf", "size":"s"}},
-        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
-        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
-        {  id:"6", value:"Sonstiges", "next" : 404, "prev" : -1, "options": {"icon":"svg/other.svg", "text":"Sonstiges", "size":"s"}},
+        {  id:"0", value:"Erbe", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/heritage.svg", "text":"Erbe", "size":"s"}},
+        {  id:"1", value:"Scheidung", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/divorce.svg", "text":"Scheidung", "size":"s"}},
+        {  id:"2", value:"Verkauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/sell.svg", "text":"Verkauf", "size":"s"}},
+        {  id:"3", value:"Kauf", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/buy.svg", "text":"Kauf", "size":"s"}},
+        {  id:"4", value:"Finanz&shy;amt", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/finance_office.svg", "text":"Finanzamt", "size":"s"}},
+        {  id:"5", value:"Gericht", "next" : 998, "prev" : -1, "options": {"icon":"/libs/wizard/svg/law_court_justice.svg", "text":"Gericht", "size":"s"}},
+        {  id:"6", value:"Sonstiges", "next" : 404, "prev" : -1, "options": {"icon":"/libs/wizard/svg/other.svg", "text":"Sonstiges", "size":"s"}},
       ]
     },
     
@@ -362,7 +362,7 @@ export default {
       { id:"0", "next" : 998, "prev" : "nil", "button_title": "Next", "options": {
         "default": '',
         "text":"Anderer Grund",
-        "icon": "svg/other.svg",
+        "icon": "/libs/wizard/svg/other.svg",
         "button_title": "Weiter",
         "placeholder" : "z.B. Schenkung",
         "description": "Für eine professionelle Beratung benötigen wir den Grund des Gutachtens oder einer Beratung"
@@ -382,7 +382,7 @@ export default {
           "default": "",
           "text":"Postleitzahl",
           "description": "Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können",
-          "icon": "svg/map.png",
+          "icon": "/libs/wizard/svg/map.png",
           "button_title": "Weiter",
         }
       }
@@ -418,7 +418,7 @@ export default {
       "title": "Danke! Wir werden Sie in Kürze telefonisch kontaktieren",
       "picture_title": "André Heid",
       "picture_subtitle":"Geschäftsführer",
-      "img":"img/owner-circle-cropped.png",
+      "img":"/libs/wizard/img/owner-circle-cropped.png",
       "html_text":"\
       <p class=\"wui cs-main-content-line\"><span class=\"wui cs-main-content-line-styled\">Sehr geehrter Interessent,</span></p>\
       <p class=\"wui cs-main-content-line\">um Ihnen eine genaue Analyse Ihrer Immobilie zukommen lassen zu können, benötigen wir weitere Daten von Ihnen. Dazu wird Sie in Kürze ein Kundenberater telefonisch kontaktieren.</p>\

@@ -28,7 +28,7 @@ class WMapLocatorStep extends Component {
             <div className={"wui step-map"}>
                 <div className={"wui step-map paper"}>
                     <div className={"wui step-map-img-container"}>
-                        <img src={`${process.env.PUBLIC_URL}/${options.options.icon}`} alt={""}
+                        <img src={`${process.env.PUBLIC_URL}${options.options.icon}`} alt={""}
                              className={"wui step-map-image"}/>
                     </div>
                     <div className={"wui step-map-btn-container"}>

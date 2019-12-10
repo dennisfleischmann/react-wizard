@@ -19,7 +19,7 @@ class WInputStep extends Component {
             <div className={"wui step-input"}>
                 <div className={"wui step-input paper"}>
                     <div className={"wui step-input-img-container"}>
-                        <img src={`${process.env.PUBLIC_URL}/svg/${options.options.icon}`} alt={""}
+                        <img src={`${process.env.PUBLIC_URL}${options.options.icon}`} alt={""}
                              className={"wui step-input-image"}/>
                     </div>
                     <div className={"wui step-input-btn-container"}>

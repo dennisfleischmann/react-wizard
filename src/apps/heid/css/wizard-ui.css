@@ -50,7 +50,7 @@
     padding: 0;
     border: none;
     cursor: pointer;
-    background: url("https://images.ctfassets.net/64q0dihi81ut/3tHFB2sBxfpZNcUxQp9LGj/40fddd7d006b2e7a422baac1a9772375/back-button.svg") center center / contain no-repeat;
+    background: url("/libs/wizard/svg/back-button.svg") center center / contain no-repeat;
 }
 
 .wui.header {
