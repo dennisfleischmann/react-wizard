@@ -26,18 +26,18 @@ A new wizard is easy to create
 
 ```json
 {
-  background_img: "img/Optimized-background_2.jpeg",
-  backend: {
-    api: "",
+  "background_img": "img/Optimized-background_2.jpeg",
+  "backend": {
+    "api": "",
   },
-  claims: [
+  "claims": [
     "Beratung durch Experten",
   ],
-  certsImage: "",
-  steps: [
+  "certsImage": "",
+  "steps": [
     {
 
-      ..
+      
     }
   ]
 }
