@@ -56,7 +56,7 @@ This project will integrate a small wizard build upon react into your web applic
 
 ## How to deploy a package
 
-  - Unpack the zip of the specific version in <b>/packages/{project-name}/release-vxx<b> folder
+  - Unpack the zip of the specific version in <b>/packages/{project-name}/release-vxx</b> folder
   - Use the javascript, css in folder and insert them in your html page
 
 ```html
@@ -65,5 +65,5 @@ This project will integrate a small wizard build upon react into your web applic
 </div>
 ```
 
-  - Make sure the folders are available in your static serving webserver (svg, img)
+  - Make sure the folders are available in your static serving webserver <b>(svg, img)</b>
   - Add an div element to your web site at the position were you want to integrate the wizard 
