@@ -1,6 +1,9 @@
 # Couple of goals
 
-A new wizard is easy to create
+A new wizard is easy to create sponsered by Heid Immobilien GmbH
+
+[logo]: https://www.heid-immobilienbewertung.de/img/heid-immobilienbewertung-logo.png
+
 - Wizard libary comes with the basic steps
 - wizard-card
 - New steps can be greated very easily by providing new custom step components (?)
