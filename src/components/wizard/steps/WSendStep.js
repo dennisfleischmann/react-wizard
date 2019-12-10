@@ -9,22 +9,25 @@ class WSendStep extends Component {
 
         if(script_tag) {
             var query = script_tag.src.replace(/^[^\?]+\??/,''); 
-            // Parse the querystring into arguments and parameters
-            var vars = query.split("&");
-            var args = {};
-            for (var i=0; i<vars.length; i++) {
-                var pair = vars[i].split("=");
-                // decodeURI doesn't expand "+" to a space.
-                args[pair[0]] = decodeURI(pair[1]).replace(/\+/g, ' ');   
-            }
+            
+            if (src) {
+                    // Parse the querystring into arguments and parameters
+                var vars = query.split("&");
+                var args = {};
+                for (var i=0; i<vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    // decodeURI doesn't expand "+" to a space.
+                    args[pair[0]] = decodeURI(pair[1]).replace(/\+/g, ' ');   
+                }
 
-            var callback = args['callback'];
+                var callback = args['callback'];
 
-            if(callback) {
-                var fn = window[callback];
+                if(callback) {
+                    var fn = window[callback];
 
-                if (typeof fn === "function") fn.apply(null, [data]);
-            }
+                    if (typeof fn === "function") fn.apply(null, [data]);
+                }
+            } 
         }
     }
 
