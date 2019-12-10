@@ -12,7 +12,7 @@ const WCard = ({data, onClick}) => {
         <div className={`wui card ${css}`} onClick={() => onClick && onClick({value: text, next})}>
             <div className={`wui card-container`}>
                 <div className={"wui card-icon-container"}>
-                    <img className={"wui card-icon-img"} src={`${process.env.PUBLIC_URL}/svg/${icon}`}
+                    <img className={"wui card-icon-img"} src={`${process.env.PUBLIC_URL}/${icon}`}
                          alt={text}/>
                 </div>
                 <div className={"wui card-title"} dangerouslySetInnerHTML={{__html: value}}>

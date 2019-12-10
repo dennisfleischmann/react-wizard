@@ -44,7 +44,7 @@ class WSliderStep extends Component {
                     </div>
                     <div className={"wui slider-ctrl"}>
                         <div className={"wui slider-ctrl-img-container"}>
-                            <img src={`${process.env.PUBLIC_URL}/svg/${icon}`} alt={``}
+                            <img src={`${process.env.PUBLIC_URL}/${icon}`} alt={``}
                                  className={"wui slider-ctrl-img"}/>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
