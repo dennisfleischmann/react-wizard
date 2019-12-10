@@ -19,9 +19,12 @@ A new wizard is easy to create
   Start
     - npm run start:app1
 
+# Build Instructions
+
+Pending
 
 
-# Deployment Notes
+# Deployment Instructions
 
 This project will integrate a small wizard build upon react into your web application.
 
