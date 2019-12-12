@@ -10,7 +10,7 @@ class WSendStep extends Component {
         if(script_tag) {
             var query = script_tag.src.replace(/^[^\?]+\??/,''); 
             
-            if (src) {
+            if (script_tag.src) {
                     // Parse the querystring into arguments and parameters
                 var vars = query.split("&");
                 var args = {};
