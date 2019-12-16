@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
     background-size: cover;
     z-index: 10;
