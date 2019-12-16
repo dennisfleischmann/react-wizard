@@ -49,6 +49,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
                                data={data}
                                claims={claims}
                                certsImage={certsImage}
+                               heroBgImg={background_img}
     />;
 
     if (Component === WSendStep || Component === WConfirmationStep) {
