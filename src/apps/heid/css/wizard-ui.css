@@ -1,122 +1,3 @@
-.wui.outer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    min-height: 530px;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-}
-
-.wui.container {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .14);
-    background-color: #fafafa;
-    width: 770px;
-    margin: auto;
-    text-align: center;
-    padding: 2rem 0 0 0;
-    border-radius: 4px;
-    z-index: 10;
-    position: relative;
-    overflow: hidden;
-}
-
-.wui.fullscreen {
-    display: block;
-}
-
-.wui.widget.fullscreen {
-}
-
-.wui.carousel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    width: 100%;
-}
-
-.wui.carousel-slide {
-    flex: 1 0 100%;
-}
-
-.wui.back-btn {
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    background: url("/libs/wizard/svg/back-button.svg") center center / contain no-repeat;
-}
-
-.wui.header {
-    padding: 40px 40px 0;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 767px) {
-    .wui.header {
-        flex-direction: column-reverse;
-    }
-}
-
-.wui.header-title {
-    font-family: "Noto Serif", sans-serif;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 0 38px 0;
-    white-space: pre-line;
-}
-
-.wui.content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    justify-content: center;
-    height: 100%;
-    padding: 0 38px;
-    flex-wrap: wrap;
-    min-width: 100%;
-}
-
-@media (max-width: 767px) {
-    .wui.content-container {
-        flex-direction: column;
-        min-height: 290px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
-    .wui.header-title {
-        margin: 0;
-        font-size: 20px;
-        hyphens: manual;
-    }
-}
-
-.wui.content {
-    min-height: 355px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-wrap: wrap;
-}
 
 .wui.card {
     display: -webkit-box;
@@ -128,50 +9,50 @@
 }
 
 /*mobile*/
-@media (max-width: 767px) {
-    .wui.card {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex: 1 1 0;
-        padding: 5px;
-        width: 100%;
-    }
+/*@media (max-width: 767px) {*/
+/*    .wui.card {*/
+/*        display: -webkit-box;*/
+/*        display: -ms-flexbox;*/
+/*        display: -webkit-flex;*/
+/*        display: flex;*/
+/*        flex: 1 1 0;*/
+/*        padding: 5px;*/
+/*        width: 100%;*/
+/*    }*/
 
-    .wui.content-container {
-        width: 100%;
-        padding: 0;
-    }
+/*    .wui.content-container {*/
+/*        width: 100%;*/
+/*        padding: 0;*/
+/*    }*/
 
-    .wui.card-icon-container {
-        visibility: hidden;
-        display: none !important;
-    }
+/*    .wui.card-icon-container {*/
+/*        visibility: hidden;*/
+/*        display: none !important;*/
+/*    }*/
 
-    .wui.card-title {
-        margin-top: 0 !important;
-    }
+/*    .wui.card-title {*/
+/*        margin-top: 0 !important;*/
+/*    }*/
 
-    .wui.card-container:hover {
-        border-color: white;
-    }
+/*    .wui.card-container:hover {*/
+/*        border-color: white;*/
+/*    }*/
 
-    .wui.card.small {
-        height: auto;
-    }
-}
+/*    .wui.card.small {*/
+/*        height: auto;*/
+/*    }*/
+/*}*/
 
-/*desktop*/
-@media (min-width: 768px) {
-    .wui.card.container {
-        flex-direction: column;
-    }
+/*!*desktop*!*/
+/*@media (min-width: 768px) {*/
+/*    .wui.card.container {*/
+/*        flex-direction: column;*/
+/*    }*/
 
-    .wui.card.small {
-        height: 184px;
-    }
-}
+/*    .wui.card.small {*/
+/*        height: 184px;*/
+/*    }*/
+/*}*/
 
 .wui.card-container {
     border-radius: 4px;
@@ -235,11 +116,11 @@
     width: 100%;
 }
 
-@media (min-width: 768px) {
-    .wui.card-container:hover {
-        border-color: var(--primary-color);
-    }
-}
+/*@media (min-width: 768px) {*/
+/*    .wui.card-container:hover {*/
+/*        border-color: var(--primary-color);*/
+/*    }*/
+/*}*/
 
 .wui.footer {
     padding: 0 38px 38px;
@@ -289,11 +170,15 @@
     margin: 0;
 }
 
-@media (min-width: 768px) {
-    .wui.benefit-checkmark {
-        margin-right: 10px;
-    }
-}
+/*@media (min-width: 768px) {*/
+/*    .wui.benefit-checkmark {*/
+/*        margin-right: 10px;*/
+/*    }*/
+/*}*/
+
+/*################################################# STEP CARDS ########################################################*/
+
+/*################################################ STEP SLIDER #######################################################*/
 
 .wui.step-slider {
     display: -webkit-box;
@@ -378,38 +263,32 @@
     transform: translateY(-50%);
 }
 
-@media (max-width: 767px) {
-    .wui.step-slider {
-        margin: 10px 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        text-align: left;
-    }
+/*@media (max-width: 767px) {*/
+/*    .wui.step-slider {*/
+/*        margin: 10px 0;*/
+/*        display: -webkit-box;*/
+/*        display: -ms-flexbox;*/
+/*        display: -webkit-flex;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        height: 100%;*/
+/*        text-align: left;*/
+/*    }*/
 
-    .wui.step-slider.paper {
-        flex-direction: column-reverse;
-    }
+/*    .wui.step-slider.paper {*/
+/*        flex-direction: column-reverse;*/
+/*    }*/
 
-    .wui.slider-measure {
-        width: 100%;
-        min-height: 140px;
-        margin: 0;
-    }
+/*    .wui.slider-measure {*/
+/*        width: 100%;*/
+/*        min-height: 140px;*/
+/*        margin: 0;*/
+/*    }*/
 
-    .wui.slider-ctrl {
-        width: 100%;
-    }
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+/*    .wui.slider-ctrl {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
 .wui.slider-ctrl-img-container {
     height: 128px;
@@ -423,43 +302,9 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
 }
 
-.wui.action-button {
-    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 20px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    height: 45px;
-    position: relative;
-    width: 100%;
-    border: none;
-    background-color: var(--primary-color);
-    border-radius: 4px;
-    padding: 8px;
-}
+/*################################################ STEP SLIDER #######################################################*/
 
-button:disabled, button[disabled] {
-    background-color: rgb(207, 207, 205) !important;
-    cursor: default !important;
-}
-
-.wui.action-button:hover, .wui.action-button:active {
-    box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 20px;
-}
-
-.wui.action-button-arrow {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    transform: rotate(45deg);
-    bottom: 0;
-    position: absolute;
-    right: 20px;
-    top: 0;
-    border-top: white solid 2px;
-    border-right: white solid 2px;
-    margin: auto;
-}
+/*################################################# STEP INPUT ########################################################*/
 
 .wui.step-input {
     margin: 0 40px;
@@ -487,23 +332,23 @@ button:disabled, button[disabled] {
     margin: auto;
 }
 
-@media (max-width: 767px) {
-    .wui.step-input {
-        margin: 0;
-        flex-direction: column;
-    }
+/*@media (max-width: 767px) {*/
+/*    .wui.step-input {*/
+/*        margin: 0;*/
+/*        flex-direction: column;*/
+/*    }*/
 
-    .wui.step-input.paper {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
+/*    .wui.step-input.paper {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*        margin-top: 20px;*/
+/*    }*/
 
-    .wui.step-input-btn-container {
-        margin-top: 20px;
-        width: 100% !important;
-    }
-}
+/*    .wui.step-input-btn-container {*/
+/*        margin-top: 20px;*/
+/*        width: 100% !important;*/
+/*    }*/
+/*}*/
 
 .wui.step-input-btn-container {
     width: 50%;
@@ -561,9 +406,10 @@ button:disabled, button[disabled] {
     padding: 12px 16px;
 }
 
+/*################################################# STEP INPUT ########################################################*/
 
-/* map step */
 
+/*################################################## STEP MAP #########################################################*/
 .wui.step-map {
     margin: 0 40px;
     display: -webkit-box;
@@ -643,6 +489,8 @@ button:disabled, button[disabled] {
     border: rgb(188, 188, 188) solid 1px;
     padding: 12px 16px;
 }
+
+/*################################################## STEP MAP #########################################################*/
 
 /* random */
 /*.widget.jsx-1910737295 {*/
@@ -825,20 +673,32 @@ button:disabled, button[disabled] {
 /*    }*/
 /*}*/
 
-button {
-    align-items: flex-start;
-    text-align: center;
-    display: inline-block;
-}
-
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 575px) {
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: 576px) {
+    /* step input */
+    .wui.step-input {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .wui.step-input.paper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .wui.step-input-btn-container {
+        margin-top: 20px;
+        width: 100% !important;
+    }
+
+    /* step map*/
     .wui.step-map {
         margin: 0;
         flex-direction: column;
@@ -855,6 +715,66 @@ button {
         width: 100% !important;
     }
 
+    /* step slider */
+    .wui.step-slider {
+        margin: 10px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: left;
+    }
+
+    .wui.step-slider.paper {
+        flex-direction: column-reverse;
+    }
+
+    .wui.slider-measure {
+        width: 100%;
+        min-height: 140px;
+        margin: 0;
+    }
+
+    .wui.slider-ctrl {
+        width: 100%;
+    }
+
+    /* step card */
+    .wui.card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex: 1 1 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .wui.content-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .wui.card-icon-container {
+        visibility: hidden;
+        display: none !important;
+    }
+
+    .wui.card-title {
+        margin-top: 0 !important;
+    }
+
+    .wui.card-container:hover {
+        border-color: white;
+    }
+
+    .wui.card.small {
+        height: auto;
+    }
+
+    /* other */
     .wui.back-btn {
         width: 45px;
         height: 45px;
@@ -867,12 +787,30 @@ button {
         flex-grow: 1;
         margin-left: 55px;
     }
+
+    .wui.benefit-checkmark {
+        margin-right: 10px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    /* step map */
     .wui.step-map.paper {
         padding: 40px 96px;
+    }
+
+    /* step card */
+    .wui.card.container {
+        flex-direction: column;
+    }
+
+    .wui.card.small {
+        height: 184px;
+    }
+
+    .wui.card-container:hover {
+        border-color: var(--primary-color);
     }
 }
 
@@ -885,4 +823,5 @@ button {
 @media only screen and (min-width: 1200px) {
 
 }
+
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
