@@ -183,6 +183,8 @@ class WSlider extends Component {
                 sliderValue = value - step < min ? min : value - step;
                 onChange && onChange(sliderValue, e);
                 break;
+            default:
+                break;
         }
     };
 
@@ -284,7 +286,7 @@ class WSlider extends Component {
         const coords = this.coordinates(position);
         const fillStyle = {[dimension]: `${coords.fill}px`};
         const handleStyle = {[direction]: `${coords.handle}px`};
-        let showTooltip = tooltip && active;
+        // let showTooltip = tooltip && active;
 
         let labelItems = [];
         let labelKeys = Object.keys(labels);

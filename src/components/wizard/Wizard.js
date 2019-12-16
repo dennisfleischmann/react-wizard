@@ -10,10 +10,10 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
     const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
     const [data, setData] = useState([]); // input value, step with id
     const [stack, setStack] = useState([steps[0]]); // stack contain path stack
-    const [dimen, setDimen] = useState({
-        height: window.innerHeight,
-        width: window.innerWidth
-    });
+    // const [dimen, setDimen] = useState({
+    //     height: window.innerHeight,
+    //     width: window.innerWidth
+    // });
 
     useEffect(_ => {
         console.log(steps);
