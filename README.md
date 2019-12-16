@@ -23,7 +23,7 @@ A new wizard is easy to create sponsered by Heid Immobilien GmbH
     - npm run start:app1
 
   
-  Modification of the wizard
+  # Modification of the wizard - Configuration
 
   The wizard is build upon configratuions. This makes sure a changed is mainly driven by a configration change. The changes are made in the wizard.config file of the project.
 
@@ -45,7 +45,23 @@ A new wizard is easy to create sponsered by Heid Immobilien GmbH
   ]
 }
 ```
+# Modification of the wizard - Adding callback when sending data to backend
 
+```html
+
+   <script>
+   
+      var test = function (a){
+         debugger;
+         console.log('value', a);
+
+      }
+   
+   </script>
+
+<script id="wizard" src="test.js?callback=test"></script>
+
+```
 
 
 # Build Instructions
