@@ -8,7 +8,7 @@ export default {
     "Über 10.000 zufriedene Kunden",
     "Kostenlose Immobilienbewertung"
   ],
-  certsImage: "/img/xzert.png.pagespeed.ic.dcLLhaE8be.png",
+  certsImage: "/img/zert.png",
   steps: [
     {
       "id": 0,
