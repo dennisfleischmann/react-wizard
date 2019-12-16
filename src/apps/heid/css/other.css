@@ -1,7 +1,8 @@
 /* mobile*/
 @media only screen and (max-width: 767px) {
     .hero {
-        background: none;
+        background: none !important;
+        margin: 4px;
     }
 }
 

@@ -283,6 +283,15 @@
     margin: 0;
 }
 
+/* mobile*/
+@media only screen and (max-width: 767px) {
+    .wui.footer-benefits {
+        margin-top: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media only screen and  (min-width: 768px) {
     .wui.benefit-checkmark {
         margin-right: 10px;
