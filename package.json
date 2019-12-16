@@ -1,6 +1,6 @@
 {
   "name": "wizard",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@babel/core": "7.5.5",
@@ -68,6 +68,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "app:heid": "node scripts/start.js heid",
     "build:heid": "node scripts/build.js heid",
+    "release": "./release.sh",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
