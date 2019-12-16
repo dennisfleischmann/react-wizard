@@ -42,7 +42,7 @@ class WMapLocatorStep extends Component {
                             <div className={"wui step-map-input-desc"}>{options.options.description}</div>
                         </div>
                         {isBrowser && <button type={"submit"} className={"wui action-button"}
-                                              disabled={this.state.value.length < 5} onClick={() => {
+                                              disabled={this.state.value.toString().length < 5} onClick={() => {
                             onNext && onNext({value: this.state.value, next: options.next, fieldName});
                         }}>
                             {options.options.button_title || "Next"}
@@ -54,7 +54,7 @@ class WMapLocatorStep extends Component {
                     onBack={() => onBack && onBack()}
                     btnProps={{
                         onClick: () => onNext && onNext({value: this.state.value, next: options.next, fieldName}),
-                        disabled: this.state.value.length < 5
+                        disabled: this.state.value.toString().length < 5
                     }}/>}
             </div>
         );
