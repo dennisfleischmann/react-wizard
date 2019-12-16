@@ -1,9 +1,10 @@
-mkdir -p packages/heid/release/next-release/img && cp -r build/libs/wizard/img/ packages/heid/release/next-release/img
-cp -r build/libs/wizard/svg/ packages/heid/release/next-release/svg
-cp -r build/static/css/ packages/heid/release/next-release/css
-cp -r build/static/js/ packages/heid/release/next-release/js
+#Creates a new deployable package with all artifacts with the version specified in the package.json
+mkdir -p packages/"$1"/release/next-release/img && cp -r build/libs/wizard/img/ packages/"$1"/release/next-release/img
+cp -r build/libs/wizard/svg/ packages/"$1"/release/next-release/svg
+cp -r build/static/css/ packages/"$1"/release/next-release/css
+cp -r build/static/js/ packages/"$1"/release/next-release/js
 
-#get version
+#get version from package.json
 VERSION='';
 re="\"(version)\": \"([^\"]*)\"";
 
@@ -16,13 +17,14 @@ done < package.json;
 
 echo $VERSION;
 
-#Compress
-cd ./packages/heid/release/next-release/
+
+#Compress and copy to release folder
+cd ./packages/"$1"/release/next-release/
 zip -r -X release-v$VERSION.zip ./
 cd ..
 cd ..
 cd ..
 cd ..
-cp -r packages/heid/release/next-release/release-v$VERSION.zip packages/heid/release/
-rm -r packages/heid/release/next-release/
+cp -r packages/"$1"/release/next-release/release-v$VERSION.zip packages/"$1"/release/
+rm -r packages/"$1"/release/next-release/
 

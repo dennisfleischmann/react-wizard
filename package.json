@@ -68,7 +68,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "app:heid": "node scripts/start.js heid",
     "build:heid": "node scripts/build.js heid",
-    "release": "./release.sh",
+    "release:heid": "./release.sh heid",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
