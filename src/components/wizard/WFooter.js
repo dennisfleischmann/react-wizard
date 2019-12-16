@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 
 class WFooter extends Component {
-
-    super(props) {
-
-    }
     render() {
         return (
             <div className={'wui footer'}>

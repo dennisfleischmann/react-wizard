@@ -1,14 +1,13 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import ProgressBar from './ProgressBar'
-import {isBrowser} from 'react-device-detect';
+import ProgressBar from './ProgressBar';
 
 class WHeader extends Component {
     render() {
         const {backArrow, percentage, title, onBack} = this.props;
         return (
             <div className={'wui header'}>
-                {backArrow && isBrowser && <div className={'wui back-btn'} onClick={() => onBack && onBack()}/>}
+                {backArrow && <div className={'wui back-btn device-desktop'} onClick={() => onBack && onBack()}/>}
                 <p className={'wui header-title'}>{title}</p>
                 <ProgressBar percentage={percentage}/>
             </div>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {isBrowser, isMobile} from "react-device-detect";
 import WBottomBtnsBar from "../WBottomBtnsBar";
 
 class WInputStep extends Component {
@@ -32,23 +31,23 @@ class WInputStep extends Component {
                                    onChange={e => this.setState({value: e.target.value})}/>
                             <div className={"wui step-input-desc"}>{options.options.description}</div>
                         </div>
-                        {isBrowser && <button type={"submit"} className={"wui action-button"}
-                                              disabled={this.state.value.length === 0} onClick={() => {
+                        <button type={"submit"} className={"wui action-button device-desktop"}
+                                disabled={this.state.value.length === 0} onClick={() => {
 
                             onNext && onNext({value: this.state.value, next: options.next, fieldName});
                         }}>
                             {options.options.button_title}
                             <span className={"wui action-button-arrow"}/>
-                        </button>}
+                        </button>
                     </div>
                 </div>
-                {isMobile && <WBottomBtnsBar
+                <WBottomBtnsBar
                     onBack={() => onBack && onBack()}
                     nextBtnTitle={options.options.button_title}
                     btnProps={{
                         onClick: () => onNext && onNext({value: this.state.value, next: options.next, fieldName}),
                         disabled: this.state.value.length === 0
-                    }}/>}
+                    }}/>
             </div>
         );
     }

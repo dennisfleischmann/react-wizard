@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
-import {isBrowser, isMobile} from 'react-device-detect';
 import WBottomBtnsBar from "../WBottomBtnsBar";
 
 class WMapLocatorStep extends Component {
@@ -41,21 +40,21 @@ class WMapLocatorStep extends Component {
                                    onChange={this.handleChange}/>
                             <div className={"wui step-map-input-desc"}>{options.options.description}</div>
                         </div>
-                        {isBrowser && <button type={"submit"} className={"wui action-button"}
-                                              disabled={this.state.value.toString().length < 5} onClick={() => {
+                        <button type={"submit"} className={"wui action-button device-desktop"}
+                                disabled={this.state.value.toString().length < 5} onClick={() => {
                             onNext && onNext({value: this.state.value, next: options.next, fieldName});
                         }}>
                             {options.options.button_title || "Next"}
                             <span className={"wui action-button-arrow"}/>
-                        </button>}
+                        </button>
                     </div>
                 </div>
-                {isMobile && <WBottomBtnsBar
+                <WBottomBtnsBar
                     onBack={() => onBack && onBack()}
                     btnProps={{
                         onClick: () => onNext && onNext({value: this.state.value, next: options.next, fieldName}),
                         disabled: this.state.value.toString().length < 5
-                    }}/>}
+                    }}/>
             </div>
         );
     }

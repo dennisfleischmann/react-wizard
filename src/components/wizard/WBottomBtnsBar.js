@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const WBottomBtnsBar = ({onBack, isBackVisible, isNextVisible, btnProps, nextBtnTitle}) => <div
-    className={"wui bottom-btns-bar"}>
+    className={"wui bottom-btns-bar device-mobile"}>
     {isNextVisible && <button type={"submit"} className={"wui action-button"} {...btnProps}>
         {nextBtnTitle ? nextBtnTitle : "Next"}
         <span className={"wui action-button-arrow"}/>

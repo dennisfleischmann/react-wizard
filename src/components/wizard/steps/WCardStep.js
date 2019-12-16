@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import WCard from '../WCard'
-import {isMobile} from "react-device-detect";
 import WBottomBtnsBar from "../WBottomBtnsBar";
 
 const WCardStep = ({fieldName, options, onNext, onBack, isBackVisible}) => {
@@ -23,7 +22,7 @@ const WCardStep = ({fieldName, options, onNext, onBack, isBackVisible}) => {
                     onClick={({value, next}) => onNext && onNext({value, next, fieldName})}
                     data={o}/>
             )}
-            {isMobile && isBackVisible && <WBottomBtnsBar onBack={() => onBack && onBack()} isNextVisible={false}/>}
+            {isBackVisible && <WBottomBtnsBar onBack={() => onBack && onBack()} isNextVisible={false}/>}
         </div>
     )
 

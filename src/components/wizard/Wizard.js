@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
-import {isMobile} from 'react-device-detect';
 import WHeader from './WHeader'
 import WFooter from './WFooter'
 import WSendStep from "./steps/WSendStep";
@@ -17,15 +16,15 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
     });
 
     useEffect(_ => {
-        const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
-        window.addEventListener("resize", handleResize);
-        return _ => window.removeEventListener("resize", handleResize);
+        // const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
+        // window.addEventListener("resize", handleResize);
+        // return _ => window.removeEventListener("resize", handleResize);
     });
 
     const handleBack = _ => {
-        if (stack.length > 0) { 
+        if (stack.length > 0) {
             const lastIndex = stack.length - 2;
-            
+
             setCurrentStep(stack[lastIndex]);
             setStack(stack.filter((_, i) => i <= lastIndex));
             setData(data.filter((_, i) => i <= lastIndex));
@@ -49,7 +48,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
                                data={data}
                                claims={claims}
                                certsImage={certsImage}
-                    />;
+    />;
 
     if (Component === WSendStep || Component === WConfirmationStep) {
         return content;
@@ -70,29 +69,10 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
 
         const stepsPassedWithoutSpecialSelection = stack.filter(({id}) => steps.find(({id: sid, isSpecialSelection}) => sid === id && !isSpecialSelection));
 
-        const temp = totalSharedSteps.length + totalStepsPath.length+1;
+        const temp = totalSharedSteps.length + totalStepsPath.length + 1;
 
         return ((stepsPassedWithoutSpecialSelection.length / temp) * 100);
     };
-
-    if (isMobile) {
-        return (
-            <div className={"wui fullscreen"}>
-                <div className={"wui widget fullscreen"}>
-                    <WHeader backArrow={stack.length > 1} title={currentStep.title}
-                             percentage={calcPercentageProgress()}
-                             onBack={() => handleBack()}/>
-                    <div className={"wui carousel animated"} key={Math.random()}>
-                        <div className={"wui carousel-slide"}>
-                            <div className={"wui content"}>
-                                {content}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
 
     // render
     return (
@@ -109,7 +89,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
                             </div>
                         </div>
                     </div>
-                    <WFooter claims={claims} img={certsImage} />
+                    <WFooter claims={claims} img={certsImage}/>
                 </div>
             </div>
         </div>

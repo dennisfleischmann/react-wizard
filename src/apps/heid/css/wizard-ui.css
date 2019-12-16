@@ -22,13 +22,6 @@
     overflow: hidden;
 }
 
-.wui.fullscreen {
-    display: block;
-}
-
-.wui.widget.fullscreen {
-}
-
 .wui.carousel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -37,6 +30,7 @@
     flex: 1;
     flex-direction: row;
     width: 100%;
+    min-height: 355px !important;
 }
 
 .wui.carousel-slide {
@@ -75,6 +69,7 @@
     line-height: 32px;
     margin: 0 38px 0;
     white-space: pre-line;
+    text-align: center !important;
 }
 
 .wui.content-container {
@@ -248,7 +243,6 @@
 }
 
 .wui.footer-benefits {
-    margin: 0 36px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -261,7 +255,7 @@
     display: -webkit-flex;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .wui.benefit {
@@ -614,7 +608,7 @@ button:disabled, button[disabled] {
 }
 
 .wui.step-map-btn-container {
-    width: 40%;
+    width: 50%;
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -631,7 +625,7 @@ button:disabled, button[disabled] {
     height: 100%;
     justify-content: center;
     position: relative;
-    width: 60%;
+    width: 50%;
 }
 
 .wui.step-map-input-desc {

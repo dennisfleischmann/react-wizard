@@ -1,12 +1,17 @@
-.hero {
-    background-size: cover;
-    z-index: 10;
-    hyphens: auto;
+/* mobile*/
+@media only screen and (max-width: 767px) {
+    .hero {
+        background: none;
+    }
 }
 
-@media (min-width: 768px) {
+/* desktop*/
+@media only screen and (min-width: 768px) {
     .hero {
-        padding: 72px;
+        padding: 48px;
+        background-size: cover;
+        z-index: 10;
+        hyphens: auto;
     }
 
     html[lang=de] .hero {
@@ -65,4 +70,29 @@
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+}
+
+/*mobile*/
+@media only screen and  (max-width: 767px) {
+    /*.device-mobile {*/
+    /*    visibility: visible !important;*/
+    /*    display: inherit !important;*/
+    /*}*/
+    .device-desktop {
+        visibility: hidden !important;
+        display: none !important;
+    }
+}
+
+/*desktop*/
+@media only screen and  (min-width: 768px) {
+    .device-mobile {
+        visibility: hidden !important;
+        display: none !important;
+    }
+
+    /*.device-desktop {*/
+    /*    visibility: visible !important;*/
+    /*    display: inherit !important;*/
+    /*}*/
 }
