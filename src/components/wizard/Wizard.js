@@ -16,6 +16,7 @@ const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, c
     });
 
     useEffect(_ => {
+        console.log(steps);
         // const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
         // window.addEventListener("resize", handleResize);
         // return _ => window.removeEventListener("resize", handleResize);

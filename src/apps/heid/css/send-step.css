@@ -2,6 +2,7 @@
     border: var(--secondary-color) solid 1px;
     border-radius: 4px;
     padding: 0;
+    margin: 5px;
 }
 
 .wui.ss-background {
@@ -171,11 +172,13 @@
     flex-direction: column;
 }
 
+.wui.ss-img-container {
+    overflow: hidden;
+}
+
 .wui.ss-img {
-    max-width: 128%;
-    left: -25%;
-    position: absolute;
-    top: -55px;
+    max-width: 124%;
+    margin-left: -12%;
 }
 
 .wui.ss-btn {
