@@ -2,7 +2,8 @@
 
 A new wizard is easy to create sponsered by Heid Immobilien GmbH
 
-[logo]: https://www.heid-immobilienbewertung.de/img/heid-immobilienbewertung-logo.png
+![alt text](https://www.heid-immobilienbewertung.de/img/heid-immobilienbewertung-logo.png)
+
 
 - Wizard libary comes with the basic steps
 - wizard-card
