@@ -65,7 +65,6 @@ const resolveModule = (resolveFn, filePath) => {
   return resolveFn(`${filePath}.js`);
 };
 
-console.log(process.argv);
 
 var myArgs = process.argv.slice(2);
 const app = myArgs[0];

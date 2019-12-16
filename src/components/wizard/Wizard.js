@@ -1,108 +1,116 @@
-import React, { Component } from 'react';
-import _ from 'lodash';
+import React, {useEffect, useState} from 'react'
+import PropTypes from 'prop-types'
+import WHeader from './WHeader'
+import WFooter from './WFooter'
+import WSendStep from "./steps/WSendStep";
+import WConfirmationStep from "./steps/WConfirmationStep";
 
-class Wizard extends Component {
+const Wizard = ({componentMap, config: {backend: {api}, background_img, steps, claims, certsImage}}) => {
+    // state
+    const [currentStep, setCurrentStep] = useState(steps[0]); // it hold current step
+    const [data, setData] = useState([]); // input value, step with id
+    const [stack, setStack] = useState([steps[0]]); // stack contain path stack
+    // const [dimen, setDimen] = useState({
+    //     height: window.innerHeight,
+    //     width: window.innerWidth
+    // });
 
-  state = {
-    currentStep: 0,
-    path: [0],
-    data: {}
-  };
+    useEffect(_ => {
+        console.log(steps);
+        // const handleResize = () => setDimen({height: window.innerHeight, width: window.innerWidth});
+        // window.addEventListener("resize", handleResize);
+        // return _ => window.removeEventListener("resize", handleResize);
+    });
 
-  handleNext = (selection, value) => {
+    const handleBack = _ => {
+        if (stack.length > 0) {
+            const lastIndex = stack.length - 2;
 
-    const stepConfig = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
-    
-    this.setState({
-      currentStep: selection.next,
-      path:  [...this.state.path, selection.next],
-      data: {
-        ...this.state.data,
-        [`${stepConfig.fieldName}`]: value
-      }
-    })
-  }
-  
-  handlePrevious = () => {
-    
-    if (this.state.path.length >= 1) {
-      var clonedArray = JSON.parse(JSON.stringify(this.state.path))
+            setCurrentStep(stack[lastIndex]);
+            setStack(stack.filter((_, i) => i <= lastIndex));
+            setData(data.filter((_, i) => i <= lastIndex));
+        }
+    };
 
-      clonedArray = _.slice(clonedArray, 0, clonedArray.length-1)
-      
-      const lastStep = clonedArray[clonedArray.length-1];
+    const Component = componentMap[currentStep.type];
 
-      this.setState({
-        path: clonedArray,
-        currentStep: lastStep
-       });
-    }
-  }
+    const content = <Component {...currentStep}
+                               isBackVisible={stack.length > 0}
+                               onBack={() => handleBack()}
+                               onNext={(d) => {
+                                   const nextStep = steps.find(s => s.id === d.next);
+                                   if (nextStep) {
+                                       setCurrentStep(nextStep);
+                                       setStack([...stack, {...nextStep}]);
+                                       setData([...data, {...d}]);
 
-  handleSubmit = (contact, nextStep) => {
+                                   }
+                               }}
+                               data={data}
+                               claims={claims}
+                               certsImage={certsImage}
+                               heroBgImg={background_img}
+    />;
 
-    this.setState({
-      contact,
-      currentStep: nextStep,
-    })
-
-    /**
-     * Send to backend
-     */
-    console.log(this.state.data, contact);
-  }
-
-  renderProgressBar(currentStep){
-
-    if(this.state.path.length <= 1) {
-      return (<div></div>);
+    if (Component === WSendStep || Component === WConfirmationStep) {
+        return content;
     }
 
-    const startStep = this.state.path[1];
+    const calcPercentageProgress = () => {
+        if (stack.length <= 1) {
+            return 5;
+        }
 
-    const choosenPath = this.props.config.steps[0].options.find(
-        option => option.stepRange.from <= startStep && option.stepRange.to >= startStep
-      );
+        const startStep = data[0].next;
 
-    const totalStepsPath =  _.filter(
-        this.props.config.steps, step => step.id >= choosenPath.stepRange.from && step.id <= choosenPath.stepRange.to && !step.isSpecialSelection
-      );
+        const choosenPath = steps[0].options.find(({stepRange: {from, to}}) => from <= startStep && to >= startStep);
 
-    const totalSharedSteps = _.filter(this.props.config.steps, step => step.isSharedStep);
+        const totalStepsPath = steps.filter(({id, isSpecialSelection}) => id >= choosenPath.stepRange.from && id <= choosenPath.stepRange.to && !isSpecialSelection);
 
-    const stepsPassedWithoutSpecialSelection = 
-      this.state.path.filter(id => this.props.config.steps.find(step => step.id === id && !step.isSpecialSelection))
+        const totalSharedSteps = steps.filter(({isSharedStep}) => isSharedStep);
 
-      const percentFinished = (stepsPassedWithoutSpecialSelection.length/(totalStepsPath.length+totalSharedSteps.length))*100;
+        const stepsPassedWithoutSpecialSelection = stack.filter(({id}) => steps.find(({id: sid, isSpecialSelection}) => sid === id && !isSpecialSelection));
 
+        const temp = totalSharedSteps.length + totalStepsPath.length + 1;
+
+        return ((stepsPassedWithoutSpecialSelection.length / temp) * 100);
+    };
+
+    // render
     return (
-      <div>
-        <strong>{`${percentFinished} %`}</strong>
-      </div>
+        <div className="hero" style={{backgroundImage: `url(${background_img})`}}>
+            <div className={'wui outer'}>
+                <div className={'wui container'}>
+                    <WHeader backArrow={stack.length > 1} title={currentStep.title}
+                             percentage={calcPercentageProgress()}
+                             onBack={() => handleBack()}/>
+                    <div className={`wui carousel animated`} key={Math.random()}>
+                        <div className={"wui carousel-slide"}>
+                            <div className={"wui content"}>
+                                {content}
+                            </div>
+                        </div>
+                    </div>
+                    <WFooter claims={claims} img={certsImage}/>
+                </div>
+            </div>
+        </div>
     )
-  }
+};
 
-  render() {
-    const currentStep = _.find(this.props.config.steps, step => step.id === this.state.currentStep);
-    
-    const StepComponent = this.props.customComponents[currentStep.type];
-    
-    const isFirstStep = this.state.path.length === 1
-    return (
-      <React.Fragment>
-        {this.renderProgressBar(currentStep)}
+Wizard.defaultProps = {
+    componentMap: {}
+};
 
-        <StepComponent 
-          isFirstStep={isFirstStep}
-          step={currentStep}
-          onNext={this.handleNext}
-          onPrevious={this.handlePrevious}
-          onSubmit={this.handleSubmit}
-          data={this.state.data}
-        />
-      </React.Fragment>
-    );
-  }
-}
+Wizard.propTypes = {
+    config: PropTypes.shape({
+        steps: PropTypes.arrayOf(PropTypes.object).isRequired,
+        backend: PropTypes.shape({
+            api: PropTypes.string
+        })
+    }),
+    onSubmit: PropTypes.func,
+    componentMap: PropTypes.object.isRequired
+};
 
-export default Wizard;
+export default Wizard

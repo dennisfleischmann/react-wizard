@@ -1,6 +1,6 @@
 {
   "name": "wizard",
-  "version": "0.1.0",
+  "version": "1.0.3-beta",
   "private": true,
   "dependencies": {
     "@babel/core": "7.5.5",
@@ -15,6 +15,7 @@
     "babel-preset-react-app": "^9.0.1",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "classnames": "^2.2.6",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
@@ -43,14 +44,17 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.2",
     "react-dev-utils": "^9.0.3",
     "react-dom": "^16.9.0",
+    "react-transition-group": "^4.3.0",
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",
     "semver": "6.3.0",
+    "source-map-explorer": "^2.1.1",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.2",
@@ -61,15 +65,11 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start:app1": "node scripts/start.js app-1",
-    "start:app2": "node scripts/start.js app-2",
-    "start:app3": "node scripts/start.js app-3",
-    "build:app1": "node scripts/build.js app-1",
-    "build:app2": "node scripts/build.js app-2",
-    "build:app3": "node scripts/build.js app-3",
-    "test": "node scripts/test.js",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "app:heid": "node scripts/start.js heid",
+    "build:heid": "node scripts/build.js heid",
+    "release:heid": "./release.sh heid",
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -88,10 +88,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@storybook/addon-actions": "^5.1.11",
-    "@storybook/addon-links": "^5.1.11",
-    "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1"
   },
