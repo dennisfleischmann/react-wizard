@@ -1,0 +1,99 @@
+/* mobile*/
+@media only screen and (max-width: 767px) {
+    .hero {
+        background: none !important;
+        margin: 4px;
+    }
+}
+
+/* desktop*/
+@media only screen and (min-width: 768px) {
+    .hero {
+        padding: 48px;
+        background-size: cover;
+        z-index: 10;
+        hyphens: auto;
+    }
+
+    html[lang=de] .hero {
+        position: relative;
+    }
+}
+
+.animated {
+    -webkit-animation: fadeIn 0.5s ease-out;
+    -moz-animation: fadeIn 0.5s ease-out;
+    -o-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*mobile*/
+@media only screen and  (max-width: 767px) {
+    /*.device-mobile {*/
+    /*    visibility: visible !important;*/
+    /*    display: inherit !important;*/
+    /*}*/
+    .device-desktop {
+        visibility: hidden !important;
+        display: none !important;
+    }
+}
+
+/*desktop*/
+@media only screen and  (min-width: 768px) {
+    .device-mobile {
+        visibility: hidden !important;
+        display: none !important;
+    }
+
+    /*.device-desktop {*/
+    /*    visibility: visible !important;*/
+    /*    display: inherit !important;*/
+    /*}*/
+}
