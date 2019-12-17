@@ -59,7 +59,7 @@
     padding: 56px 72px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .wui.cs-thank-you-content {
         align-items: center;
         -webkit-box-align: center;
@@ -99,7 +99,7 @@
     flex: 0 0 24%
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .wui.cs-thank-you-img {
         flex-direction: column;
     }
@@ -145,15 +145,14 @@
     padding: 9px 0;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .wui.cs-background {
         padding: 4px;
     }
 
     .wui.cs-header {
-        justify-content: flex-start;
+        justify-content: center;
         margin-top: -4px;
-        padding-left: 22%;
         background: url("/libs/wizard/img/radiant-checkmark.png") left center / 20% no-repeat;
     }
 
@@ -163,7 +162,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .wui.container.border {
         width: 100%;
     }
