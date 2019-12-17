@@ -1,6 +1,6 @@
 {
   "name": "wizard",
-  "version": "0.1.0",
+  "version": "1.0.3-beta",
   "private": true,
   "dependencies": {
     "@babel/core": "7.5.5",
@@ -68,9 +68,8 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "app:heid": "node scripts/start.js heid",
     "build:heid": "node scripts/build.js heid",
-    "test": "node scripts/test.js",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook"
+    "release:heid": "./release.sh heid",
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -89,10 +88,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@storybook/addon-actions": "^5.1.11",
-    "@storybook/addon-links": "^5.1.11",
-    "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1"
   },
