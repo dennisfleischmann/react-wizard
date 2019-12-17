@@ -17,7 +17,7 @@
     text-align: center;
     padding: 2rem 0 0 0;
     border-radius: 4px;
-    z-index: 10;
+    /*z-index: 10;*/
     position: relative;
     overflow: hidden;
 }
@@ -230,10 +230,16 @@
     width: 100%;
 }
 
-@media only screen and  (min-width: 768px) {
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
     .wui.card-container:hover {
         border-color: var(--primary-color);
     }
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    
 }
 
 .wui.footer {
