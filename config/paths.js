@@ -68,6 +68,9 @@ const resolveModule = (resolveFn, filePath) => {
 
 var myArgs = process.argv.slice(2);
 const app = myArgs[0];
+const site = myArgs[1];
+
+console.log('site', site)
 
 // config after eject: we're in ./config/
 module.exports = {
@@ -75,7 +78,7 @@ module.exports = {
     appPath: resolveApp('.'),
     appBuild: resolveApp('build'),
     appPublic: resolveApp(`src/apps/${app}/public`),
-    appHtml: resolveApp(`src/apps/${app}/public/index.html`),
+    appHtml: resolveApp(`src/apps/${app}/public/${site ? site+'-': ''}index.html`),
     appIndexJs: resolveModule(resolveApp, `src/apps/${app}/index`),
     appPackageJson: resolveApp('package.json'),
     appSrc: resolveApp('src'),

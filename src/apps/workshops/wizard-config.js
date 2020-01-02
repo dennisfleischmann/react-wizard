@@ -14,7 +14,7 @@ export default {
       "id": 0,
       "type": "cards-step",
       "description":"trainings",
-      "title": "Early Bird Trainings available",
+      "title": "Our top training courses",
       "fieldName": "training_course",
       "options": [
         {  id:"0", value:"Angular Training", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"/svg/angular.svg", "text":"Angular Training", "size":"s"}},
@@ -43,7 +43,7 @@ export default {
       "isSharedStep":true,
       "fieldName": "participant_count",
       "options": [
-        { id:"0", "next" : 3, "prev" : "nil", "options": {
+        { id:"0", "next" : 998, "prev" : "nil", "options": {
           "unit": "",
           "range": {
             "min": 1,
@@ -69,7 +69,7 @@ export default {
         { id:"0", "next" : 999, "prev" : "nil", "button_title": "Next", "options": {
           "default": '',
           "text":"Reason of the training",
-          "icon": "/svg/computer-svgrepo-com.svg",
+          "icon": "/svg/classroom.svg",
           "button_title": "Next",
           "placeholder" : "i.e Product Development",
           "description": "Please provide the most important archivements"
@@ -77,17 +77,31 @@ export default {
       }
       ]
     },
+
     {
       "id": 999,
+      "type": "cards-step",
+      "description":"type of real estate",
+      "isSharedStep":true,
+      "title": "Location",
+      "fieldName": "Angular_Training",
+      "options": [
+        {  id:"0", value:"Inhouse Training", "next" : 1000, "prev" : -1, "options": {"icon":"/img/angular_basic.png", "text":"", "size":"s"}},
+        {  id:"0", value:"Training Center", "next" : 1000, "prev" : -1, "options": {"icon":"/img/angular_basic.png", "text":"", "size":"s"}},
+        
+      ]
+    },
+    {
+      "id": 1000,
       "type": "send-step",
       "description":"send data",
+      "isSharedStep":true,
       "title": "Ihre Immobilienbewertung wird erstellt",
       "isSharedStep":true,
-      
       "sideImg": "",
       "options": [
         { 
-          "id":"0", "next" : 1000,
+          "id":"0", "next" : 1001,
           "text": "Wer soll die Immobilienbewertung erhalten?", 
           "button_title": "Bewertung erhalten",
           "description": "Dieser Service ist kostenfrei. Mit Klick auf \"Bewertung erhalten\" bestätigen Sie die Kenntnisnahme unserer\
@@ -101,7 +115,8 @@ export default {
       api: '/api/wizard/submit',
     },
     {
-      "id": 1000,
+      "id": 1001,
+      "isSharedStep":true,
       "type": "confirmation-step",
       "description":"send data",
       "title": "Thanks! We will contract you shortly.",

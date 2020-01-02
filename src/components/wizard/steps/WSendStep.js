@@ -216,7 +216,7 @@ class WSendStep extends Component {
                                 <div className={"wui ss-footer"}>
                                     <div className={"wui ss-footer-content"}>
                                         <img
-                                            src={"https://www.heid-immobilienbewertung.de/img/xzert.png.pagespeed.ic.dcLLhaE8be.png"}
+                                            src={this.props.certImage}
                                             alt={""}/>
                                     </div>
                                 </div>
