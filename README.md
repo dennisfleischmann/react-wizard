@@ -1,6 +1,6 @@
 # Couple of goals
 
-A new wizard is easy to create sponsered by Heid Immobilien GmbH
+A New Wizard is easy to create sponsered by Heid Immobilien GmbH
 
 ![alt text](https://www.heid-immobilienbewertung.de/img/heid-immobilienbewertung-logo.png)
 
