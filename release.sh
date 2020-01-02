@@ -13,7 +13,7 @@ while read -r l; do
         value="${BASH_REMATCH[2]}";
         VERSION="$value";
     fi
-done < package.json;
+done < ./src/apps/"$1"/manifest.json;
 
 echo $VERSION;
 
