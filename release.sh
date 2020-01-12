@@ -3,6 +3,7 @@ mkdir -p packages/"$1"/release/next-release/img && cp -r build/libs/wizard/img/ 
 cp -r build/libs/wizard/svg/ packages/"$1"/release/next-release/svg
 cp -r build/static/css/ packages/"$1"/release/next-release/css
 cp -r build/static/js/ packages/"$1"/release/next-release/js
+cp build/static/index.html packages/"$1"/release/next-release/index.html
 
 #get version from package.json
 VERSION='';

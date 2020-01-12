@@ -68,10 +68,14 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "app:heid": "node scripts/start.js heid",
     "build:heid": "node scripts/build.js heid",
+    "app:heid-engineering": "node scripts/start.js heid-engineering",
     "app:workshops": "node scripts/start.js workshops",
     "build:workshops": "node scripts/build.js workshops",
+    "build:heid-engineering": "node scripts/build.js heid-engineering",
     "release:heid": "./release.sh heid",
     "release:workshops": "./release.sh workshops",
+    "release:heid-engineering": "./release.sh heid-engineering",
+    "deploy:heid-engineering": "npm run build:heid-engineering city && ./deploy.sh heid-engineering",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {

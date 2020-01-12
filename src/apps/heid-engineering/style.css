@@ -1,0 +1,10 @@
+.card {
+  width: 200px;
+  float: left;
+  border: 2px solid orange;
+}
+
+:root {
+  --primary-color: #f2932c;
+  --secondary-color: #033152;
+}

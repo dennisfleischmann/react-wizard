@@ -1,0 +1,15 @@
+.wui.progress-bar {
+    height: 5px;
+    position: relative;
+    background: var(--primary-color);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    -webkit-transition: width 0.64s;
+    transition: width 0.84s;
+    margin-top: 14px;
+    border-radius: 50em;
+}
+
+.wui.progress-bar.mobile {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
