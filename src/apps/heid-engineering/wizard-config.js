@@ -14,13 +14,14 @@ export default {
       "id": 0,
       "type": "cards-step",
       "description":"house select",
-      "title": "Kostenlos & Unverbindliche Beratung",
+      "title": "Kostenlose & Unverbindliche Erstberatung",
       "fieldName": "Objekt_Typ",
       "options": [
-        {  id:"0", value:"Tragwerksplanung", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"/images/wizard/beam.svg", "text":"Neubau", "size":"s"}},
-        {  id:"1", value:"Bautechnische Prüfung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"/images/wizard/ruler.svg", "text":"Umbau", "size":"s"}},
-        {  id:"2", value:"Ausführplanung", "next" : 200, "stepRange":{"from": 200, "to": 299}, "options": {"icon":"/images/wizard/planning.svg", "text":"Durchbruch", "size":"s"}},
-        {  id:"2", value:"Sachverständigen Gutachten", "next" : 300, "stepRange":{"from": 300, "to": 399}, "options": {"icon":"/images/wizard/assessment.png", "text":"Durchbruch", "size":"s"}}
+        {  id:"0", value:"Tragwerksplanung", "next" : 1, "stepRange":{"from": 1, "to": 99}, "options": {"icon":"/images/wizard/beam.svg", "text":"Tragwerksplanung", "size":"s"}},
+        {  id:"1", value:"Bautechnische Prüfung", "next" : 100, "stepRange":{"from": 100, "to": 199}, "options": {"icon":"/images/wizard/ruler.svg", "text":"Bautechnische Prüfung", "size":"s"}},
+        {  id:"2", value:"Ausführplanung", "next" : 200, "stepRange":{"from": 200, "to": 299}, "options": {"icon":"/images/wizard/planning.svg", "text":"Ausführplanung", "size":"s"}},
+        {  id:"2", value:"Sachverständigen Gutachten", "next" : 300, "stepRange":{"from": 300, "to": 399}, "options": {"icon":"/images/wizard/assessment.png", "text":"Sachverständigen Gutachten", "size":"s"}},
+        {  id:"2", value:"Bauberatung", "next" : 400, "stepRange":{"from": 400, "to": 499}, "options": {"icon":"/images/wizard/consultation.svg", "text":"Beratung", "size":"s"}}
       ]
     },
     {
