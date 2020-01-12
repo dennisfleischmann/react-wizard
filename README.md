@@ -37,7 +37,6 @@ A New Wizard is easy to create sponsered by Heid Immobilien GmbH
   "claims": [
     "Beratung durch Experten",
   ],
-  "certsImage": "",
   "steps": [
     {
 
