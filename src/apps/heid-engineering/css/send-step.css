@@ -2,6 +2,7 @@
     border: var(--secondary-color) solid 1px;
     border-radius: 4px;
     padding: 0;
+    margin: 5px;
 }
 
 .wui.ss-background {
@@ -171,11 +172,20 @@
     flex-direction: column;
 }
 
+.wui.ss-img-container {
+    overflow: hidden;
+}
+
 .wui.ss-img {
-    max-width: 128%;
-    left: -25%;
-    position: absolute;
-    top: -55px;
+    max-width: 124%;
+    margin-left: -12%;
+}
+
+/* mobile*/
+@media only screen and (max-width: 767px) {
+    .wui.ss-img {
+        display: none;
+    }
 }
 
 .wui.ss-btn {
@@ -223,7 +233,7 @@
         justify-content: flex-start;
         margin-top: -4px;
         padding-left: 22%;
-        background: url("https://images.ctfassets.net/64q0dihi81ut/7LCEQRuSFItwi0DfIMrPEz/6950e391242b63c458080418d9b04b6d/radiant-checkmark.png") left center / 20% no-repeat;
+        background: url("/libs/wizard/svg/radiant-checkmark.png") left center / 20% no-repeat;
     }
 
     .wui.ss-header-title {

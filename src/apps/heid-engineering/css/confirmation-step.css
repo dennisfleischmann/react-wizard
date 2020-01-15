@@ -154,7 +154,7 @@
         justify-content: flex-start;
         margin-top: -4px;
         padding-left: 22%;
-        background: url("https://images.ctfacsets.net/64q0dihi81ut/7LCEQRuSFItwi0DfIMrPEz/6950e391242b63c458080418d9b04b6d/radiant-checkmark.png") left center / 20% no-repeat;
+        background: url("/libs/wizard/img/radiant-checkmark.png") left center / 20% no-repeat;
     }
 
     .wui.cs-header-title {

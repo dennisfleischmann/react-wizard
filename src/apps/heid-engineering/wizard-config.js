@@ -4,9 +4,9 @@ export default {
     api: "",
   },
   claims: [
-    "Beratung durch Experten",
-    "Über 10.000 zufriedene Kunden",
-    "Kostenlose Immobilienbewertung"
+    {text:"Beratung durch Experten", icon:"/libs/wizard/svg/checkmark.svg"},
+    {text:"Über 10.000 zufriedene Kunden", icon:"/libs/wizard/svg/checkmark.svg"},
+    {text:"Kostenlose Immobilienbewertung", icon:"/libs/wizard/svg/checkmark.svg"}
   ],
   certsImage: "/img/zert.png",
   steps: [

@@ -47,9 +47,9 @@ class WConfirmationStep extends Component {
                                                     {this.props.claims.map((t, i) =>
                                                         <div className={"wui benefit"} key={i}>
                                                             <img
-                                                                src={"/libs/wizard/svg/checkmark.svg"}
+                                                                src={t.icon}
                                                                 alt={""} className={"wui benefit-checkmark"}/>
-                                                            <span className={"wui benefit-title"}>{t}</span>
+                                                            <span className={"wui benefit-title"}>{t.text}</span>
                                                         </div>)}
                                                 </div>
                                             </div>
